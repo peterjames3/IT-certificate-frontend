@@ -20,6 +20,9 @@ importers:
       '@react-email/components':
         specifier: ^1.0.12
         version: 1.0.12(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@sanity-image/url-builder':
+        specifier: ^1.1.0
+        version: 1.1.0
       '@sanity/image-url':
         specifier: ^2.1.1
         version: 2.1.1
@@ -2369,6 +2372,9 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@sanity-image/url-builder@1.1.0':
+    resolution: {integrity: sha512-ApAlwhF/cLxGY+VJKmYI8krLPySZuxRe4OiT95vJGCBra1cIvSZgkosKzpu/sBVRVujt8Jq0yF0pTko94H7iQQ==}
 
   '@sanity-labs/design-tokens@0.0.2-alpha.4':
     resolution: {integrity: sha512-+i7GXix4Akt34VDWgSM1Lpq8Hxf8SH8022uNsDRXSNuAqQMjKVGWLItAyc2TyfWVwWZLhsCF3lj5tdW7cecDxQ==}
@@ -8809,6 +8815,8 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
+
+  '@sanity-image/url-builder@1.1.0': {}
 
   '@sanity-labs/design-tokens@0.0.2-alpha.4': {}
 
