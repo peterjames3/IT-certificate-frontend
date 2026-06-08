@@ -5,10 +5,15 @@ import { PortableText } from "@portabletext/react";
 import slugify from "slugify";
 import Link from "next/link";
 import Image from "next/image";
-import { buildSrc } from "@sanity-image/url-builder";
-import { dataset, projectId } from "@/sanity/env";
+import { client } from "@/sanity/lib/client";
+import { createImageUrlBuilder } from "@sanity/image-url";
 
-const baseUrl = `https://cdn.sanity.io/images/${projectId}/${dataset}/`;
+
+const builder = createImageUrlBuilder(client);
+
+const urlFor = (source: string) => {
+  return builder.image(source);
+};
 
 // Define types for table structure
 interface TableCell extends PortableTextBlock {
@@ -88,24 +93,17 @@ const SanityImage = ({ value }: SanityImageProps) => {
     return null;
   }
 
-  const { src } = buildSrc({
-    id: value.asset._ref,
-    width: 1200,
-    height: 800,
-    baseUrl,
-    mode: value.hotspot ? "cover" : "contain",
-    hotspot: value.hotspot
-      ? { x: value.hotspot.x, y: value.hotspot.y }
-      : undefined,
-    crop: value.crop,
-    queryParams: { q: 80 },
-  });
+  const imageUrl = urlFor(value.asset._ref)
+    .width(1200)
+    .height(800)
+    .quality(80)
+    .url();
 
   return (
     <figure className="relative w-full h-64 my-8">
       <div className="relative w-full h-full">
         <Image
-          src={src}
+          src={imageUrl}
           alt={value.alt || " "}
           fill
           className="object-cover rounded-lg"
@@ -114,7 +112,7 @@ const SanityImage = ({ value }: SanityImageProps) => {
         />
       </div>
       {value.caption && (
-        <figcaption className="text-center text-sm text-secondary-600 mt-2">
+        <figcaption className="text-center text-sm text-gray-600 mt-2">
           {value.caption}
         </figcaption>
       )}

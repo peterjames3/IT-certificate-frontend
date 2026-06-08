@@ -7,11 +7,11 @@ import { PortableText } from "@portabletext/react"; // Assuming this import is f
 import SocialShare from "./social-share";
 //import type { ComponentType } from "react";
 import { format } from "date-fns";
-import imageUrlBuilder from "@sanity/image-url";
+import {createImageUrlBuilder} from "@sanity/image-url";
 import { client } from "@/sanity/lib/client";
 import RecentPosts from "./recent-posts";
 
-const builder = imageUrlBuilder(client);
+const builder = createImageUrlBuilder(client);
 const urlFor = (source: string) => {
   return builder.image(source);
 };

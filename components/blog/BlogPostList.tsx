@@ -7,14 +7,14 @@ type Category = {
   description: string;
 };
 import { postsQuery } from "@/sanity/lib/queries";
-import imageUrlBuilder from "@sanity/image-url";
+import {createImageUrlBuilder} from "@sanity/image-url";
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { format } from "date-fns";
 
-const builder = imageUrlBuilder(client);
+const builder = createImageUrlBuilder(client);
 
 export default async function BlogPosts() {
   let posts: SanityDocument[] = [];
