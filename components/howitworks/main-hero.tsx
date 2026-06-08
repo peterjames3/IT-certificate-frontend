@@ -3,7 +3,7 @@ import LeftHero from "./hero-left";
 import RightHero from "./hero-right";
 import FloatingElements from "../animation/FloatingElements";
 import { motion, AnimatePresence } from "framer-motion";
-import MultiStepForm from "@/app/ui/components/form/MultiStepForm";
+import MultiStepForm from "@/components/form/MultiStepForm";
 import { useUIState, useUIDispatch } from "@/context/UIContext";
 export default function MainHero() {
   const { isVisible } = useUIState();

@@ -1,0 +1,60 @@
+export interface StatCard {
+  number: number;
+  suffix: string;
+  description: string;
+  bgColor: string;
+  iconColor: string;
+}
+
+export interface ExamItem {
+  name: string;
+  slug: string;
+}
+
+export type ExamCategory = Record<string, ExamItem[]>;
+// export interface ExamCategory {
+//  name: string;
+//  slug: string;
+// }
+
+export interface AcademicService {
+  name: string;
+  href: string;
+}
+
+export interface NavbarProps {
+  className?: string;
+}
+
+export interface DropdownMenuProps {
+  title: string;
+  categories: ExamCategory;
+  baseUrl: string;
+}
+
+export interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+  onOpen: () => void;
+  academicServices: AcademicService[];
+  testPrepCategories: ExamCategory;
+  examAidCategories: ExamCategory;
+}
+
+export type MenuItem = {
+  name: string;
+  href: string;
+  submenu?: SubMenuItem[];
+};
+
+export type SubMenuItem = {
+  name: string;
+  href: string;
+  group?: string; // For grouping exam categories
+};
+//other links
+export interface LinkItem {
+  name: string;
+  slug?: string;
+  isLink?: boolean;
+}
