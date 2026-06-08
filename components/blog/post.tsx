@@ -1,11 +1,11 @@
 import { SanityDocument } from "@sanity/client";
-import TableOfContents from "./table-Of-content"; 
+import TableOfContents from "./table-Of-content";
 import { portableTextComponents } from "./portable-text-components";
 import Image from "next/image";
 import Link from "next/link";
 import { PortableText } from "@portabletext/react"; // Assuming this import is from @portabletext/react
 import SocialShare from "./social-share";
-import type { ComponentType } from "react";
+//import type { ComponentType } from "react";
 import { format } from "date-fns";
 import imageUrlBuilder from "@sanity/image-url";
 import { client } from "@/sanity/lib/client";
@@ -49,12 +49,8 @@ export default function Post({ post }: { post: SanityDocument }) {
               <TableOfContents headings={post.headings || []} />
             </div>
             <div className="border-t border-tertiary-30"></div>
-            <div>
-              {/* Ensure correct typing for SocialShare component */}
-              {(() => {
-                const SocialShareComp = SocialShare as ComponentType<{ title: string }>;
-                return <SocialShareComp title={post.title} />;
-              })()}
+          <div>
+              <SocialShare title={post.title} />
             </div>
           </div>
         </section>

@@ -1,41 +1,64 @@
-import { sanityFetch } from "@/sanity/lib/fetch";
-import { latestPostsQuery } from "@/sanity/lib/queries";
-import { SanityDocument } from "next-sanity";
-import { format } from "date-fns";
-import { notFound } from "next/navigation";
-import Link from "next/link";
+"use client";
+import { useState } from "react";
+import {
+  FacebookShareButton,
+  RedditShareButton,
+  XShareButton,
+  LinkedinShareButton,
+  WhatsappShareButton,
+  EmailShareButton,
+  FacebookIcon,
+  RedditIcon, 
+  XIcon ,
+  LinkedinIcon,
+  WhatsappIcon,
+  EmailIcon,
+} from "react-share";
 
-export default async function RecentPosts() {
-  const latestPosts = await sanityFetch<SanityDocument[]>({
-    query: latestPostsQuery,
-  });
+export default function SocialShare({ title }: { title: string }) {
+  const [postUrl] = useState(() =>
+    typeof window !== "undefined" ? window.location.href : ""
+  );
+  const [isCopied, setIsCopied] = useState(false);
 
-  if (!latestPosts) {
-    notFound();
-  }
+  const copyToClipBoard = async () => {
+    try {
+      await navigator.clipboard.writeText(postUrl);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000); //resetting  after 2 seconds
+    } catch (err) {
+      console.error("failed to copy", err);
+    }
+  };
+
+  const shareButtons = [
+    { Component: FacebookShareButton, Icon: FacebookIcon, name: "Facebook" },
+    { Component: RedditShareButton, Icon: RedditIcon, name: "Reddit" },
+    { Component: XShareButton, Icon: XIcon, name: "Twitter" },
+    { Component: LinkedinShareButton, Icon: LinkedinIcon, name: "LinkedIn" },
+    { Component: WhatsappShareButton, Icon: WhatsappIcon, name: "WhatsApp" },
+    { Component: EmailShareButton, Icon: EmailIcon, name: "Email" },
+  ];
+
   return (
-    <section className=" mt-2 space-y-8">
-      {latestPosts.slice(1, 5).map((latestPost) => (
-        <Link
-          href={latestPost.slug.current || "#"}
-          key={latestPost._id}
-          className="border-l-4 border-primary px-3 py-2 rounded-md flex flex-col gap-2 hover:cursor-pointer hover:shadow-lg transition-all delay-300"
+    <div>
+      <h3 className="title font-semibold mb-2">Share this post:</h3>
+      <div className="flex flex-col space-y-5  ">
+        {shareButtons.map(({ Component, Icon, name }) => (
+          <Component key={name} url={postUrl} title={title}>
+            <Icon size={32} round />
+          </Component>
+        ))}
+        {/* Copy Link */}
+        <button
+          className="cursor-pointer text-[0.98rem] font-semibold"
+          type="button"
+          aria-label="copy post link"
+          onClick={copyToClipBoard}
         >
-          <header className=" text-[0.89rem] sm:text-[0.89] md:text-[1.1rem] font-semibold text-foreground">
-            {latestPost.title || "Untitled Post"}
-          </header>
-          <footer className="flex  flex-row justify-between items-center">
-            <address className="text-textColor/70 font-medium not-italic">
-              {latestPost.authorName || "Unknown author"}
-            </address>
-            <time>
-              {/* Format the date using date-fns */}
-              {format(new Date(latestPost._createdAt), "MMMM dd, yyyy") ||
-                "Unknown date"}
-            </time>
-          </footer>
-        </Link>
-      ))}
-    </section>
+          {isCopied ? "Copied!" : "Copy Link"}
+        </button>
+      </div>
+    </div>
   );
 }

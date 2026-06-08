@@ -28,7 +28,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
           }
         });
       },
-      { rootMargin: "-100px 0px -50% 0px" }
+      { rootMargin: "-100px 0px -50% 0px" },
     );
 
     // Ensure elements exist before observing
@@ -79,8 +79,8 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
                   e.preventDefault(); // Prevent default link behavior
                   scrollToHeading(slug); // Call custom scroll function
                 }}
-                className={`block text-active-link hover:text-button-login-active transition-colors delay-300 ${
-                  activeId === slug ? "text-primary font-semibold" : ""
+                className={`block text-secondary-700 hover:text-secondary-900 transition-colors delay-300 ${
+                  activeId === slug ? "text-active-link font-semibold" : ""
                 }`}
               >
                 {text}

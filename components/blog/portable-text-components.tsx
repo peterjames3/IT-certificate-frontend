@@ -10,9 +10,6 @@ import { dataset, projectId } from "@/sanity/env";
 
 const baseUrl = `https://cdn.sanity.io/images/${projectId}/${dataset}/`;
 
-
-
-
 // Define types for table structure
 interface TableCell extends PortableTextBlock {
   _type: "tableCell";
@@ -42,9 +39,9 @@ const TableComponent = ({ value }: TableComponentProps) => {
             <tr key={i} className={i % 2 === 0 ? "bg-gray-50" : ""}>
               {row.cells.map((cell: TableCell, j: number) => (
                 <td key={j} className="border p-3">
-                  <PortableText 
+                  <PortableText
                     value={cell}
-                    components={portableTextComponents} 
+                    components={portableTextComponents}
                   />
                 </td>
               ))}
@@ -117,7 +114,7 @@ const SanityImage = ({ value }: SanityImageProps) => {
         />
       </div>
       {value.caption && (
-        <figcaption className="text-center text-sm text-gray-600 mt-2">
+        <figcaption className="text-center text-sm text-secondary-600 mt-2">
           {value.caption}
         </figcaption>
       )}
@@ -125,6 +122,14 @@ const SanityImage = ({ value }: SanityImageProps) => {
   );
 };
 
+const paragraphLinkStyles = [
+  "[&_a]:text-primary-500",
+  "[&_a]:underline",
+  "[&_a]:underline-offset-4",
+  "[&_a]:hover:text-primary-600",
+  "[&_a]:transition-colors",
+  "[&_a]:duration-200",
+].join(" ");
 // Main Portable Text Components configuration
 export const portableTextComponents: PortableTextComponents = {
   types: {
@@ -134,7 +139,7 @@ export const portableTextComponents: PortableTextComponents = {
   },
   block: {
     normal: ({ children }) => (
-      <p className="text-[1rem] lg:text-[1.3rem] text-primary leading-7 mb-4">
+      <p className={`text-[1rem] lg:text-[1.3rem] text-secondary-900 leading-7 mb-4 ${paragraphLinkStyles}`}>
         {children}
       </p>
     ),
@@ -144,7 +149,7 @@ export const portableTextComponents: PortableTextComponents = {
       const slug = slugify(toPlainText(value), { lower: true, strict: true });
       return (
         <h2 id={slug} className="text-2xl font-bold mb-6 mt-8 scroll-mt-24">
-          <Link href={`#${slug}`} className="hover:text-primary">
+          <Link href={`#${slug}`} className="hover:text-secondary-600">
             {children}
           </Link>
         </h2>
@@ -156,7 +161,7 @@ export const portableTextComponents: PortableTextComponents = {
       const slug = slugify(toPlainText(value), { lower: true, strict: true });
       return (
         <h3 id={slug} className="text-xl font-semibold mb-4 mt-6 scroll-mt-24">
-          <Link href={`#${slug}`} className="hover:text-primary">
+          <Link href={`#${slug}`} className="hover:text-primary-600">
             {children}
           </Link>
         </h3>
@@ -181,10 +186,14 @@ export const portableTextComponents: PortableTextComponents = {
   },
   listItem: {
     bullet: ({ children }) => (
-      <li className="text-[1rem] lg:text-[1.3rem] text-primary leading-7">{children}</li>
+      <li className="text-[1rem] lg:text-[1.3rem] text-secondary-800 leading-7">
+        {children}
+      </li>
     ),
     number: ({ children }) => (
-      <li className="text-[1rem] lg:text-[1.3rem] text-primary leading-7">{children}</li>
+      <li className="text-[1rem] lg:text-[1.3rem] text-secondary-800 leading-7">
+        {children}
+      </li>
     ),
   },
   marks: {

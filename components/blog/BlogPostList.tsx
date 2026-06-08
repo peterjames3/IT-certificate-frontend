@@ -37,9 +37,10 @@ export default async function BlogPosts() {
   return (
     <section className=" wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       {posts.map((post, index) => (
-        <article
+        <Link
+          href={`/blog/${post.slug.current}`}
           key={index}
-          className="bg-white rounded-lg  hover:shadow-md  transition-transform duration-300 ease-in-out"
+          className="group bg-white rounded-lg  hover:shadow-md  transition-transform duration-300 ease-in-out"
         >
           <figure>
             <Image
@@ -64,10 +65,10 @@ export default async function BlogPosts() {
               ))}
             </div>
 
-            <h3 className="text-[1.2rem] text-textColor font-bold ">
+            <h3 className="group-hover:text-primary-700 text-[1.2rem] text-textColor font-bold ">
               {post.title}
             </h3>
-            <div className="text-foreground line-clamp-3 p-text font-medium">
+            <div className="text-foreground line-clamp-3 p-[0.8rem] font-medium">
               {(post.categories ?? []).map((category: Category, id: number) => (
                 <p key={id}>{category.description}</p>
               ))}
@@ -79,13 +80,11 @@ export default async function BlogPosts() {
                 <span>By: {post.authorName || "Unknown Author"}</span>
               </div>
               <div>
-                <Link href={`/blog/${post.slug.current}`}>
-                  <ArrowRight className="size-5 text-tertiary hover:cursor-pointer hover:text-primary transition-color delay-300" />
-                </Link>
+                <ArrowRight className="size-5 text-tertiary hover:cursor-pointer group-hover:text-primary-800 transition-color delay-300" />
               </div>
             </div>
           </figcaption>
-        </article>
+        </Link>
       ))}
     </section>
   );
