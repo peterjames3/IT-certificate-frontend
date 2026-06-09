@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-//import Navbar from "@/app/ui/components/navigation/Navbar";
+import Navbar from "@/components/navigation/navbar";
 import { GoogleTagManager } from "@next/third-parties/google";
 //import { ToastContainer } from "react-toastify";
 //import Footer from "../ui/components/footer/Footer";
-//import ScrollToTopBtn from "../ui/scroll-to-top-btn";
+import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
 //import Chatbot from "../ui/Chatbot";
 const geistSans = Geist({
@@ -100,9 +100,9 @@ export default function RootLayout({
             ></iframe>
           </noscript> */}
           {/* <!-- End Google Tag Manager (noscript) --> */}
-          {/* <Navbar /> */}
+           <Navbar /> 
           {children}
-          {/* <ScrollToTopBtn /> */}
+          <ScrollToTopBtn />
           {/* <Footer /> */}
           {/* <Chatbot /> */}
           {/* <ToastContainer /> */}
