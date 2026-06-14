@@ -52,7 +52,7 @@ const categoryToSubmenu = (categories: ExamCategory, basePath: string) => {
 
 export const MenuItems: MenuItem[] = [
   { name: "Home", href: "/" },
- 
+
   {
     name: "Test Prep",
     href: "/test-prep",
@@ -63,10 +63,32 @@ export const MenuItems: MenuItem[] = [
     href: "/proctored-exam-help",
     submenu: categoryToSubmenu(examAidCategories, "/proctored-exam-help"),
   },
-   {
-    name: "Certificates Comparer",
-    href: "/it-certificate-comparer",
-   
+
+  {
+    name: "Certificate Tools",
+    href: "it-certificate-tools",
+    submenu: [
+      {
+        name: "Compare Certifications",
+        href: "/tools/compare",
+        group: "Career Tools",
+      },
+      {
+        name: "Certification Roadmap",
+        href: "/tools/roadmap",
+        group: "Career Tools",
+      },
+      {
+        name: "Recommend Certifications",
+        href: "/tools/recommend/certifications",
+        group: "Career Tools",
+      },
+      {
+        name: "Recommend Homelabs",
+        href: "/tools/recommend/homelabs",
+        group: "Career Tools",
+      },
+    ],
   },
   { name: "Blog", href: "/blog" },
   { name: "How It Works", href: "/how-it-works" },

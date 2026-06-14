@@ -7,6 +7,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 //import Footer from "../ui/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
+import QueryProvider from "@/provider/QueryProvider";
 //import Chatbot from "../ui/Chatbot";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -85,13 +86,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <UIProvider>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
-        >
-          <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
-          {/* <!-- Google Tag Manager (noscript) --> */}
-          {/* <noscript>
+      <QueryProvider>
+        <UIProvider>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
+          >
+            <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
+            {/* <!-- Google Tag Manager (noscript) --> */}
+            {/* <noscript>
             <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-KZHSPRPQ"
               height="0"
@@ -99,15 +101,16 @@ export default function RootLayout({
               style={{ display: "none", visibility: "hidden" }}
             ></iframe>
           </noscript> */}
-          {/* <!-- End Google Tag Manager (noscript) --> */}
-           <Navbar /> 
-          {children}
-          <ScrollToTopBtn />
-          {/* <Footer /> */}
-          {/* <Chatbot /> */}
-          {/* <ToastContainer /> */}
-        </body>
-      </UIProvider>
+            {/* <!-- End Google Tag Manager (noscript) --> */}
+            <Navbar />
+            {children}
+            <ScrollToTopBtn />
+            {/* <Footer /> */}
+            {/* <Chatbot /> */}
+            {/* <ToastContainer /> */}
+          </body>
+        </UIProvider>
+      </QueryProvider>
     </html>
   );
 }
