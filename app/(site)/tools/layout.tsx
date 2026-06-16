@@ -19,11 +19,10 @@ export default function ToolsLayout({ children }: { children: ReactNode }) {
           Tools
         </span>
         <h1 className="text-3xl font-bold text-secondary-800 mt-1">
-          Certification intelligence
+          Certification Preparation Support
         </h1>
         <p className="text-secondary-500 mt-2 max-w-xl">
-          Compare certifications, build your roadmap, and get personalised
-          recommendations based on your goals.
+          Whether you&apos;re pursuing cybersecurity, cloud, networking, or other IT certifications, we provide additionaly guidance and support to help candidates  navigate and aquire their certificates.
         </p>
       </div>
 

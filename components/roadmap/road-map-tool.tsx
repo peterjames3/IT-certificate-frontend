@@ -1,11 +1,16 @@
 "use client";
-// components/certifications/RoadmapTool.tsx
-import { useState } from "react";
+// components/roadmap/road-map-tool.tsx
+
+import { useState, useRef } from "react";
 import { Map, Loader2, AlertCircle, X } from "lucide-react";
 import { useRoadmap } from "@/hooks/useRoadmap";
 import RoadmapResults from "./road-map-results";
+import { validateRole } from "@/utils/validateRole";
+import type { Roadmap } from "@/types/api.types";
 
-const POPULAR_ROLES = [
+// ── Popular roles (allowlist — never validated, always accepted) ───────────────
+
+export const POPULAR_ROLES = [
   "SOC Analyst",
   "Cloud Security Engineer",
   "Penetration Tester",
@@ -16,29 +21,93 @@ const POPULAR_ROLES = [
   "Malware Analyst",
   "Threat Intelligence Analyst",
   "Digital Forensics Analyst",
-];
+] as const;
 
-export default function RoadmapTool() {
-  const [input, setInput]           = useState("");
-  const [submittedRole, setSubmittedRole] = useState("");
+export type AllowedRole = (typeof POPULAR_ROLES)[number];
 
-  const { data, isLoading, isFetching, error } = useRoadmap(submittedRole);
+function toSlug(role: string) {
+  return role.toLowerCase().trim().replace(/\s+/g, "-");
+}
 
-  function handleSubmit(role: string) {
-    const trimmed = role.trim();
-    if (!trimmed) return;
-    setSubmittedRole(trimmed);
+// ── Rate limit — max 1 new request per 3 seconds ──────────────────────────────
+
+function useRateLimit(ms = 3000) {
+  const lastRef = useRef<number>(0);
+  return () => {
+    const now = Date.now();
+    if (now - lastRef.current < ms) return false;
+    lastRef.current = now;
+    return true;
+  };
+}
+
+// ── Props ─────────────────────────────────────────────────────────────────────
+
+interface RoadmapToolProps {
+  initialData: Roadmap | null;
+  initialRole: AllowedRole;
+}
+
+// ── Component ─────────────────────────────────────────────────────────────────
+
+export default function RoadmapTool({
+  initialData,
+  initialRole,
+}: RoadmapToolProps) {
+  const [input, setInput] = useState("");
+  const [queriedRole, setQueriedRole] = useState(toSlug(initialRole));
+  const [validationError, setValidationError] = useState<string | null>(null);
+
+  const canSubmit = useRateLimit(3000);
+
+  const { data, isLoading, isFetching, error } = useRoadmap(
+    queriedRole,
+    toSlug(initialRole),
+    initialData,
+  );
+
+  const busy = isLoading || isFetching;
+
+  // ── Handlers ───────────────────────────────────────────────────────────────
+
+  function selectPopularRole(role: AllowedRole) {
+    // Popular roles bypass validation — they're trusted by definition
+    setInput("");
+    setValidationError(null);
+    setQueriedRole(toSlug(role));
+  }
+
+  function handleFreeTextSubmit() {
+    setValidationError(null);
+
+    if (!canSubmit()) {
+      setValidationError("Please wait a moment before searching again.");
+      return;
+    }
+
+    const result = validateRole(input);
+    if (!result.valid) {
+      setValidationError(result.error ?? "Invalid role.");
+      return;
+    }
+
+    setQueriedRole(toSlug(result.sanitised!));
   }
 
   function handleReset() {
     setInput("");
-    setSubmittedRole("");
+    setValidationError(null);
+    setQueriedRole(toSlug(initialRole));
   }
+
+  // ── Render ─────────────────────────────────────────────────────────────────
+
+  const activePopular = POPULAR_ROLES.find((r) => toSlug(r) === queriedRole);
 
   return (
     <div>
-      {/* Input card */}
       <div className="bg-white rounded-xl border border-neutral-200 shadow-sm p-6">
+        {/* Free-text input for custom IT roles */}
         <label
           htmlFor="role-input"
           className="block text-sm font-medium text-secondary-700 mb-2"
@@ -46,21 +115,31 @@ export default function RoadmapTool() {
           Target role
         </label>
 
-        {/* Search input */}
         <div className="relative flex gap-3">
           <div className="relative flex-1">
             <input
               id="role-input"
               type="text"
               value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSubmit(input)}
-              placeholder="e.g. SOC Analyst, Cloud Security Engineer..."
-              className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-sm text-secondary-800 placeholder:text-secondary-400 outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition-all bg-white pr-10"
+              onChange={(e) => {
+                setInput(e.target.value);
+                if (validationError) setValidationError(null);
+              }}
+              onKeyDown={(e) => e.key === "Enter" && handleFreeTextSubmit()}
+              placeholder="e.g. OT Security Analyst, AI Red Teamer…"
+              maxLength={60}
+              className={`w-full border rounded-lg px-4 py-3 text-sm text-secondary-800 placeholder:text-secondary-400 outline-none focus:ring-2 transition-all bg-white pr-10 ${
+                validationError
+                  ? "border-red-300 focus:border-red-400 focus:ring-red-100"
+                  : "border-neutral-200 focus:border-primary-500 focus:ring-primary-100"
+              }`}
             />
             {input && (
               <button
-                onClick={() => setInput("")}
+                onClick={() => {
+                  setInput("");
+                  setValidationError(null);
+                }}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-secondary-400 hover:text-secondary-600 transition-colors"
                 aria-label="Clear"
               >
@@ -70,18 +149,26 @@ export default function RoadmapTool() {
           </div>
 
           <button
-            onClick={() => handleSubmit(input)}
-            disabled={!input.trim() || isLoading || isFetching}
+            onClick={handleFreeTextSubmit}
+            disabled={!input.trim() || busy}
             className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-500 text-white text-sm font-medium hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
           >
-            {isLoading || isFetching ? (
+            {busy && !activePopular ? (
               <Loader2 className="w-4 h-4 animate-spin" />
             ) : (
               <Map className="w-4 h-4" />
             )}
-            {isLoading || isFetching ? "Generating..." : "Get Roadmap"}
+            {busy && !activePopular ? "Generating…" : "Get Roadmap"}
           </button>
         </div>
+
+        {/* Validation error */}
+        {validationError && (
+          <p className="mt-2 text-xs text-red-500 flex items-center gap-1">
+            <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+            {validationError}
+          </p>
+        )}
 
         {/* Popular roles */}
         <div className="mt-4">
@@ -90,12 +177,10 @@ export default function RoadmapTool() {
             {POPULAR_ROLES.map((role) => (
               <button
                 key={role}
-                onClick={() => {
-                  setInput(role);
-                  handleSubmit(role);
-                }}
-                className={`text-xs px-3 py-1.5 rounded-full border transition-colors ${
-                  submittedRole === role
+                onClick={() => selectPopularRole(role)}
+                disabled={busy}
+                className={`text-xs px-3 py-1.5 rounded-full border transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${
+                  activePopular === role
                     ? "bg-primary-500 text-white border-primary-500"
                     : "border-neutral-200 text-secondary-600 hover:border-primary-400 hover:text-primary-600 bg-white"
                 }`}
@@ -107,7 +192,7 @@ export default function RoadmapTool() {
         </div>
 
         {/* Reset */}
-        {data && !isLoading && (
+        {data && !busy && (
           <div className="mt-4 flex justify-end">
             <button
               onClick={handleReset}
@@ -120,7 +205,7 @@ export default function RoadmapTool() {
       </div>
 
       {/* Loading skeleton */}
-      {(isLoading || isFetching) && (
+      {busy && (
         <div className="mt-10 space-y-4 animate-pulse">
           <div className="h-10 bg-neutral-100 rounded-xl w-1/3" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -132,8 +217,8 @@ export default function RoadmapTool() {
         </div>
       )}
 
-      {/* Error */}
-      {error && !isLoading && (
+      {/* API error */}
+      {error && !busy && (
         <div className="mt-8 flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl p-5">
           <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
           <div>
@@ -148,9 +233,7 @@ export default function RoadmapTool() {
       )}
 
       {/* Results */}
-      {data && !isLoading && !isFetching && (
-        <RoadmapResults data={data!} />
-      )}
+      {data && !busy && <RoadmapResults data={data} />}
     </div>
   );
 }
