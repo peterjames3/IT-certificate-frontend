@@ -4,7 +4,7 @@ import "../globals.css";
 import Navbar from "@/components/navigation/navbar";
 import { GoogleTagManager } from "@next/third-parties/google";
 //import { ToastContainer } from "react-toastify";
-//import Footer from "../ui/components/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
 import QueryProvider from "@/provider/QueryProvider";
@@ -105,7 +105,7 @@ export default function RootLayout({
             <Navbar />
             {children}
             <ScrollToTopBtn />
-            {/* <Footer /> */}
+            <Footer /> 
             {/* <Chatbot /> */}
             {/* <ToastContainer /> */}
           </body>

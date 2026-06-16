@@ -165,7 +165,7 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <Row
               label="Total (year 1)"
               cells={certs.map((c) => (
-                <span className="font-medium text-secondary-900">
+                <span key={`${c.acronym}-total`} className="font-medium text-secondary-900">
                   {c.cost.totalFirstYearUSD}
                 </span>
               ))}
@@ -175,7 +175,9 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <SectionHeader icon={<BookOpen className="w-3.5 h-3.5" />} label="Difficulty" />
             <Row
               label="Score"
-              cells={certs.map((c) => <DifficultyBar score={c.difficulty.score} />)}
+              cells={certs.map((c) => (
+                <DifficultyBar key={`${c.acronym}-difficulty`} score={c.difficulty.score} />
+              ))}
             />
             <Row
               label="Study time"
@@ -203,7 +205,7 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <Row
               label="Avg salary"
               cells={certs.map((c) => (
-                <span className="font-medium text-secondary-900">
+                <span key={`${c.acronym}-avg-salary`} className="font-medium text-secondary-900">
                   {c.roles.avgSalaryUSD}
                 </span>
               ))}
@@ -211,7 +213,7 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <Row
               label="Salary impact"
               cells={certs.map((c) => (
-                <span className="text-primary-600 font-medium">
+                <span key={`${c.acronym}-salary-impact`} className="text-primary-600 font-medium">
                   {c.roles.salaryImpactUSD}
                 </span>
               ))}
@@ -220,6 +222,7 @@ export default function CompareResults({ data }: CompareResultsProps) {
               label="Job demand"
               cells={certs.map((c) => (
                 <span
+                  key={`${c.acronym}-job-demand`}
                   className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
                     DEMAND_COLOR[c.roles.jobDemand] ?? "bg-neutral-100 text-neutral-600"
                   }`}
@@ -235,7 +238,7 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <Row
               label="Ideal for"
               cells={certs.map((c) => (
-                <div className="flex flex-wrap gap-1">
+                <div key={`${c.acronym}-ideal-for`} className="flex flex-wrap gap-1">
                   {c.roles.idealFor.map((role) => (
                     <span
                       key={role}
@@ -250,7 +253,7 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <Row
               label="Top employers"
               cells={certs.map((c) => (
-                <div className="flex flex-wrap gap-1">
+                <div key={`${c.acronym}-top-employers`} className="flex flex-wrap gap-1">
                   {c.roles.topEmployers.map((emp) => (
                     <span
                       key={emp}
@@ -292,9 +295,15 @@ export default function CompareResults({ data }: CompareResultsProps) {
               label="Vendor neutral"
               cells={certs.map((c) =>
                 c.domains.vendorNeutral ? (
-                  <CheckCircle className="w-4 h-4 text-primary-500" />
+                  <CheckCircle
+                    key={`${c.acronym}-vendor-neutral`}
+                    className="w-4 h-4 text-primary-500"
+                  />
                 ) : (
-                  <XCircle className="w-4 h-4 text-secondary-400" />
+                  <XCircle
+                    key={`${c.acronym}-vendor-neutral`}
+                    className="w-4 h-4 text-secondary-400"
+                  />
                 )
               )}
             />
@@ -305,10 +314,10 @@ export default function CompareResults({ data }: CompareResultsProps) {
             <Row
               label="Topics covered"
               cells={certs.map((c) => (
-                <div className="flex flex-wrap gap-1">
-                  {c.domains.coveredTopics.map((t) => (
+                <div key={`${c.acronym}-topics`} className="flex flex-wrap gap-1">
+                  {c.domains.coveredTopics.map((t, idx) => (
                     <span
-                      key={t}
+                      key={`${c.acronym}-topic-${idx}`}
                       className="text-[10px] px-2 py-0.5 rounded-full bg-neutral-100 text-secondary-600"
                     >
                       {t}

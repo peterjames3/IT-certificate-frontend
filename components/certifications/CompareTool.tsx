@@ -1,31 +1,27 @@
 "use client";
 // components/certifications/CompareTool.tsx
 import { useState } from "react";
-import { ArrowLeftRight, Plus, X, Loader2, AlertCircle } from "lucide-react";
-import { useComparison } from "@/hooks/useComparisons";
+import { useRouter } from "next/navigation";
+import { ArrowLeftRight, Plus, X } from "lucide-react";
 import CertSearchInput from "./cert-search-input";
-import CompareResults from "./compare-results";
+import { buildCompareSlug } from "@/lib/compareSlugs";
 
 interface CertSlot {
-  slug:  string;
+  slug: string;
   label: string;
 }
 
 const EMPTY_SLOT: CertSlot = { slug: "", label: "" };
 
 export default function CompareTool() {
+  const router = useRouter();
   const [slots, setSlots] = useState<CertSlot[]>([
     { ...EMPTY_SLOT },
     { ...EMPTY_SLOT },
   ]);
-  // Submitted slugs — only set when user clicks Compare
-  const [submittedSlugs, setSubmittedSlugs] = useState<string[]>([]);
 
-  const validSlugs   = submittedSlugs.filter(Boolean);
-  const canCompare   = slots.filter((s) => s.slug).length >= 2;
-  const canAddSlot   = slots.length < 3;
-
-  const { data, isLoading, error, isFetching } = useComparison(validSlugs);
+  const canCompare = slots.filter((s) => s.slug).length >= 2;
+  const canAddSlot = slots.length < 3;
 
   function handleChange(index: number, slug: string, label: string) {
     setSlots((prev) => {
@@ -49,18 +45,15 @@ export default function CompareTool() {
 
   function handleRemoveSlot() {
     setSlots((prev) => prev.slice(0, -1));
-    // Also remove last submitted slug if present
-    setSubmittedSlugs((prev) => prev.slice(0, -1));
   }
 
   function handleCompare() {
     const slugs = slots.map((s) => s.slug).filter(Boolean);
-    setSubmittedSlugs(slugs);
-  }
-
-  function handleReset() {
-    setSlots([{ ...EMPTY_SLOT }, { ...EMPTY_SLOT }]);
-    setSubmittedSlugs([]);
+    if (slugs.length < 2) return;
+    // Navigate to the crawlable, server-rendered comparison page.
+    // The server pre-fetches the data, so this lands with full content
+    // already in the HTML — and the URL itself becomes indexable by Google.
+    router.push(`/it-certificate-tools/compare/${buildCompareSlug(slugs)}`);
   }
 
   return (
@@ -80,8 +73,8 @@ export default function CompareTool() {
                 i === 0
                   ? "e.g. CompTIA Security+"
                   : i === 1
-                  ? "e.g. CISSP"
-                  : "e.g. AWS Security Specialty"
+                    ? "e.g. CISSP"
+                    : "e.g. AWS Security Specialty"
               }
             />
           ))}
@@ -89,21 +82,15 @@ export default function CompareTool() {
 
         {/* Actions row */}
         <div className="flex flex-wrap items-center gap-3 mt-6">
-          {/* Compare button */}
           <button
             onClick={handleCompare}
-            disabled={!canCompare || isLoading || isFetching}
+            disabled={!canCompare}
             className="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-500 text-white text-sm font-medium hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            {isLoading || isFetching ? (
-              <Loader2 className="w-4 h-4 animate-spin" />
-            ) : (
-              <ArrowLeftRight className="w-4 h-4" />
-            )}
-            {isLoading || isFetching ? "Comparing..." : "Compare"}
+            <ArrowLeftRight className="w-4 h-4" />
+            Compare
           </button>
 
-          {/* Add 3rd cert */}
           {canAddSlot && (
             <button
               onClick={handleAddSlot}
@@ -114,7 +101,6 @@ export default function CompareTool() {
             </button>
           )}
 
-          {/* Remove 3rd cert */}
           {slots.length === 3 && (
             <button
               onClick={handleRemoveSlot}
@@ -124,53 +110,14 @@ export default function CompareTool() {
               Remove 3rd cert
             </button>
           )}
-
-          {/* Reset */}
-          {data && (
-            <button
-              onClick={handleReset}
-              className="ml-auto text-sm text-secondary-400 hover:text-secondary-600 transition-colors underline underline-offset-4"
-            >
-              Start over
-            </button>
-          )}
         </div>
 
-        {/* Helper text */}
         {!canCompare && (
           <p className="text-xs text-secondary-400 mt-3">
             Select at least 2 certifications to compare.
           </p>
         )}
       </div>
-
-      {/* Loading skeleton */}
-      {(isLoading || isFetching) && (
-        <div className="mt-10 animate-pulse space-y-4">
-          <div className="h-32 bg-neutral-100 rounded-xl" />
-          <div className="h-96 bg-neutral-100 rounded-xl" />
-        </div>
-      )}
-
-      {/* Error state */}
-      {error && !isLoading && (
-        <div className="mt-8 flex items-start gap-3 bg-red-50 border border-red-200 rounded-xl p-5">
-          <AlertCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-          <div>
-            <p className="text-sm font-medium text-red-700">
-              Failed to compare certifications
-            </p>
-            <p className="text-sm text-red-600 mt-0.5">
-              {error instanceof Error ? error.message : "Please try again."}
-            </p>
-          </div>
-        </div>
-      )}
-
-      {/* Results */}
-      {data && !isLoading && !isFetching && (
-        <CompareResults data={data} />
-      )}
     </div>
   );
 }

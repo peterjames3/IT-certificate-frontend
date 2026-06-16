@@ -56,10 +56,16 @@ export default function CertSearchInput({
   const [open, setOpen]       = useState(false);
   const containerRef          = useRef<HTMLDivElement>(null);
 
-  // Sync label when parent clears
-  useEffect(() => { 
-    setQuery(label); 
-  }, [label]);
+  // Sync label when parent clears — defer state update to avoid cascading renders
+  useEffect(() => {
+    if (label !== query) {
+      const timer = window.setTimeout(() => {
+        setQuery(label);
+      }, 0);
+
+      return () => window.clearTimeout(timer);
+    }
+  }, [label, query]);
 
   // Close on outside click
   useEffect(() => {

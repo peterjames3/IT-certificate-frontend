@@ -1,5 +1,8 @@
 
 import Hero from "@/components/Hero/hero-section";
+import StatsSection from "@/components/stats/stats-section"
+import { AnimatedBanner } from "@/components/ui/animated-banner";
+import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 // import StatsSection from "../ui/components/stats/stats-section";
 // import SubService from "../ui/components/heroservice/subservices-section";
 // import TestServices from "../ui/components/exam/test-services-section";
@@ -11,6 +14,7 @@ import Hero from "@/components/Hero/hero-section";
 // import PortalsSection from "../ui/portal-section"
 // import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
 import HomeSchema from "./_schema";
+import PortalsSection from "@/components/ui/portal-section";
 
 export const metadata = {
   title: "Pay Someone to Take My Online Exam | AllExamHelper",
@@ -22,6 +26,7 @@ export default function Page() {
     <main className="">
       <HomeSchema />
       <Hero />
+      <StatsSection />
       {/* <StatsSection />
       <SubService />
       <TestServices />
@@ -32,6 +37,9 @@ export default function Page() {
       <TestimonialsSection />
       <AnimatedBanner />
       <OtherLinksSection /> */}
+      <TestimonialsSection />
+      <PortalsSection />
+      <AnimatedBanner />
     </main>
   );
 }

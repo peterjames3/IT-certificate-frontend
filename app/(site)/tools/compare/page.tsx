@@ -1,6 +1,8 @@
 // app/(site)/it-certificate-tools/compare/page.tsx
 import { Metadata } from "next";
-import Comparetool from "@/components/certifications/compare-tools";
+import Link from "next/link";
+import Comparetool from "@/components/certifications/CompareTool";
+import { POPULAR_COMPARISONS, buildCompareSlug } from "@/lib/compareSlugs";
 
 export const metadata: Metadata = {
   title: "Compare Certifications | Certificate Tools — TestHelpNow",
@@ -26,6 +28,37 @@ export default function ComparePage() {
       </div>
 
       <Comparetool />
+
+      {/* Crawlable links to pre-built popular comparisons.
+          This also helps Google *discover* the [slug] pages via internal
+          linking, separate from generateStaticParams building them. */}
+      <section className="mt-14 max-w-3xl">
+        <h2 className="text-lg font-semibold text-secondary-800 mb-4">
+          Popular comparisons
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {POPULAR_COMPARISONS.map((pair) => {
+            const slug = buildCompareSlug(pair);
+            const label = pair
+              .map((s) =>
+                s
+                  .split("-")
+                  .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+                  .join(" "),
+              )
+              .join(" vs ");
+            return (
+              <Link
+                key={slug}
+                href={`/tools/compare/${slug}`}
+                className="text-sm px-4 py-2 rounded-full border border-neutral-200 text-secondary-600 hover:border-primary-400 hover:text-primary-600 transition-colors bg-white"
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 }
