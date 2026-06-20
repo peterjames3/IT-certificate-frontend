@@ -22,19 +22,19 @@ const stats: StatCard[] = [
   {
     number: 2000,
     suffix: "K +",
-    description: "Exam experts in 300+ subjects",
+    description: "Exam experts in 10+ Domains",
     bgColor: "bg-pink-100",
     iconColor: "bg-blue-400",
   },
   {
     number: 10000,
     suffix: "K +",
-    description: "Students Helped",
+    description: "Individual Helped",
     bgColor: "bg-purple-200",
     iconColor: "bg-pink-300",
   },
   {
-    number: 10,
+    number: 4,
     suffix: " +",
     description: "years in industry",
     bgColor: "bg-green-100",
@@ -115,7 +115,7 @@ function StatCard({
         <div
           className={`${stat.iconColor} w-9 h-8 p-4 rotate-45 mb-6 rounded-sm`}
         />
-        <div className="display font-bold text-primary mb-2">
+        <div className="display font-bold text-secondary mb-2">
           {formatNumber(count)}
           {stat.suffix}
         </div>

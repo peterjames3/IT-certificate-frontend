@@ -5,49 +5,57 @@ import GraphicCluster from "./graphic-cluster";
 export default function LearningSection() {
   const features = [
     {
-      label: "Active Engagement",
-      icon: "✨",
+      label: "Cert exam help online",
+      icon: "⏱️",
       color: "bg-emerald-50 text-emerald-700 border-emerald-100",
     },
     {
-      label: "Research-Based Content",
-      icon: "📝",
+      label: "Pass CompTIA fast",
+      icon: "⚡",
       color: "bg-orange-50 text-orange-700 border-orange-100",
     },
     {
-      label: "Adaptive Learning",
-      icon: "🧩",
+      label: "AWS cert cheat pass alternative",
+      icon: "☁️",
       color: "bg-purple-50 text-purple-700 border-purple-100",
     },
     {
-      label: "Optimizing Progress",
-      icon: "📊",
+      label: "Cheapest reliable proxy service",
+      icon: "💎",
       color: "bg-blue-50 text-blue-700 border-blue-100",
     },
   ];
 
   return (
-    <section className=" w-full py-16  bg-[#f4faf7] ">
+    <section className="w-full py-16 bg-[#f4faf7]">
       <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex flex-col lg:flex-row gap-12 items-center px-6">
         {/* Left Column: Content */}
         <div className="w-full lg:w-1/2">
           <span className="text-xs font-bold tracking-widest text-emerald-600 uppercase">
-            Our Approach
+            Expedited Delivery & Support
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight">
-            Innovative and effective <br className="hidden sm:inline" />{" "}
-            learning approaches
+            On-Demand Proctored IT Exam Help  With
+            Guaranteed Results
           </h2>
 
-          <p className="text-slate-600 max-w-xl leading-relaxed text-sm md:text-base">
-            Empower your journey with tailor-made methodologies designed to
-            accelerate knowledge retention, foster collaborative environments,
-            and unlock practical skills seamlessly.
+          <p className="text-slate-600 max-w-xl leading-relaxed text-sm md:text-base mt-4">
+            Struggling with a looming deadline or figuring out{" "}
+            <span className="font-semibold text-slate-800">
+              how to pass CompTIA Network+ without studying
+            </span>
+            ? Our system acts as an ultimate{" "}
+            <span className="font-semibold text-slate-800">
+              online exam helper
+            </span>
+            . We fast-track your certifications before your corporate vouchers
+            expire, providing a secure and professional shortcut to high-tier
+            industry badges.
           </p>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
             {features.map((feature, index) => (
               <FeatureButton
                 key={index}
@@ -59,9 +67,9 @@ export default function LearningSection() {
           </div>
 
           {/* Call to Action */}
-          <div className="pt-6">
+          <div className="pt-8">
             <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-emerald-500 rounded-full hover:bg-emerald-600 transition-colors shadow-sm shadow-emerald-200 group">
-              Get Started
+              Book Urgent Slot
               <svg
                 className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
                 fill="none"

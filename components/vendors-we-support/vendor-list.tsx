@@ -1,29 +1,29 @@
 "use client";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { 
-  Award, 
-  Cloud, 
-  Network, 
-  ShieldAlert, 
-  LayoutGrid, 
-  Terminal, 
+import {
+  Award,
+  Cloud,
+  Network,
+  ShieldAlert,
+  LayoutGrid,
+  Terminal,
   Layers,
-  ShieldCheck 
+  ShieldCheck,
 } from "lucide-react";
 
 const examServices = [
   {
     icon: Award,
-    title: "General IT / Foundational Support",
-    subtitle: "CompTIA Tracks",
-    tags: ["CompTIA Neutral", "⭐ Core Fundamentals"],
+    title: "Foundational Cert proxy service",
+    subtitle: "CompTIA Tracks (A+, Network+, Security+)",
+    tags: ["Pass CompTIA fast", "⭐ Core Security"],
     description:
-      "Expert exam handling for foundational to mid-level IT tracks. Pass your CompTIA A+, Network+, Security+, Linux+, Cloud+, CySA+, or PenTest+ benchmarks reliably with specialized remote technical support.",
+      "Deploy premium remote configurations to pass CompTIA fast. Secure your certification goals using a tailored online exam helper built specifically for Security+, Network+, and A+ baseline tiers.",
     features: [
-      "Covers A+, Network+, & Security+",
-      "Advanced CySA+ & PenTest+ tracks",
-      "Full webcam/lockdown sandbox prep",
+      "Pay someone to take my CompTIA Security+ exam support",
+      "How to pass CompTIA Network+ without studying tracks",
+      "Hire a professional test taker for CompTIA A+ core 1 & 2",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
@@ -37,15 +37,15 @@ const examServices = [
   },
   {
     icon: Cloud,
-    title: "Cloud Engineering Systems",
-    subtitle: "AWS, Azure & Google Cloud",
-    tags: ["Cloud Platforms", "⭐ Hyper-Scale"],
+    title: "AWS Exam Proxy & Cloud Systems",
+    subtitle: "AWS, Azure & Google Cloud (GCP)",
+    tags: ["Cloud Platforms", "⭐ Hyper-Scale Architecture"],
     description:
-      "Comprehensive solutions architectures management maps across major multi-cloud vendor environments including AWS Solutions Architect, Azure Fundamentals (AZ-900), and Google Cloud Architect.",
+      "Comprehensive multi-cloud proxy testing IT configurations. Sit back while certified infrastructure experts connect securely to pass advanced role-based vendor platforms on your first attempt.",
     features: [
-      "AWS Practitioner up to Professional",
-      "Azure AZ-900 up to Expert role-based",
-      "GCP Associate & Architect tracks",
+      "Pay someone to take my AWS Solutions Architect exam maps",
+      "Hire an expert to pass Azure AZ-104 administrator codes",
+      "Can I pay someone to do my GCP Cloud Engineer test instances",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
@@ -59,15 +59,15 @@ const examServices = [
   },
   {
     icon: Network,
-    title: "Core Enterprise Networking",
+    title: "Core Enterprise Networking Help",
     subtitle: "Cisco & Juniper Infrastructure",
-    tags: ["Networking Systems", "Infrastructure"],
+    tags: ["CCNA exam helper", "Infrastructure Mapping"],
     description:
-      "Rigorous simulation handling for advanced routing and switching pipelines. Full lifecycle coverage for deep engineering tracks including Cisco CCNA/CCNP portfolios and Juniper enterprise paths.",
+      "Rigorous simulation bypass workflows matching advanced routing and switching pipelines. Full command coverage for complex corporate test sandboxes and multi-tier network validation environments.",
     features: [
-      "Cisco CCNA & CCNP paths managed",
-      "Juniper JNCIA through JNCIE maps",
-      "Topology and lab configurations setup",
+      "Hire a proxy for Cisco CCNA proctored exam blocks",
+      "Full Cisco CCNP routing & switching profile delivery",
+      "Juniper JNCIA through JNCIE software setup",
     ],
     stats: [
       { value: "99.4%", label: "Pass rate" },
@@ -81,15 +81,15 @@ const examServices = [
   },
   {
     icon: ShieldAlert,
-    title: "Advanced Cybersecurity Ops",
+    title: "Advanced Cybersecurity Operations",
     subtitle: "Defensive & Offensive Profiles",
-    tags: ["Cybersecurity", "⭐ Highly Valued"],
+    tags: ["Security Systems", "⭐ Enterprise Grade"],
     description:
-      "Specialized proctor strategies for elite security certifications. Certified security personnel support for administrative management profiles like CISSP/CISM as well as offensive validation tracks like CEH and OSCP.",
+      "Premium proctor bypass methods for elite cybersecurity certifications. Secure your next organizational tier without risking verification updates or screen share detection algorithms.",
     features: [
-      "Management: CISSP, CISM, & ISACA",
-      "Offensive: CEH & hands-on OSCP",
-      "Deep technical GIAC / SANS blueprints",
+      "Cheapest reliable proxy service for Security plus cert levels",
+      "Can someone take my proctored CompTIA test online securely",
+      "Certified delivery options for CISSP, CEH, & OSCP frameworks",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
@@ -103,15 +103,15 @@ const examServices = [
   },
   {
     icon: LayoutGrid,
-    title: "Project Management & ITSM",
+    title: "Project Management & ITSM Help",
     subtitle: "PMP, Agile & ITIL Frameworks",
     tags: ["Project Management", "IT Service Management"],
     description:
-      "Process optimization support for delivery leads. Complete structural oversight for managing service delivery methodologies under strict PMI PMP specifications, ITIL v4 frameworks, or Scrum implementations.",
+      "Process optimization support for enterprise delivery leads. Complete structural oversight for passing service delivery methodologies under strict PMI PMP or ITIL v4 specifications.",
     features: [
-      "PMP 180-question domain management",
-      "ITIL v4 Service operations maps",
-      "Agile Scrum (PSM/CSM) validation",
+      "PMP 180-question domain management delivery",
+      "ITIL v4 Service operations maps verification",
+      "Agile Scrum (PSM/CSM) validation options",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
@@ -127,13 +127,13 @@ const examServices = [
     icon: Terminal,
     title: "Linux & Enterprise Systems",
     subtitle: "LPI & Red Hat Operations",
-    tags: ["Systems Admin", "Open Source"],
+    tags: ["Pass Red Hat exam online", "Open Source Labs"],
     description:
-      "Practical execution strategies for command line environments and systems automation frameworks. Targeted handling for Red Hat performance exams and multi-tier LPIC administration tracks.",
+      "Targeted Linux Professional Institute LPI exam help services paired with automated deployment setups. Complete performance verification labs successfully without hours of CLI preparation.",
     features: [
-      "Hands-on RHCSA & RHCE execution",
-      "LPIC-1, LPIC-2, & LPIC-3 tiers",
-      "Shell automation & configuration profiles",
+      "Pay someone to pass Red Hat Certified System Administrator (RHCSA)",
+      "Take my Red Hat Certified Engineer lab exam for me schedules",
+      "Professional proxy testing for enterprise Linux certs (LPIC Tiers)",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
@@ -147,15 +147,15 @@ const examServices = [
   },
   {
     icon: Layers,
-    title: "Virtualization & Data Center",
+    title: "Virtualization & Data Center Systems",
     subtitle: "VMware Infrastructures",
-    tags: ["Virtualization", "Data Center"],
+    tags: ["Virtualization", "Data Center Platforms"],
     description:
       "Strategic verification models matching Software-Defined Data Center architectures. Clear configuration controls targeting VMware Certified Professional (VCP) pipelines.",
     features: [
-      "VMware VCP baseline execution",
-      "Hypervisor storage & configuration paths",
-      "Data Center virtualization profiles",
+      "VMware VCP baseline execution tracking",
+      "Hypervisor storage & configuration maps",
+      "Data Center virtualization infrastructure profiles",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
@@ -181,21 +181,22 @@ export default function VendorListSection() {
       viewport={{ once: true, margin: "-100px" }}
       className="py-16 px-4 bg-white"
     >
-     <motion.h2
+      <motion.h2
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
         className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4"
       >
-        Expert Help for Every Major IT Certification
+        Expert Cert Exam Help for Every Major Technical Track
       </motion.h2>
       <motion.p
-        className="text-xl text-primary mb-12 text-center"
+        className="text-xl text-secondary mb-12 text-center"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        Certified engineering and security specialists equipped to help you pass your technical certification exams.
+        Main domains where our Certified engineering and security specialists will to help you pass
+        your technical certification exams.
       </motion.p>
 
       <motion.div
@@ -219,8 +220,8 @@ export default function VendorListSection() {
                     key={i}
                     className={`text-sm text-center font-semibold px-3 py-2 rounded-full ${
                       tag.includes("⭐")
-                        ? "bg-[#2DBF50] text-white border border-green-700"
-                        : "bg-accent2 text-primary border border-gray-600"
+                        ? "bg-primary-500 text-white border border-primary-700"
+                        : "bg-primary-50 text-secondary border border-secondary-600"
                     }`}
                   >
                     {tag}
@@ -234,10 +235,10 @@ export default function VendorListSection() {
                   <Icon size={36} strokeWidth={1.5} className="text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-primary font-bold text-lg leading-tight">
+                  <h3 className="text-secondary-900 font-bold text-lg leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mt-1">
+                  <p className="text-secondary-500 text-sm mt-1">
                     {service.subtitle}
                   </p>
                 </div>
@@ -255,7 +256,7 @@ export default function VendorListSection() {
                     key={i}
                     className="flex items-center gap-3 text-sm text-gray-600"
                   >
-                    <span className="w-[18px] h-[18px] bg-primary rounded-full flex items-center justify-center shrink-0">
+                    <span className="size-4.5 bg-secondary rounded-full flex items-center justify-center shrink-0">
                       <svg
                         width="10"
                         height="10"
@@ -298,7 +299,7 @@ export default function VendorListSection() {
               </p> */}
 
               {/* Guarantee */}
-              <div className="flex items-center gap-2 bg-green-950/50 border border-green-800/50 rounded-lg px-4 py-2.5 text-primary text-sm font-medium">
+              <div className="flex items-center gap-2 bg-green-950/50 border border-green-800/50 rounded-lg px-4 py-2.5 text-white text-sm font-medium">
                 <ShieldCheck size={16} strokeWidth={2} />
                 100% money-back if you don&apos;t pass
               </div>
@@ -312,7 +313,7 @@ export default function VendorListSection() {
               </button>
               <Link
                 href={service.learnMore.href}
-                className="text-center text-primary text-sm underline underline-offset-2 hover:opacity-80 transition-opacity"
+                className="text-center text-secondary text-sm underline underline-offset-2 hover:opacity-80 transition-opacity"
               >
                 {service.learnMore.label}
               </Link>

@@ -5,20 +5,20 @@ import { HeroRight } from "./hero-right";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-tr from-[#f4fbf7] via-[#ffffff] to-[#f0f9ff] py-16 md:py-24 px-4 sm:px-6 lg:px-8 mt-35">
+    <section className="relative w-full overflow-hidden bg-linear-to-tr from-primary-50 via-[#ffffff] to-[#f0f9ff] py-16 md:py-24 px-4 sm:px-6 lg:px-8 mt-35">
       {/* Background Decorative Mesh Blobs */}
       <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-emerald-100/40 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-5%] right-[-5%] w-[35vw] h-[35vw] rounded-full bg-sky-100/30 blur-[100px] pointer-events-none" />
 
       {/* Main Content Layout Wrapper */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="w-full  max-w-full lg:max-w-310 xl:max-w-360 mx-auto flex flex-col gap-10 lg:flex-row md:justify-between">
         {/* Left Interactive Column */}
-        <div className="lg:col-span-7 order-2 lg:order-1">
+        <div className="w-full lg:w-1/2">
           <HeroLeft />
         </div>
 
         {/* Right Graphical Column */}
-        <div className="lg:col-span-5 order-1 lg:order-2">
+        <div className="w-full lg:w-1/2">
           <HeroRight />
         </div>
       </div>

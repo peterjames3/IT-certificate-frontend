@@ -18,6 +18,7 @@ import LearningSection from '@/components/learning-section/learningsection';
 // import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
 import HomeSchema from "./_schema";
 import PortalsSection from "@/components/ui/portal-section";
+import FAQSection from "@/components/faq/home-page-faq"
 
 export const metadata = {
   title: "Pay Someone to Take My Online Exam | AllExamHelper",
@@ -44,9 +45,11 @@ export default function Page() {
       <AnimatedBanner />
       <OtherLinksSection /> */}
       <SEOContent />
-      <TestimonialsSection />
       <PortalsSection />
+      <TestimonialsSection />
+      
       <AnimatedBanner />
+      <FAQSection />
     </main>
   );
 }

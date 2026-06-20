@@ -11,13 +11,13 @@ interface StatCardProps {
 }
 
 const StatCard = memo<StatCardProps>(({ stat, index, isVisible }) => {
-  //console.log(`📊 Rendering StatCard ${index}, isVisible:`, isVisible);
+ 
 
   const { count, setIsActive } = useCountUp(stat.number, 2000, index * 200);
 
   useEffect(() => {
     if (isVisible) {
-      //console.log(`🎯 Activating counter for card ${index}`);
+      
       setIsActive(true);
     }
   }, [isVisible, setIsActive, index]);

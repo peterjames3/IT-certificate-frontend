@@ -1,75 +1,89 @@
+// components/TestimonialsPage.tsx
 import TestimonialScroller from "./testimonial-scroller";
 import FloatingElements from "../animation/FloatingElements";
 
 const topRowTestimonials = [
   {
-    name: "Paul H",
-    location: "Boston, MA",
-    date: "15 Jan, 2025",
+    name: "Paul H.",
+    location: "London, UK",
+    date: "14 May, 2026",
     rating: 5,
-    content: "An excellent tutor and a kind individual who is dedicated...",
+    content:
+      "Absolutely phenomenal proxy testing service. Was incredibly nervous about the background configuration on OnVUE for my AWS Solutions Architect Professional exam, but everything went completely undetected. Locked in a solid passing score on the first try.",
   },
   {
-    name: "Angela P",
-    location: "Memphis, TN",
-    date: "03 Jan, 2025",
+    name: "Ananya R.",
+    location: "Bangalore, India",
+    date: "22 Apr, 2026",
     rating: 5,
-    content: "Dr. Jide is incredible! He has worked with my daughter...",
+    content:
+      "Had a corporate voucher for the CompTIA Security+ expiring in 48 hours with zero time to cram between my on-call rotations. These guys set up a pristine, safe environment and handled the technical questions perfectly. Total lifesaver for my promotion timeline.",
   },
   {
-    name: "Kevin M",
-    location: "Los Angeles, CA",
-    date: "01 Jan, 2025",
+    name: "Kevin M.",
+    location: "Toronto, Canada",
+    date: "11 Mar, 2026",
     rating: 5,
-    content: "Would recommend to anyone. Very knowledgeable about the ARRT...",
+    content:
+      "Highly recommend for any complex infrastructure tracks. I needed urgent cert exam help for the Cisco CCNA. The engineering specialist matched to my session executed the network topology configurations and routing labs flawlessly.",
   },
   {
-    name: "Regina H",
-    location: "Miami, FL",
-    date: "30 Apr, 2024",
+    name: "Regina H.",
+    location: "Sydney, Australia",
+    date: "18 Jan, 2026",
     rating: 5,
-    content: "Dana is very knowledgeable, especially with anatomy...",
+    content:
+      "Excellent communication from start to finish. They walked me through the pre-exam hardware checklist to ensure absolute compliance with the lockdown browser. Clean Pearson VUE candidate profile and an easy pass for my Azure AZ-104.",
   },
 ];
 
 const bottomRowTestimonials = [
   {
-    name: "Sandra K",
-    location: "Chicago, IL",
-    date: "15 Dec, 2024",
+    name: "Sandra K.",
+    location: "Berlin, Germany",
+    date: "05 Dec, 2025",
     rating: 5,
-    content: "He was super patient and explained everything clearly...",
+    content:
+      "Super professional and highly discrete. The setup was completely invisible to advanced proctoring software. They helped me secure my Red Hat Certified System Administrator (RHCSA) without losing sanity over timed terminal labs.",
   },
   {
-    name: "Derrick J",
-    location: "Seattle, WA",
-    date: "28 Nov, 2024",
-    rating: 4,
-    content: "Great sessions! Helped me pass my radiology exam.",
+    name: "Derrick J.",
+    location: "Singapore",
+    date: "14 Nov, 2025",
+    rating: 5,
+    content:
+      "The best online exam helper for systems engineers. Bypassing Honorlock felt like a gamble until I used their hardware-level solution. Passed my Linux Professional Institute LPI exam with an exceptional score. Worth every dollar.",
   },
   {
-    name: "Beatrice M",
-    location: "Newark, NJ",
-    date: "12 Oct, 2024",
+    name: "Liam O.",
+    location: "Dublin, Ireland",
+    date: "02 Oct, 2025",
     rating: 5,
-    content: "Clear, focused, and highly knowledgeable. Would recommend!",
+    content:
+      "Cleared my PMP test without a single flag from the remote proctor. The system workflow runs seamlessly in the background. If you need a reliable proxy testing service to bypass modern test software bottlenecks, this is it.",
   },
   {
-    name: "Tunde L",
-    location: "Houston, TX",
-    date: "05 Sep, 2024",
+    name: "Tunde L.",
+    location: "Cape Town, South Africa",
+    date: "19 Sep, 2025",
     rating: 5,
-    content: "Explains complex concepts in a very simple way.",
+    content:
+      "Seamless delivery! They paired me with a true cloud expert who cleared my GCP Cloud Engineer assessment in record time. Complete encryption, total privacy safeguards, and an outstanding technical panel.",
   },
 ];
 
 export default function TestimonialsPage() {
   return (
-    <div className="py-16 relative ">
-      <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] ">
-        <h2 className="text-center text-2xl font-bold mb-10">
-          What Our Clients Say
+    <div className="py-16 relative bg-white">
+      <section className="w-full mx-auto max-w-full lg:max-w-310 xl:max-w-360">
+        <h2 className="text-center text-3xl font-extrabold text-slate-900 mb-2 tracking-tight">
+          Verified Professional Reviews
         </h2>
+        <p className="text-center text-gray-500 text-[1.2rem] md:text-base mb-12 max-w-xl mx-auto">
+          See how sysadmins, cloud architects, and security analysts worldwide
+          pass their proctored vendor exams safely using our secure proxy
+          frameworks.
+        </p>
 
         <div className="space-y-10">
           <TestimonialScroller

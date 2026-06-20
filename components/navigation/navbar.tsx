@@ -27,8 +27,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-6 ${
         isScrolled
-          ? "bg-gradient-to-r from-white/90 via-green-50/80 to-white/90 backdrop-blur-lg shadow-xl border-b border-white/20"
-          : "bg-gradient-to-r from-[#CEF3D6] to-[#FFEEEB]"
+          ? "bg-linear-to-r from-white/90 via-green-50/80 to-white/90 backdrop-blur-lg shadow-xl border-b border-white/20"
+          : "bg-linear-to-r from-primary-50 via-[#ffffff] to-[#f0f9ff]"
       }`}
     >
       <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]">
@@ -89,8 +89,8 @@ export default function Navbar() {
             onClick={() => dispatch({ type: "SHOW_HELP" })}
             type="button"
             className="cta hover:cursor-pointer"
-            aria-label='Get help now'
-            aria-pressed='false'
+            aria-label="Get help now"
+            aria-pressed="false"
           >
             Get Help Now
           </button>

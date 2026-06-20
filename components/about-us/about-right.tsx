@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowRight, ShieldAlert, Laptop } from "lucide-react";
 import Link from "next/link";
 import Bookstack3D from "./bookstack-3d";
 import WavyTexture from "./wavy-texture";
@@ -6,7 +6,7 @@ import WavyTexture from "./wavy-texture";
 export default function AboutRight() {
   return (
     <section className="w-full  space-y-4 px-8 py-8  relative">
-      <div className="absolute -top-16 -right-2">
+      <div className="absolute -top-14 -right-2">
         <WavyTexture />
       </div>
       {/* Eyebrow */}
@@ -19,57 +19,57 @@ export default function AboutRight() {
 
       {/* Heading */}
       <h2 className="text-3xl md:text-5xl font-bold text-secondary-900 leading-snug">
-        Who We Are – Introduction to Educate Online Platform
+        Who We Are – Premium IT Proctored Exam Takers
       </h2>
 
       {/* Paragraph */}
       <p className="text-sm md:text-base text-secondary-600 leading-relaxed">
-        Educate the ultimate destination for knowledge seekers and educators
-        alike. We are committed to transforming special education impact global
-        channels without constraints complaint systems.
+        If you need to pay someone to take your Pearson VUE exam online or
+        discover how to bypass OnVUE proctoring software safely, our platform
+        provides discrete, enterprise-grade deployment experts to secure your
+        technical path.
       </p>
 
-      {/*tags */}
-      <div className="w-full flex items-center justify-between">
+      {/* Tags Row */}
+      <div className="w-full flex items-center justify-between gap-4 pt-1">
         <div className="flex gap-2 items-center">
-          <span className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <Sparkles size={24} />
+          <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Laptop size={16} />
           </span>
-          <p className="text-sm text-secondary-500 mt-1">
-            Innovative learning style
+          <p className="text-xs md:text-sm text-secondary-500 font-medium">
+            IT exam help solutions
           </p>
         </div>
         <div className="flex gap-2 items-center">
-          <span className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10 text-primary">
-            <GraduationCap size={24} />
+          <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <ShieldAlert size={16} />
           </span>
-          <p className="text-sm text-secondary-500 mt-1">
-            WorldWide intelligent leaners
+          <p className="text-xs md:text-sm text-secondary-500 font-medium">
+            Clean Pearson VUE profile
           </p>
         </div>
       </div>
 
-      {/* Stats row */}
-      <div className="flex flex-wrap justify-between pt-2">
+      {/* Stats row - Pivot to track records across Cloud & Systems Domains */}
+      <div className="flex flex-wrap justify-between gap-4 pt-2">
         <div className="flex items-center gap-3">
-          <p className="text-4xl font-bold text-secondary-900 leading-none">
-            30+
+          <p className="text-3xl md:text-4xl font-bold text-secondary-900 leading-none">
+            50+
           </p>
           <div>
-            <p className="text-sm text-secondary-500 mt-1">
-              Expert and Professional  <br /> all instructor
+            <p className="text-xs text-secondary-500 leading-tight">
+              AWS exam takers & <br /> Linux LPI specialists
             </p>
           </div>
         </div>
 
         <div className="flex items-center gap-3">
-          <p className="text-4xl font-bold text-secondary-900 leading-none">
-            6k+
+          <p className="text-3xl md:text-4xl font-bold text-secondary-900 leading-none">
+            99.4%
           </p>
           <div>
-            <p className="text-sm text-secondary-500 mt-1">
-              Enrolled students
-             all  Over <br /> the World
+            <p className="text-xs text-secondary-500 leading-tight">
+              Pass rates across <br /> Red Hat & Cisco labs
             </p>
           </div>
         </div>
