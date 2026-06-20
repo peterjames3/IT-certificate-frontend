@@ -3,6 +3,9 @@ import Hero from "@/components/Hero/hero-section";
 import StatsSection from "@/components/stats/stats-section"
 import { AnimatedBanner } from "@/components/ui/animated-banner";
 import TestimonialsSection from "@/components/Testimonial/testimonials-section";
+import AboutUsSection from "@/components/about-us/aboutus-section";
+import VendorListSection from "@/components/vendors-we-support/vendor-list";
+import LearningSection from '@/components/learning-section/learningsection';
 // import StatsSection from "../ui/components/stats/stats-section";
 // import SubService from "../ui/components/heroservice/subservices-section";
 // import TestServices from "../ui/components/exam/test-services-section";
@@ -10,7 +13,7 @@ import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 // import SuccessPath from "../ui/components/path/success-path";
 // import TestimonialsSection from "../ui/components/Testimonial/testimonials-section";
 // import { AnimatedBanner } from "../ui/animated-banner";
-// import SEOContent from '../ui/seo-content'
+ import SEOContent from '@/components/ui/proctored-seo-content'
 // import PortalsSection from "../ui/portal-section"
 // import { OtherLinksSection } from "../ui/components/otherlinks/other-links-section";
 import HomeSchema from "./_schema";
@@ -27,6 +30,9 @@ export default function Page() {
       <HomeSchema />
       <Hero />
       <StatsSection />
+      <AboutUsSection />
+      <VendorListSection />
+      <LearningSection />
       {/* <StatsSection />
       <SubService />
       <TestServices />
@@ -37,6 +43,7 @@ export default function Page() {
       <TestimonialsSection />
       <AnimatedBanner />
       <OtherLinksSection /> */}
+      <SEOContent />
       <TestimonialsSection />
       <PortalsSection />
       <AnimatedBanner />
