@@ -21,7 +21,7 @@ const DropdownMenu = ({ submenu }: { submenu: SubMenuItem[] }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
-      className="absolute left-0 mt-2 w-[30rem] bg-background shadow-xl rounded-lg z-50 p-4"
+      className="absolute left-0 mt-2 w-[40rem] bg-background shadow-xl rounded-lg z-50 p-4"
     >
       {/* Container with fixed height and scroll */}
       <div
@@ -31,7 +31,7 @@ const DropdownMenu = ({ submenu }: { submenu: SubMenuItem[] }) => {
         <div className="grid grid-cols-2 gap-4">
           {Object.entries(groupedItems).map(([group, items]) => (
             <div key={group} className="space-y-2">
-              <h3 className="font-bold text-primary border-b pb-1 sticky top-0 bg-white z-10">
+              <h3 className="font-bold text-secondary border-b pb-1 sticky top-0 bg-white z-10">
                 {group}
               </h3>
               <ul className="space-y-1">
@@ -41,8 +41,8 @@ const DropdownMenu = ({ submenu }: { submenu: SubMenuItem[] }) => {
                       href={item.href}
                       className={`block px-2 py-1 rounded transition ${
                         pathname === item.href
-                          ? "text-secondary"
-                          : "text-primary"
+                          ? "text-[#10b981]"
+                          : "text-secondary"
                       } `}
                     >
                       {item.name}

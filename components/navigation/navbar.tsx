@@ -31,12 +31,12 @@ export default function Navbar() {
           : "bg-linear-to-r from-primary-50 via-[#ffffff] to-[#f0f9ff]"
       }`}
     >
-      <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px]">
+      <section className="w-full mx-auto max-w-full lg:max-w-310 xl:max-w-360">
         <ContactBar isScrolled={false} />
       </section>
-      <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex items-center justify-between gap-6 px-4 md:px-2 lg:px-3">
+      <div className="w-full mx-auto max-w-full lg:max-w-310 xl:max-w-360 flex items-center justify-between gap-6 px-4 md:px-2 lg:px-3">
         {/* Logo */}
-        <nav className="font-bold text-[1.2rem] lg:text-[1.5rem]">
+        <nav className="font-bold text-[1.2rem] lg:text-headline">
           <Link href="/" className="flex items-center gap-1 lg:gap-2">
             <Image
               src="/favicon-32x32.png"
@@ -66,7 +66,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   className={`hover:text-primary transition-colors ${
-                    pathname === item.href ? "text-secondary" : "text-primary"
+                    pathname === item.href ? "text-[#10b981] font-sem" : "text-secondary"
                   }`}
                 >
                   {item.name}

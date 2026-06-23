@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { CertificationCard } from "./certificate-cards";
 
+
 export const HeroRight = () => {
   return (
     <div className="relative w-full  mx-auto flex items-center justify-center ">

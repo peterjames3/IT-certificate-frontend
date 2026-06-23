@@ -1,8 +1,9 @@
+"use client";
 // components/HeroSection.tsx
 
 import { HeroLeft } from "./hero-left";
 import { HeroRight } from "./hero-right";
-
+import { motion } from "framer-motion";
 export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-linear-to-tr from-primary-50 via-[#ffffff] to-[#f0f9ff] py-16 md:py-24 px-4 sm:px-6 lg:px-8 mt-35">
@@ -18,9 +19,16 @@ export default function HeroSection() {
         </div>
 
         {/* Right Graphical Column */}
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          key="hero-right"
+          initial={{ opacity: 0, scale: 0.85, z: -100, filter: "blur(8px)" }}
+          animate={{ opacity: 1, scale: 1, z: 0, filter: "blur(0px)" }}
+          exit={{ opacity: 0, scale: 0.85, z: -100, filter: "blur(8px)" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="w-full lg:w-1/2"
+        >
           <HeroRight />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

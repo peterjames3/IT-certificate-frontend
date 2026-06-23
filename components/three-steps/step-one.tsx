@@ -17,30 +17,31 @@ export default function StepOne() {
         </nav>
          
         <h2 className="headline font-semibold mb-2">
-          Choose Your <span className="text-secondary">Exam Help</span> Service.
+          Choose Your <span className="text-accent-700">Exam Help</span>{" "}
+          Service.
         </h2>
          {/* ── UPDATED: service names are now internal links ── */}
-        <p className="text-[1rem] lg:text-[1.3rem] text-primary mb-4">
+        <p className="text-[1rem] lg:text-[1.3rem] text-secondary mb-4">
           Pick from{" "}
           <Link
             href="/academic/tutoring"
-            className="text-secondary underline underline-offset-2 hover:opacity-80 transition-opacity"
+            className="text-primary-700 underline underline-offset-2 hover:opacity-80 transition-opacity"
           >
-            Online Tutoring
+            Take my cloud exam 
           </Link>
           ,{" "}
           <Link
             href="/test-prep"
-            className="text-secondary underline underline-offset-2 hover:opacity-80 transition-opacity"
+            className="text-primary-700 underline underline-offset-2 hover:opacity-80 transition-opacity"
           >
-            Exam Preparation
+            Take my Security exam
           </Link>
           , or{" "}
           <Link
             href="/proctored-exam-help"
-            className="text-secondary underline underline-offset-2 hover:opacity-80 transition-opacity"
+            className="text-primary-700 underline underline-offset-2 hover:opacity-80 transition-opacity"
           >
-            Full Proctored Exam Support
+            Take my  linux exam
           </Link>{" "}
           — we cover every type of support you need.
         </p>
@@ -48,7 +49,7 @@ export default function StepOne() {
         <article className="flex gap-4 text-start">
           <article className="bg-accent2 p-4 rounded w-1/2">
             <h3 className="text-secondary font-bold text-2xl">94%</h3>
-            <p className="p-text text-primary mb-2">
+            <p className="p-text text-secondary-500 mb-2">
               of students reported increased confidence when receiving
               personalized exam prep guidance, rather than studying alone.
             </p>
@@ -59,7 +60,7 @@ export default function StepOne() {
            
           <div className="bg-accent2 p-4 rounded w-1/2">
             <h3 className="text-secondary font-bold text-2xl">85%</h3>
-            <p className="p-text text-primary">
+            <p className="p-text text-secondary-500">
               of learners choose services that are tailored to their exact exam
               goals — whether it&apos;s one-on-one tutoring, test strategy
               sessions, or full prep programs.

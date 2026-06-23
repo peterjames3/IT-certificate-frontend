@@ -8,6 +8,8 @@ import Footer from "@/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import { UIProvider } from "@/context/UIContext";
 import QueryProvider from "@/provider/QueryProvider";
+import ChatWoot from "@/components/ui/chatwoot";
+import Script from "next/script";
 //import Chatbot from "../ui/Chatbot";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     "hire someone to take my Microsoft  certification exam",
     "ISC2 certification prep",
     "Google cloud certification training and support",
-   "cybersecurity certification training",
+    "cybersecurity certification training",
     "cloud certification preparation",
     "exam takers for hire",
     "Pay Someone to do my Online Exam for me",
@@ -105,9 +107,28 @@ export default function RootLayout({
             <Navbar />
             {children}
             <ScrollToTopBtn />
-            <Footer /> 
+            <Footer />
             {/* <Chatbot /> */}
             {/* <ToastContainer /> */}
+            <ChatWoot />
+            {/* Chatwoot Live Chat Widget */}
+            <Script id="chatwoot-script" strategy="lazyOnload">
+              {`
+            (function(d,t) {
+              var BASE_URL="https://app.chatwoot.com";
+              var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+              g.src=BASE_URL+"/packs/js/sdk.js";
+              g.async = true;
+              s.parentNode.insertBefore(g,s);
+              g.onload=function(){
+                window.chatwootSDK.run({
+                  websiteToken: 'Z7QNTcjECspMQtHmTpdVo3jq',
+                  baseUrl: BASE_URL
+                })
+              }
+            })(document,"script");
+          `}
+            </Script>
           </body>
         </UIProvider>
       </QueryProvider>

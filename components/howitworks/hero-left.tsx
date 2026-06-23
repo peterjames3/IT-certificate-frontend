@@ -6,46 +6,46 @@ import { ArrowRight } from "lucide-react";
 const LeftHero = () => {
   const dispatch = useUIDispatch();
   const toggleForm = () => {
-   
-
-  
-      dispatch({ type: "SHOW_HELP" });
-    
+    dispatch({ type: "SHOW_HELP" });
   };
+
   return (
-    <div className=" h-full w-full mx-auto px-6 flex items-center">
+    <div className="h-full w-full mx-auto px-6 flex items-center">
       <div>
         <div>
-          <h1>How TestHelpNow Works</h1>
-          <h2 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-4 leading-tight">
-            <span className="text-primary">Hire an Exam Expert, </span>
-            <span className="text-secondary">or want to Understand </span>
+          {/* SEO Short-Tail Target: Tells Google exactly what the page is about */}
+          <h1 className="text-sm font-semibold tracking-wider uppercase text-primary mb-2">
+            Secure IT Certification Exam Assistance
+          </h1>
 
-            <span className="text-primary">How Proctored Exam Help Works </span>
-            <br />
-            <span className="text-secondary">Before you commit? </span>
-            <span className="text-primary">?</span>
+          {/* Core Hook & Value Prop */}
+          <h2 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-6 leading-tight">
+            <span className="text-secondary">Want to Understand How Our </span>
+            <span className="text-[#10b981]">
+              Managed Technical Environments{" "}
+            </span>
+            <span className="text-secondary">Work Before You Commit?</span>
           </h2>
 
-          <p className="text-primary mb-4 text-lg leading-relaxed">
-            Our process is simple. Select the service you need and we guide you every
-            step of the way. Experience personalized support tailored to your
-            unique learning needs.
+          {/* Body Text: Natural Long-Tail Integration (No registration, clears strict proctor checks) */}
+          <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-xl">
+            Our process is built entirely around professional privacy. You can
+            <strong className="text-secondary font-medium">
+              {" "}
+              pay for exam help without registration
+            </strong>
+            . We map out custom hardware and software logistics designed to
+            clear strict automated proctoring flags smoothly.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-            Get help Now!
-          </h2>
-
-        
-           <motion.button
-                      onClick={toggleForm}
-                      className="cta hover:cursor-pointer flex items-center gap-2"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Get Exam Help Now! <ArrowRight />
-                    </motion.button>
+          <motion.button
+            onClick={toggleForm}
+            className="cta hover:cursor-pointer flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Exam Help Now! <ArrowRight />
+          </motion.button>
         </div>
       </div>
     </div>

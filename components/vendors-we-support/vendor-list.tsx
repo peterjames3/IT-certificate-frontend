@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   Award,
@@ -195,8 +195,8 @@ export default function VendorListSection() {
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        Main domains where our Certified engineering and security specialists will to help you pass
-        your technical certification exams.
+        Main domains where our Certified engineering and security specialists
+        will to help you pass your technical certification exams.
       </motion.p>
 
       <motion.div
@@ -209,7 +209,15 @@ export default function VendorListSection() {
         {examServices.map((service, index) => {
           const Icon = service.icon;
           return (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: index * 0.2,
+              }}
               key={index}
               className="flex flex-col rounded-2xl p-6 text-white gap-4 border-2 border-gray-200 hover:shadow-2xl transition-shadow duration-300"
             >
@@ -317,7 +325,7 @@ export default function VendorListSection() {
               >
                 {service.learnMore.label}
               </Link>
-            </div>
+            </motion.div>
           );
         })}
       </motion.div>

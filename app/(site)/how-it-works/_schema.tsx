@@ -5,9 +5,9 @@ export default function HowItWorksSchema() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to Get Expert Exam Help from TestHelpNow",
+    name: "How to Get Expert IT Certification Exam Help online",
     description:
-      "TestHelpNow makes it easy to get expert exam help in three simple steps — choose your service, tell us about your exam, and your assigned expert takes care of everything.",
+      "Get certified in three simple steps. Learn how our secure IT exam proxy service coordinates expert assistance for AWS, Azure, and CompTIA certifications without needing an account on our platform.",
     url: "https://www.testhelpnow.com/how-it-works",
     image: {
       "@type": "ImageObject",
@@ -15,19 +15,16 @@ export default function HowItWorksSchema() {
     },
     totalTime: "PT10M",
     supply: [
-      {
+{
         "@type": "HowToSupply",
-        name: "Your exam details (subject, date, platform, format)",
+        name: "Your target IT certification exam code (e.g., SAA-C03, AZ-104, SY0-701)",
       },
       {
         "@type": "HowToSupply",
-        name: "A valid email address and phone number",
-      },
-      {
-        "@type": "HowToSupply",
-        name: "Login credentials for your exam platform",
+        name: "An email address for discrete receipt delivery",
       },
     ],
+  
     tool: [
       {
         "@type": "HowToTool",
@@ -38,34 +35,34 @@ export default function HowItWorksSchema() {
       {
         "@type": "HowToStep",
         position: 1,
-        name: "Choose Your Exam Help Service",
-        text: "Browse the type of support you need: Online Tutoring, Exam Preparation, or Full Exam Handling. Whether you want to hire an exam expert or need structured coaching, choose the service that fits your academic goals and click Get Help Now.",
+        name: "Submit Your Exam Details Anonymously",
+        text: "Select your vendor and exact IT exam code via our secure inquiry form. No registration or account profile creation is required on our website to protect your professional privacy.",
         url: "https://www.testhelpnow.com/how-it-works#step-1",
         image: {
           "@type": "ImageObject",
-          url: "https://www.testhelpnow.com/step%201%20image.png",
+          url: "https://www.testhelpnow.com/step-1-image.png",
         },
       },
       {
         "@type": "HowToStep",
         position: 2,
-        name: "Tell Us About Your Exam",
-        text: "Fill out a quick form with your exam details: subject name, course level, exam date, platform, and any specific areas where you need help. The more detail you provide, the better we can match you with the right expert for your exact exam.",
+        name: "Complete a Secure Guest Checkout",
+        text: "Receive a custom quote and a dynamic, encrypted checkout link. Complete your invoice instantly using your credit card or cryptocurrency using our discrete payment methods with zero account creation.",
         url: "https://www.testhelpnow.com/how-it-works#step-2",
         image: {
           "@type": "ImageObject",
-          url: "https://www.testhelpnow.com/step%202%20image.png",
+          url: "https://www.testhelpnow.com/step-2-image.png",
         },
       },
       {
         "@type": "HowToStep",
         position: 3,
-        name: "Your Expert Takes Care of Everything",
-        text: "Our team contacts you directly to confirm your expert assignment. On exam day, you log in to your exam platform to start the session — your assigned expert then takes over remotely and completes the exam on your behalf, end-to-end. All sessions are handled with full confidentiality under a signed NDA.",
+        name: "Execute Logistics & Clear the Exam Safely",
+        text: "Our dedicated technical consultants coordinate the secure hardware and software setups to bypass automated proctoring flags, safely guiding your target IT exam session to a passing mark.",
         url: "https://www.testhelpnow.com/how-it-works#step-3",
         image: {
           "@type": "ImageObject",
-          url: "https://www.testhelpnow.com/step%203%20image.png",
+          url: "https://www.testhelpnow.com/step-3-image.png",
         },
       },
     ],

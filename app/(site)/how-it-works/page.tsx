@@ -9,13 +9,13 @@ import Quote from "@/components/form/quote";
 import FAQSection from "@/components/howitworks/faq";
 //import ShapoReviews from "@/app/ui/Shaporeviews";
 export const metadata = {
-  title: "How It  Works - Get Expert Exam Help in 3 Steps | TestHelpNow",
+  title: "How It Works - Pay Someone to Take My IT  Certification Exam | TestHelpNow",
   description:
-    "See exactly how  TestHelpNow works. Browse services, fill a quick form, and get matched with a certified exam expert in minutes",
+    "Get your AWS, Azure, or CompTIA certification Exam Help in 3 steps. Learn how our secure IT exam proxy service works with discrete guest checkout and zero account registration.",
   openGraph: {
-    title: "How TestHelpNow Works - 3 Steps to Expert Exam help",
+    title: "How It Works - 3 Steps to Secure IT Certification Help",
     description:
-      " Browse services, fill a quick form, and get matched with a certified exam expert in minutes. See how TestHelpNow delivers expert exam help in 3 simple steps.",
+      "Pass your IT exams safely. See how our anonymous proxy service manages strict proctoring platforms with zero user registration and discrete payment links.",
     url: "https://testhelpnow.com/how-it-works",
     siteName: "TestHelpNow",
     locale: "en_US",

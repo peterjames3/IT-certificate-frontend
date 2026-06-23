@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 import FeatureButton from "./feature-button";
 import GraphicCluster from "./graphic-cluster";
 
@@ -30,14 +31,19 @@ export default function LearningSection() {
     <section className="w-full py-16 bg-[#f4faf7]">
       <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex flex-col lg:flex-row gap-12 items-center px-6">
         {/* Left Column: Content */}
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          initial={{ opacity: 0, x: -60, rotate: -5 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0 }}
+          className="w-full lg:w-1/2"
+        >
           <span className="text-xs font-bold tracking-widest text-emerald-600 uppercase">
             Expedited Delivery & Support
           </span>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 tracking-tight leading-tight">
-            On-Demand Proctored IT Exam Help  With
-            Guaranteed Results
+            On-Demand Proctored IT Exam Help With Guaranteed Results
           </h2>
 
           <p className="text-slate-600 max-w-xl leading-relaxed text-sm md:text-base mt-4">
@@ -85,12 +91,18 @@ export default function LearningSection() {
               </svg>
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column: Visual Clusters */}
-        <div className="w-full lg:w-1/2">
+        <motion.div
+          initial={{ opacity: 0, x: 60, rotate: 5 }}
+          whileInView={{ opacity: 1, x: 0, rotate: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+          className="w-full lg:w-1/2"
+        >
           <GraphicCluster />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
