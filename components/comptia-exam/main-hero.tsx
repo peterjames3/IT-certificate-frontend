@@ -31,7 +31,7 @@ export default function MainHero() {
           </motion.div>
         </AnimatePresence>
       ) : (
-        <div className="pt-[10rem] py-2 w-full mx-auto max-w-full lg:max-w-310 flex  flex-col gap-10 lg:flex-row  md:justify-between">
+        <div className="pt-[10rem] py-2 w-full mx-auto max-w-full lg:max-w-[1240px] flex  flex-col gap-8 lg:flex-row  md:justify-between">
           <div className="w-full lg:w-1/2">
             <LeftHero />
           </div>

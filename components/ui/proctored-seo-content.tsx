@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ProctoredSeoContent() {
   return (
-    <section className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] gap-20 px-6 py-12 md:flex items-start">
+    <section className="w-full mx-auto max-w-full lg:max-w-310 gap-20 px-6 py-12 md:flex items-start">
       <article className="w-full md:w-[65%]">
         {/* Main SEO Header - High Intent Keyword targeting IT industry */}
         <article>

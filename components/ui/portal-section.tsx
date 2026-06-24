@@ -7,32 +7,97 @@ import StaggeredContainer from "@/components/animation/StaggeredContainer"; // A
 
 // LMS portals
 const LMS = [
-  { src: "/canvas.png", alt: "canvas exam portal logo", title: "Canvas", bgColor: "bg-[#FBF7F0]" },
-  { src: "/StraighterLine.webp", alt: "straighterline exam portal logo", title: "Straighter Line", bgColor: "bg-[#F6EEF0]" },
-  { src: "/Blackboard.webp", alt: "blackboard exam portal logo", title: "Blackboard", bgColor: "bg-[#E9F5EA]" },
-  { src: "/Pearson.png", alt: "pearson exam portal logo", title: "Pearson", bgColor: "bg-[#E3F1F5]" },
-  { src: "/sophia.png", alt: "sophia exam portal logo", title: "Sophia", bgColor: "bg-[#ECE5F1]" },
+  {
+    src: "/canvas.png",
+    alt: "canvas exam portal logo",
+    title: "Canvas",
+    bgColor: "bg-[#FBF7F0]",
+  },
+  {
+    src: "/StraighterLine.webp",
+    alt: "straighterline exam portal logo",
+    title: "Straighter Line",
+    bgColor: "bg-[#F6EEF0]",
+  },
+  {
+    src: "/Blackboard.webp",
+    alt: "blackboard exam portal logo",
+    title: "Blackboard",
+    bgColor: "bg-[#E9F5EA]",
+  },
+  {
+    src: "/Pearson.png",
+    alt: "pearson exam portal logo",
+    title: "Pearson",
+    bgColor: "bg-[#E3F1F5]",
+  },
+  {
+    src: "/sophia.png",
+    alt: "sophia exam portal logo",
+    title: "Sophia",
+    bgColor: "bg-[#ECE5F1]",
+  },
 ] as const;
 
 // Proctoring platforms
 const PROCTORING_PLATFORMS = [
-  { src: "/protoru.png", alt: "ProctorU proctoring platform logo", title: "ProctorU", bgColor: "bg-[#EEF2FB]" },
-  { src: "/examity.png", alt: "Examity live proctoring platform logo", title: "Examity", bgColor: "bg-[#FFE7C6]" },
-  { src: "/respondus.png", alt: "Respondus lockdown browser logo", title: "Respondus", bgColor: "bg-[#FDECEA]" },
-  { src: "/ets.png", alt: "ets proctoring platform logo", title: "*ects", bgColor: "bg-[#E9F5EA]" },
-  { src: "/proctorio.png", alt: "Proctorio proctoring platform logo", title: "Proctorio", bgColor: "bg-[#FEF3E2]" },
-  { src: "/examsoft.webp", alt: "ExamSoft lockdown and AI proctoring logo", title: "ExamSoft", bgColor: "bg-[#FBF7F0]" },
-  { src: "/Pearson.png", alt: "Pearson VUE certification exam platform logo", title: "Pearson VUE", bgColor: "bg-[#E3F1F5]" },
-  { src: "/proctortrack.png", alt: "ProctorTrack exam platform logo", title: "ProctorTrack", bgColor: "bg-[#FFFFFF]" },
+  {
+    src: "/protoru.png",
+    alt: "ProctorU proctoring platform logo",
+    title: "ProctorU",
+    bgColor: "bg-[#EEF2FB]",
+  },
+  {
+    src: "/examity.png",
+    alt: "Examity live proctoring platform logo",
+    title: "Examity",
+    bgColor: "bg-[#FFE7C6]",
+  },
+  {
+    src: "/respondus.png",
+    alt: "Respondus lockdown browser logo",
+    title: "Respondus",
+    bgColor: "bg-[#FDECEA]",
+  },
+  {
+    src: "/ets.png",
+    alt: "ets proctoring platform logo",
+    title: "*ects",
+    bgColor: "bg-[#E9F5EA]",
+  },
+  {
+    src: "/proctorio.png",
+    alt: "Proctorio proctoring platform logo",
+    title: "Proctorio",
+    bgColor: "bg-[#FEF3E2]",
+  },
+  {
+    src: "/examsoft.webp",
+    alt: "ExamSoft lockdown and AI proctoring logo",
+    title: "ExamSoft",
+    bgColor: "bg-[#FBF7F0]",
+  },
+  {
+    src: "/Pearson.png",
+    alt: "Pearson VUE certification exam platform logo",
+    title: "Pearson VUE",
+    bgColor: "bg-[#E3F1F5]",
+  },
+  {
+    src: "/proctortrack.png",
+    alt: "ProctorTrack exam platform logo",
+    title: "ProctorTrack",
+    bgColor: "bg-[#FFFFFF]",
+  },
 ] as const;
 
 // Single shared variant for child items to handle fade + slide up
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 15 } 
+    transition: { type: "spring", stiffness: 100, damping: 15 },
   },
 };
 
@@ -62,7 +127,11 @@ const PortalCard = ({ portal }: { portal: (typeof LMS)[number] }) => {
 };
 
 // Proctoring Platform Card
-const ProctoringCard = ({ platform }: { platform: (typeof PROCTORING_PLATFORMS)[number] }) => {
+const ProctoringCard = ({
+  platform,
+}: {
+  platform: (typeof PROCTORING_PLATFORMS)[number];
+}) => {
   return (
     <motion.div
       variants={cardVariants}
@@ -91,7 +160,7 @@ export default function PortalsSection() {
     <>
       {/* ── LMS Section ─────────────────────────────────────── */}
       <section className="py-20 px-4 md:px-8 bg-primary-50">
-        <div className="w-full mx-auto max-w-7xl flex flex-col items-center text-center mb-12 px-4">
+        <div className="w-full mx-auto max-w-full lg:max-w-310 flex flex-col items-center text-center mb-12 px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
             LMS and Portals We Work On
           </h2>
@@ -106,7 +175,7 @@ export default function PortalsSection() {
           </p>
         </div>
 
-        <div className="w-full mx-auto max-w-full lg:max-w-310 xl:max-w-360">
+        <div className="w-full mx-auto max-w-full lg:max-w-310 px-3 ">
           {/* Wrap the grid layer with your custom StaggeredContainer */}
           <StaggeredContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {LMS.map((portal, index) => (
@@ -118,7 +187,7 @@ export default function PortalsSection() {
 
       {/* ── Proctoring Platforms Section ────────────────────── */}
       <section className="pb-20 px-4 md:px-8 bg-primary-50">
-        <div className="w-full mx-auto max-w-full lg:max-w-310 xl:max-w-360">
+        <div className="w-full mx-auto max-w-full lg:max-w-310 px-3">
           {/* Separate StaggeredContainer ensures this section triggers independently */}
           <StaggeredContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {PROCTORING_PLATFORMS.map((platform, index) => (

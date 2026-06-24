@@ -62,126 +62,10 @@ export const latestPostsQuery = groq`
   }
 `;
 
-// Fetch Slugs and Exam aid programs
-export const examPathsQuery = `
-  *[_type == "exam_aid"] {
-    "slug": slug.current
-  }
-`;
+// Fetch Slugs and CompTIa Exam aid programs
 
-export const examQuery = `
-  *[_type == "exam_aid" && slug.current == $slug] {
-    _id,
-    _createdAt,
-    title,
-    "slug": slug.current,
-    description,
-    deliveryMethod,
-    educationLevel,
-    benefits,
-    structure,
-    "sections": sections[]->{
-      _id,
-      title,
-      content,
-      tips,
-      icon
-    },
-    "testimonials": testimonials[]->{
-      _id,
-      author,
-      quote
-    }
-  }
-`;
-export const examAidProgramsQuery = `
-  *[_type == "exam_aid"] | order(title asc) {
-    _id,
-    _createdAt,
-    title,
-    "slug": slug.current,
-    description,
-    deliveryMethod,
-    educationLevel,
-    benefits,
-    structure,
-    "sections": sections[]->{
-      _id,
-      title,
-      content,
-      tips,
-      icon
-    },
-    "testimonials": testimonials[]->{
-      _id,
-      author,
-      quote
-    }
-  }
-`;
 
-//fetch slugs  for exam prep programs
-
-export const examPrepPathsQuery = `
-*[_type == "exam_prep"] {
-  "slug": slug.current
-}
-`;
-
-export const examPrepQuery = `
-*[_type == "exam_prep" && slug.current == $slug] {
-  _id,
-  _createdAt,
-  title,
-  "slug": slug.current,
-  description,
-  deliveryMethod,
-  educationLevel,
-  benefits,
-  structure,
-  "sections": sections[]->{
-    _id,
-    title, 
-    content,
-    tips,
-    icon
-  },
-  "testimonials": testimonials[]->{
-    _id,
-    author,
-    quote
-  }
-}
-`;
-export const examPrepProgramsQuery = `
-*[_type == "exam_prep"]  {
-  _id,
-  _createdAt,
-  title,
-  "slug": slug.current,
-  description,
-  deliveryMethod,
-  educationLevel,   
-  benefits,
-  structure,
-  "sections": sections[]->{
-    _id,
-    title,
-    content,
-    tips,
-    icon
-  },
-  "testimonials": testimonials[]->{
-    _id,
-    author,
-    quote
-  }
-}
-`;
-
-//   Get all exam service page slugs (for generateStaticParams)
-
-export const examServicePathQuery = groq`
+export const comptiaexamServicePathQuery = groq`
   *[_type == "examServicePage" && defined(slug.current)] {
     "slug": slug.current
   }
@@ -189,7 +73,7 @@ export const examServicePathQuery = groq`
 `;
 
 // Get a single exam service page by slug
-export const examServicePageQuery = groq`
+export const comptiaexamServicePageQuery = groq`
   *[_type == "examServicePage" && slug.current == $slug][0] {
     _id,
     _createdAt,
@@ -367,7 +251,7 @@ export const allExamServicePagesQuery = groq`
 `;
 // Fetch all exam service pages as a lightweight listing
 // Used in the "Exams We Support" section on proctored-exam-help and other pages
-export const examsWeSupportQuery = groq`
+export const comptiaexamsWeSupportQuery = groq`
   *[_type == "examServicePage"] | order(seoTitle asc) {
     _id,
     seoTitle,

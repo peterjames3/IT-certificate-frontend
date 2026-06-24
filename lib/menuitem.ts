@@ -4,81 +4,81 @@ export const examAidCategories: ExamCategory = {
   "AWS Certifications": [
     {
       name: "Take AWS cerfied Cloud Practitioner (CLF-C02) Exam for Me",
-      slug: "pay-someone-to-take-my-pmp-exam-for-me",
+      slug: "pay-someone-to-take-aws-cloud-practitionerclf-c02-exam-for-me",
     },
     {
-      name: "AWS Solutions Architect Associate (SAA-C03)",
-      slug: "pass-aws-solutions-architect-associate-saa-c03",
+      name: "Take AWS Solutions Architect Associate (SAA-C03) Exam for Me",
+      slug: "pay-someone-to-take-aws-solutions-architect-associate-saa-c03-exam-for-me",
     },
     {
-      name: "AWS SysOps Administrator Associate (SOA-C02)",
-      slug: "pass-aws-sysops-administrator-soa-c02",
+      name: "Take AWS SysOps Administrator Associate (SOA-C02) Exam for Me)",
+      slug: "pay-someone-to-take-aws-sysops-administrator-soa-c02-exam-for-me",
     },
   ],
   "Microsoft Azure": [
     {
-      name: "Azure Fundamentals (AZ-900)",
-      slug: "pass-azure-fundamentals-az-900",
+      name: "Take Azure Fundamentals (AZ-900) Exam for Me",
+      slug: "pay-someone-to-take-azure-fundamentals-az-900-exam-for-me",
     },
     {
-      name: "Azure Administrator (AZ-104)",
-      slug: "pass-azure-administrator-az-104",
+      name: "Take Azure Administrator (AZ-104) Exam for Me",
+      slug: "pay-someone-to-take-azure-administrator-az-104-exam-for-me",
     },
     {
-      name: "Azure Solutions Architect Expert (AZ-305)",
-      slug: "pass-azure-solutions-architect-expert-az-30",
+      name: "Take Azure Solutions Architect Expert (AZ-305) Exam for Me",
+      slug: "pay-someone-to-take-azure-solutions-architect-expert-az-30-exam-for-me",
     },
   ],
   "Linux Administration": [
     {
-      name: "Red Hat Certified System Administrator (RHCSA EX200)",
-      slug: "pass-rhcsa-exam-ex200",
+      name: "Take Red Hat Certified System Administrator (RHCSA EX200) Exam for Me",
+      slug: "pay-some-to-take-rhcsa-exam-ex200-for-me",
     },
     {
-      name: "Linux Foundation Certified System Administrator (LFCS)",
-      slug: "pass-lfcs-certification-exam",
+      name: "Take Linux Foundation Certified System Administrator (LFCS) Exam for Me",
+      slug: "pay-someone-to-take-lfcs-certification-exam-for-me",
     },
   ],
   "ISC² & ISACA": [
     {
-      name: "ISC² Certified Information Systems Security Professional (CISSP)",
-      slug: "pass-isc2-cissp-exam",
+      name: "Take ISC² Certified Information Systems Security Professional (CISSP)for Me",
+      slug: "pay-someone-to-take-isc2-cissp-exam-for-me",
     },
     {
-      name: "ISACA Certified Information Systems Auditor (CISA)",
-      slug: "pass-isaca-cisa-exam",
+      name: "Take ISACA Certified Information Systems Auditor (CISA)for Me ",
+      slug: "pay-someone-to-take-isaca-cisa-exam-for-me",
     },
     {
-      name: "ISACA Certified Information Security Manager (CISM)",
-      slug: "pass-isaca-cism-exam",
+      name: "Take ISACA Certified Information Security Manager (CISM) for Me",
+      slug: "pay-someone-to-take-isaca-cism-exam-for-me",
     },
   ],
   Fortinet: [
     {
-      name: "Fortinet Certified Associate (FCA / NSE 1-3)",
-      slug: "pass-fortinet-fca-certification",
+      name: "Take Fortinet Certified Associate (FCA / NSE 1-3) Exam for me",
+      slug: "pay-someone-to-take-fortinet-fca-certification-for-me",
     },
     {
-      name: "Fortinet Certified Professional (FCP / NSE 4-6)",
-      slug: "pass-fortinet-fcp-nse4-exam",
+      name: "Take Fortinet Certified Professional (FCP / NSE 4-6) for Me",
+      slug: "pay-someone-to-take-fortinet-fcp-nse4-exam-for-me",
     },
   ],
   "Google Cloud & Oracle": [
     {
-      name: "Google Cloud Associate Cloud Engineer (ACE)",
-      slug: "pass-gcp-associate-cloud-engineer",
+      name: "Take Google Cloud Associate Cloud Engineer (ACE) Exam for Me",
+      slug: "pay-someone-to-pass-gcp-associate-cloud-engineer-exam-for-me",
     },
     {
-      name: "Google Cloud Professional Cloud Architect (PCA)",
-      slug: "pass-gcp-professional-cloud-architect",
+      name: "Take Google Cloud Professional Cloud Architect (PCA) Exam for me",
+      slug: "pay-someone-to-pass-gcp-professional-cloud-architect-exam-for-me",
     },
     {
-      name: "Oracle Cloud Infrastructure Foundations (OCI)",
-      slug: "pass-oracle-cloud-infrastructure-foundations",
+      name: "Take Oracle Cloud Infrastructure Foundations (OCI) Exam for Me",
+      slug: "pay-someone-to-pass-oracle-cloud-infrastructure-foundations-exam-for-me",
     },
     {
-      name: "Oracle Certified Professional Java SE",
-      slug: "pass-oracle-java-se-professional",
+      name: "Take Oracle Certified Professional Java SE Exam for Me",
+      slug: "pay-someone-to-pass-oracle-java-se-professional-exam-for-me",
     },
   ],
 };

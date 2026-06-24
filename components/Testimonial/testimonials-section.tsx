@@ -75,7 +75,7 @@ const bottomRowTestimonials = [
 export default function TestimonialsPage() {
   return (
     <div className="py-16 relative bg-white">
-      <section className="w-full mx-auto max-w-full lg:max-w-310 xl:max-w-360">
+      <section className="w-full mx-auto max-w-full lg:max-w-310 px-3">
         <h2 className="text-center text-3xl font-extrabold text-slate-900 mb-2 tracking-tight">
           Verified Professional Reviews
         </h2>

@@ -29,7 +29,7 @@ export default function LearningSection() {
 
   return (
     <section className="w-full py-16 bg-[#f4faf7]">
-      <div className="w-full mx-auto max-w-full lg:max-w-[1240px] xl:max-w-[1440px] flex flex-col lg:flex-row gap-12 items-center px-6">
+      <div className="w-full mx-auto max-w-full lg:max-w-310 flex flex-col lg:flex-row gap-12 items-center px-6">
         {/* Left Column: Content */}
         <motion.div
           initial={{ opacity: 0, x: -60, rotate: -5 }}
