@@ -6,10 +6,10 @@ import SlideInContainer from "../animation/SlideInContainer";
 export default function SuccessReasons() {
   return (
     <section className="w-full bg-white py-20 px-4 md:px-12">
-      <div className="mx-auto max-w-310">
+      <div className="mx-auto max-w-310 px-8">
         {/* Main Heading */}
         <SlideInContainer direction="down" distance={30} delay={0.1}>
-          <h2 className="text-center headline font-bold text-primary mb-16">
+          <h2 className="text-center headline font-bold text-secondary mb-16">
             Learn from the nation&apos;s largest community of <br />{" "}
             professional tutors.
           </h2>

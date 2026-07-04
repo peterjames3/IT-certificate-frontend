@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-      <div className="w-full max-w-full lg:max-w-310 mx-auto grid grid-cols-1 lg:grid-cols-2  gap-2 lg:gap-18 items-center">
+      <div className="w-full max-w-full lg:max-w-310 mx-auto grid grid-cols-1 lg:grid-cols-2  gap-2 lg:gap-18 items-center px-6">
         {/* Left Column - Text Content */}
         <motion.div
           initial="hidden"
@@ -52,8 +52,7 @@ export default function WhyChooseUs() {
             variants={item}
             className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
           >
-            Why Should You Choose to Pay Us To Take My Online CompTIA
-            Exam Help?
+            Why Should You Choose to Pay Us To Take My Online CompTIA Exam Help?
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">

@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react"; // Assuming this import is f
 import SocialShare from "./social-share";
 //import type { ComponentType } from "react";
 import { format } from "date-fns";
-import {createImageUrlBuilder} from "@sanity/image-url";
+import { createImageUrlBuilder } from "@sanity/image-url";
 import { client } from "@/sanity/lib/client";
 import RecentPosts from "./recent-posts";
 
@@ -25,7 +25,7 @@ export default function Post({ post }: { post: SanityDocument }) {
   if (!post) return <p>Loading ...</p>;
 
   return (
-    <div className="w-full mx-auto max-w-full md:max-w-210 xl:max-w-360 px-4 md:px-0 mt-40">
+    <div className="w-full mx-auto max-w-full md:max-w-210 xl:max-w-310 px-4 md:px-0 mt-40">
       <ul className="flex gap-2 p-text mb-3 sm:ml-3.25 ">
         <li className="hover:text-primary font-semibold transition-color delay-300">
           <Link href="/">Home</Link>
@@ -40,7 +40,7 @@ export default function Post({ post }: { post: SanityDocument }) {
           {post.title}
         </li>
       </ul>
-      <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-6">
+      <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Left Social Share - Sticky */}
         <section className="col-span-1 p-4 h-auto md:min-h-120 md:sticky md:top-7 md:h-screen overflow-y-auto">
           <div className="sm:sticky sm:top-26 flex flex-col  gap-8">
@@ -49,7 +49,7 @@ export default function Post({ post }: { post: SanityDocument }) {
               <TableOfContents headings={post.headings || []} />
             </div>
             <div className="border-t border-tertiary-30"></div>
-          <div>
+            <div>
               <SocialShare title={post.title} />
             </div>
           </div>

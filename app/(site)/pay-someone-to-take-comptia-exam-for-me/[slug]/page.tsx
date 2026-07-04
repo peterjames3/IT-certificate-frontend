@@ -1,18 +1,18 @@
-import {  examServicePageQuery, examServicePathQuery } from "@/sanity/lib/queries";
+import {  comptiaexamServicePageQuery, comptiaexamServicePathQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
 import { PortableTextBlock } from "@portabletext/types";
 
 // ── Section components ──────────────────────────────────────
-import HeroSection from "@/app/ui/components/exam-service/hero-section";
-import ContentSectionWithImage from "@/app/ui/components/exam-service/content-section-with-image";
-import StepsSection from "@/app/ui/components/exam-service/steps-section";
-import ExamStructureSection from "@/app/ui/components/exam-service/exam-structure-section";
-import ChallengesSection from "@/app/ui/components/exam-service/challenges-section";
-import UnlockPathSection from "@/app/ui/components/exam-service/unlock-path-section";
-import WhyChooseUsSection from "@/app/ui/components/exam-service/why-choose-us-section";
-import FaqSection from "@/app/ui/components/exam-service/faq-section";
+import HeroSection from "@/components/comptia-dynamic-sections/hero-section";
+//import ContentSectionWithImage from "@/app/ui/components/exam-service/content-section-with-image";
+//import StepsSection from "@/app/ui/components/exam-service/steps-section";
+//import ExamStructureSection from "@/app/ui/components/exam-service/exam-structure-section";
+//import ChallengesSection from "@/app/ui/components/exam-service/challenges-section";
+//import UnlockPathSection from "@/app/ui/components/exam-service/unlock-path-section";
+//import WhyChooseUsSection from "@/app/ui/components/exam-service/why-choose-us-section";
+//import FaqSection from "@/app/ui/components/exam-service/faq-section";
 
  // ── Types ───────────────────────────────────────────────────
 type RichText = PortableTextBlock[];
@@ -37,9 +37,8 @@ export interface HeroSectionData {
   accentWord?: string;
   subtext?: string;
   ctaPrimary?: { label: string; href: string };
-  ctaSecondary?: { label: string; href: string };
-  heroImage?: SanityImage;
-  backgroundImage?: SanityImage;
+  //ctaSecondary?: { label: string; href: string };
+  
   backgroundColor?: string;
 }
 
@@ -156,7 +155,7 @@ export interface ExamServicePageData {
 
 // ── Static params ───────────────────────────────────────────
 export async function generateStaticParams() {
-  const pages = await client.fetch(examServicePathQuery);
+  const pages = await client.fetch(comptiaexamServicePathQuery);
   return pages.map((page: { slug: string }) => ({ slug: page.slug }));
 }
 
@@ -166,7 +165,7 @@ type Params = Promise<{ slug: string }>;
 export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
   const page = await sanityFetch<ExamServicePageData>({
-    query: examServicePageQuery,
+    query: comptiaexamServicePageQuery,
     params: { slug },
   });
 
@@ -188,20 +187,20 @@ function renderSection(section: PageSection, index: number) {
   switch (section._type) {
     case "hero":
       return <HeroSection key={index} data={section} />;
-    case "contentSectionWithImage":
-      return <ContentSectionWithImage key={section.sectionId ?? index} data={section} />;
-    case "stepsSection":
-      return <StepsSection key={index} data={section} />;
-    case "examStructureSection":
-      return <ExamStructureSection key={index} data={section} />;
-    case "challengesSection":
-      return <ChallengesSection key={index} data={section} />;
-    case "unlockPathSection":
-      return <UnlockPathSection key={index} data={section} />;
-    case "whyChooseUsSection":
-      return <WhyChooseUsSection key={index} data={section} />;
-    case "faqSection":
-      return <FaqSection key={index} data={section} />;
+    // case "contentSectionWithImage":
+    //   return <ContentSectionWithImage key={section.sectionId ?? index} data={section} />;
+    // case "stepsSection":
+    //   return <StepsSection key={index} data={section} />;
+    // case "examStructureSection":
+    //   return <ExamStructureSection key={index} data={section} />;
+    // case "challengesSection":
+    //   return <ChallengesSection key={index} data={section} />;
+    // case "unlockPathSection":
+    //   return <UnlockPathSection key={index} data={section} />;
+    // case "whyChooseUsSection":
+    //   return <WhyChooseUsSection key={index} data={section} />;
+    // case "faqSection":
+    //   return <FaqSection key={index} data={section} />;
     default:
       return null;
   }
@@ -212,7 +211,7 @@ export default async function ExamServicePage({ params }: { params: Params }) {
   const { slug } = await params;
 
   const page = await sanityFetch<ExamServicePageData>({
-    query: examServicePageQuery,
+    query: comptiaexamServicePageQuery,
     params: { slug },
   });
 

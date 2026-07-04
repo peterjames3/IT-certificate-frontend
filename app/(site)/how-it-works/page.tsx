@@ -9,7 +9,7 @@ import Quote from "@/components/form/quote";
 import FAQSection from "@/components/howitworks/faq";
 //import ShapoReviews from "@/app/ui/Shaporeviews";
 export const metadata = {
-  title: "How It Works - Pay Someone to Take My IT  Certification Exam | TestHelpNow",
+  title: "How It Works - Pay Someone to Take My Proctored IT  Certification Exam | TestHelpNow",
   description:
     "Get your AWS, Azure, or CompTIA certification Exam Help in 3 steps. Learn how our secure IT exam proxy service works with discrete guest checkout and zero account registration.",
   openGraph: {

@@ -64,9 +64,8 @@ export const latestPostsQuery = groq`
 
 // Fetch Slugs and CompTIa Exam aid programs
 
-
 export const comptiaexamServicePathQuery = groq`
-  *[_type == "examServicePage" && defined(slug.current)] {
+  *[_type == "CompTIAServicePage" && defined(slug.current)] {
     "slug": slug.current
   }
     
@@ -74,7 +73,7 @@ export const comptiaexamServicePathQuery = groq`
 
 // Get a single exam service page by slug
 export const comptiaexamServicePageQuery = groq`
-  *[_type == "examServicePage" && slug.current == $slug][0] {
+  *[_type == "CompTIAServicePage" && slug.current == $slug][0] {
     _id,
     _createdAt,
     seoTitle,
@@ -234,15 +233,14 @@ export const comptiaexamServicePageQuery = groq`
     }
   }
 `;
- 
 // Get all exam service pages (for listing/sitemap)
-export const allExamServicePagesQuery = groq`
-  *[_type == "examServicePage"] | order(_createdAt desc) {
+export const allcomptiaExamServicePagesQuery = groq`
+  *[_type == "CompTIAServicePage"] | order(_createdAt desc) {
     _id,
     _createdAt,
     seoTitle,
     seoDescription,
-    "slug": slug.current,
+    "slug": slug.current, 
     "ogImage": ogImage {
       alt,
       "url": asset->url
@@ -252,7 +250,7 @@ export const allExamServicePagesQuery = groq`
 // Fetch all exam service pages as a lightweight listing
 // Used in the "Exams We Support" section on proctored-exam-help and other pages
 export const comptiaexamsWeSupportQuery = groq`
-  *[_type == "examServicePage"] | order(seoTitle asc) {
+  *[_type == "CompTIAServicePage"] | order(seoTitle asc) {
     _id,
     seoTitle,
     seoDescription,
@@ -266,4 +264,3 @@ export const comptiaexamsWeSupportQuery = groq`
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
- 

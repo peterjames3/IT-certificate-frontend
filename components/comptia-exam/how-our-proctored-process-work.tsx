@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HowOurProctoredProcessWork() {
   return (
     <section className="bg-primary-50/80 py-16 ">
-      <div className="w-full max-w-full lg:max-w-310 mx-auto">
+      <div className="w-full max-w-full lg:max-w-310 mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-12">
           <motion.p
