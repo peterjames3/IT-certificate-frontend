@@ -32,7 +32,7 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about CompTIA help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-comptia-exam-for-me",
+      href: "/pay-someone-to-take-comptia-exam-for-me",
     },
   },
   {

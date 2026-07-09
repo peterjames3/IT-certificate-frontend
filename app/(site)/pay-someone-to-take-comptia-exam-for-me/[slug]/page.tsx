@@ -6,13 +6,17 @@ import { PortableTextBlock } from "@portabletext/types";
 
 // ── Section components ──────────────────────────────────────
 import HeroSection from "@/components/comptia-dynamic-sections/hero-section";
-//import ContentSectionWithImage from "@/app/ui/components/exam-service/content-section-with-image";
+//import TestimonialsSection from "@/components/Testimonial/testimonials-section";
+import ContentSectionWithImage from "@/components/comptia-dynamic-sections/exam-details";
+import CompTIAFocusedContentSection from "@/components/comptia-dynamic-sections/comptia-focused-content-section";
+import CertOverviewSection from "@/components/comptia-dynamic-sections/cert-overview-section";
+
 //import StepsSection from "@/app/ui/components/exam-service/steps-section";
 //import ExamStructureSection from "@/app/ui/components/exam-service/exam-structure-section";
 //import ChallengesSection from "@/app/ui/components/exam-service/challenges-section";
 //import UnlockPathSection from "@/app/ui/components/exam-service/unlock-path-section";
 //import WhyChooseUsSection from "@/app/ui/components/exam-service/why-choose-us-section";
-//import FaqSection from "@/app/ui/components/exam-service/faq-section";
+import FaqSection from "@/components/comptia-dynamic-sections/faq-section";
 
  // ── Types ───────────────────────────────────────────────────
 type RichText = PortableTextBlock[];
@@ -38,8 +42,12 @@ export interface HeroSectionData {
   subtext?: string;
   ctaPrimary?: { label: string; href: string };
   //ctaSecondary?: { label: string; href: string };
-  
+  title: string;
+  content: string;
+tips?: string[];
+icon?: string;
   backgroundColor?: string;
+  sections: string[];
 }
 
 export interface ContentSectionData {
@@ -136,6 +144,8 @@ export interface FaqSectionData {
 export type PageSection =
   | HeroSectionData
   | ContentSectionData
+  | CompTIAFocusedContentSectionData
+  | CertOverviewSectionData
   | StepsSectionData
   | ExamStructureSectionData
   | ChallengesSectionData
@@ -143,6 +153,19 @@ export type PageSection =
   | WhyChooseUsSectionData
   | FaqSectionData;
 
+  export interface CompTIAFocusedContentSectionData {
+  _type: "compTIAFocusedContentSection";
+  sectionId?: string;
+  heading?: string;
+  body?: RichText;
+  sidebarCards: {
+    title: string;
+    accentColor?: string;
+    items: { text: string; link?: string }[];
+  }[];
+  backgroundColor?: string;
+  ctaButton?: CtaButton;
+}
 export interface ExamServicePageData {
   _id: string;
   _createdAt: string;
@@ -187,9 +210,13 @@ function renderSection(section: PageSection, index: number) {
   switch (section._type) {
     case "hero":
       return <HeroSection key={index} data={section} />;
-    // case "contentSectionWithImage":
-    //   return <ContentSectionWithImage key={section.sectionId ?? index} data={section} />;
-    // case "stepsSection":
+     case "contentSectionWithImage":
+       return <ContentSectionWithImage key={section.sectionId ?? index} data={section} />;
+     case "compTIAFocusedContentSection":
+      return <CompTIAFocusedContentSection key={section.sectionId ?? index} data={section} />;
+  case "certOverviewSection":
+  return <CertOverviewSection key={section.sectionId ?? index} data={section} />;
+      // case "stepsSection":
     //   return <StepsSection key={index} data={section} />;
     // case "examStructureSection":
     //   return <ExamStructureSection key={index} data={section} />;
@@ -199,8 +226,11 @@ function renderSection(section: PageSection, index: number) {
     //   return <UnlockPathSection key={index} data={section} />;
     // case "whyChooseUsSection":
     //   return <WhyChooseUsSection key={index} data={section} />;
-    // case "faqSection":
-    //   return <FaqSection key={index} data={section} />;
+   
+    //  case "reviews":
+    //    return <TestimonialsSection />;
+    case "faqSection":
+      return <FaqSection key={index} data={section} />;
     default:
       return null;
   }

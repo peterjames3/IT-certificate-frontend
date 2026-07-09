@@ -98,12 +98,12 @@ export const comptiaexamServicePageQuery = groq`
         subtext,
         ctaPrimary,
         ctaSecondary,
-        "heroImage": heroImage {
-          alt,
-          "url": asset->url,
-          hotspot,
-          crop
-        },
+    "sections": sections[]-> {
+    title,
+    content,
+    tips,
+    icon
+  },
         "backgroundImage": backgroundImage {
           alt,
           "url": asset->url
@@ -129,6 +129,24 @@ export const comptiaexamServicePageQuery = groq`
         },
         ctaButton
       },
+ 
+      // --certificate overview
+      _type == "certOverviewSection" => { _type, sectionId, certSlug },
+
+      // -- CompTIA Focused Content Section
+      _type == "compTIAFocusedContentSection" => {
+  _type,
+  sectionId,
+  heading,
+  body,
+  sidebarCards[]{
+    title,
+    accentColor,
+    items[]{ text, link }
+  },
+  backgroundColor,
+  ctaButton
+},
  
       // ── Steps / Process ───────────────────────────────────
       _type == "stepsSection" => {
