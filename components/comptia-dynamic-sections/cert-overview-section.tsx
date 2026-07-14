@@ -11,6 +11,7 @@ export interface CertOverviewSectionData {
 
 interface Props {
   data: CertOverviewSectionData;
+  initialCert?: Certification; // fetched server-side in page.tsx
 }
 
 const TOKENS = {
@@ -110,8 +111,8 @@ function DomainBars({ domains }: { domains: Certification["domains"] }) {
   );
 }
 
-export default function CertOverviewSection({ data }: Props) {
-  const { data: cert, isLoading, error } = useCertification(data.certSlug);
+export default function CertOverviewSection({ data, initialCert }: Props) {
+  const { data: cert, isLoading, error } = useCertification(data.certSlug, initialCert);
 
   if (isLoading) {
     return (

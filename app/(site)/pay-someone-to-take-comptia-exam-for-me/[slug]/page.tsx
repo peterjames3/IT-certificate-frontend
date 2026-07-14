@@ -3,7 +3,7 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
 import { PortableTextBlock } from "@portabletext/types";
-
+import { getCertification } from "@/services/certification.service";
 // ── Section components ──────────────────────────────────────
 import HeroSection from "@/components/comptia-dynamic-sections/hero-section";
 //import TestimonialsSection from "@/components/Testimonial/testimonials-section";
@@ -61,6 +61,30 @@ export interface ContentSectionData {
   imageSize?: "33" | "50" | "66";
   backgroundColor?: string;
   ctaButton?: CtaButton;
+}
+
+export interface CompTIAFocusedContentSectionData {
+  _type: "compTIAFocusedContentSection";
+  sectionId?: string;
+  heading?: string;
+  body?: RichText;
+  sidebarCards: {
+    title: string;
+    accentColor?: string;
+    items: { text: string; link?: string }[];
+  }[];
+  backgroundColor?: string;
+  ctaButton?: CtaButton;
+}
+
+// Sanity only stores which cert this section shows — the actual
+// detail data (level, domains, cost, renewal, etc.) is fetched
+// server-side from the certifications API and handed down as
+// initialCert, not read from Sanity.
+export interface CertOverviewSectionData {
+  _type: "certOverviewSection";
+  sectionId?: string;
+  certSlug: string;
 }
 
 export interface StepsSectionData {
@@ -153,19 +177,6 @@ export type PageSection =
   | WhyChooseUsSectionData
   | FaqSectionData;
 
-  export interface CompTIAFocusedContentSectionData {
-  _type: "compTIAFocusedContentSection";
-  sectionId?: string;
-  heading?: string;
-  body?: RichText;
-  sidebarCards: {
-    title: string;
-    accentColor?: string;
-    items: { text: string; link?: string }[];
-  }[];
-  backgroundColor?: string;
-  ctaButton?: CtaButton;
-}
 export interface ExamServicePageData {
   _id: string;
   _createdAt: string;
@@ -206,17 +217,49 @@ export async function generateMetadata({ params }: { params: Params }) {
 }
 
 // ── Section renderer ────────────────────────────────────────
-function renderSection(section: PageSection, index: number) {
+// async: certOverviewSection fetches its own cert data server-side
+// before rendering, so every other case still returns synchronously
+// but the function as a whole must be async/awaited by the caller.
+async function renderSection(section: PageSection, index: number) {
   switch (section._type) {
     case "hero":
       return <HeroSection key={index} data={section} />;
-     case "contentSectionWithImage":
-       return <ContentSectionWithImage key={section.sectionId ?? index} data={section} />;
-     case "compTIAFocusedContentSection":
-      return <CompTIAFocusedContentSection key={section.sectionId ?? index} data={section} />;
-  case "certOverviewSection":
-  return <CertOverviewSection key={section.sectionId ?? index} data={section} />;
-      // case "stepsSection":
+    case "contentSectionWithImage":
+      return (
+        <ContentSectionWithImage
+          key={section.sectionId ?? index}
+          data={section}
+        />
+      );
+    case "compTIAFocusedContentSection":
+      return (
+        <CompTIAFocusedContentSection
+          key={section.sectionId ?? index}
+          data={section}
+        />
+      );
+    case "certOverviewSection": {
+      let cert;
+      try {
+        cert = await getCertification(section.certSlug);
+      } catch (err) {
+        // Don't let one bad slug or a flaky API call fail the whole page
+        // build. Falls back to a client-side fetch attempt (and this
+        // component's own error UI if that fails too).
+        console.error(
+          `Failed to prefetch certification "${section.certSlug}":`,
+          err,
+        );
+      }
+      return (
+        <CertOverviewSection
+          key={section.sectionId ?? index}
+          data={section}
+          initialCert={cert}
+        />
+      );
+    }
+    // case "stepsSection":
     //   return <StepsSection key={index} data={section} />;
     // case "examStructureSection":
     //   return <ExamStructureSection key={index} data={section} />;
@@ -226,7 +269,7 @@ function renderSection(section: PageSection, index: number) {
     //   return <UnlockPathSection key={index} data={section} />;
     // case "whyChooseUsSection":
     //   return <WhyChooseUsSection key={index} data={section} />;
-   
+
     //  case "reviews":
     //    return <TestimonialsSection />;
     case "faqSection":
@@ -237,6 +280,8 @@ function renderSection(section: PageSection, index: number) {
 }
 
 // ── Page ────────────────────────────────────────────────────
+export const revalidate = 3600; // matches useCertification's staleTime
+
 export default async function ExamServicePage({ params }: { params: Params }) {
   const { slug } = await params;
 
@@ -247,9 +292,9 @@ export default async function ExamServicePage({ params }: { params: Params }) {
 
   if (!page) notFound();
 
-  return (
-    <main>
-      {page.sections?.map((section, index) => renderSection(section, index))}
-    </main>
+  const renderedSections = await Promise.all(
+    page.sections?.map((section, index) => renderSection(section, index)) ?? []
   );
+
+  return <main>{renderedSections}</main>;
 }

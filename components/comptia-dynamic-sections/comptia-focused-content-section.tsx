@@ -1,6 +1,7 @@
 import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
-
+import { CircleArrowRight } from "lucide-react";
+import { portableTextComponents } from "../blog/portable-text-components";
 // ── Types ─────────────────────────────────────────────────
 // (Also add these — or import from page.tsx — to your shared types file)
 export interface SidebarListItem {
@@ -42,7 +43,7 @@ export default function CompTIAFocusedContentSection({ data }: Props) {
       className="py-12"
       style={backgroundColor ? { backgroundColor } : undefined}
     >
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 lg:grid-cols-[1fr_340px]">
+      <div className="mx-auto grid max-w-310 grid-cols-1 gap-10 px-4 lg:grid-cols-[1fr_340px]">
         {/* Left column: heading + body */}
         <div>
           {heading && (
@@ -53,7 +54,8 @@ export default function CompTIAFocusedContentSection({ data }: Props) {
 
           {body && (
             <div className="prose prose-gray max-w-none text-gray-700">
-              <PortableText value={body} />
+              <PortableText value={body}
+              components={portableTextComponents} />
             </div>
           )}
 
@@ -84,15 +86,13 @@ export default function CompTIAFocusedContentSection({ data }: Props) {
               >
                 {card.title}
               </div>
-              <ul className="space-y-3 px-5 py-4">
+              <ul className="space-y-3 px-5 py-4 font-medium">
                 {card.items?.map((item, j) => (
                   <li
                     key={j}
-                    className="flex items-start gap-2 text-gray-700"
+                    className="flex itemscenter gap-2 text-secondary-700"
                   >
-                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-emerald-500 text-[10px] text-emerald-600">
-                      →
-                    </span>
+                      <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                     {item.link ? (
                       <a href={item.link} className="hover:underline">
                         {item.text}

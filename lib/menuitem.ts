@@ -87,7 +87,8 @@ export const comptiaCategories: ExamCategory = {
   "CompTIA Core": [
     { name: "Take CompTIA A+ Exam for Me", slug: "take-pmp-exam" },
     { name: "Take CompTIA Network+ Exam for Me", slug: "take-pmp-exam" },
-    { name: "Take CompTIA Security+ Exam for Me", slug: "take-pmp-exam" },
+    
+    { name: "Take CompTIA Data+ Exam for Me", slug: "pay-someone-to-take-my-comptia-data-plus-exam-for-me" }
   ],
   "CompTIA Infrastructure": [
     { name: "Take CompTIA Server+ for Me", slug: "take-ged-exam" },
@@ -97,7 +98,7 @@ export const comptiaCategories: ExamCategory = {
   "CompTIA Cybersecurity": [
     { name: "Take CompTIA CySA+ for Me", slug: "take-ged-exam" },
     { name: "Take CompTIA PenTest+ for me", slug: "take-hiset-exam" },
-    { name: "Take CompTIA Security+ Exam for Me", slug: "take-pmp-exam" },
+    { name: "Take CompTIA Security+ Exam for Me", slug: "pay-someone-to-take-my-comptia-security-plus-exam-for-me" },
   ],
 };
 

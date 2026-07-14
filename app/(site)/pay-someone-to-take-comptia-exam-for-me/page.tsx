@@ -29,7 +29,7 @@ export default async function CompTIAHomePage() {
   const compTIAExams = await sanityFetch<SanityDocument[]>({
     query: allcomptiaExamServicePagesQuery,
   });
-  console.log(`comptia exams: ${compTIAExams.length}`);
+  
   return (
     <>
       <CompTIAExamFAQSchema />
