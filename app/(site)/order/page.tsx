@@ -64,7 +64,7 @@ export default function AzureOrderPage() {
   };
 
   return (
-    <section className="min-h-screen py-20 px-6 bg-slate-50 flex items-center justify-center">
+    <section className="min-h-screen py-20 mt-10 px-6 bg-slate-50 flex items-center justify-center">
       <div className="max-w-6xl w-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           

@@ -21,88 +21,83 @@ export default function HeroRightContent() {
 
   return (
     <motion.div
-      className="w-full flex items-center gap-2"
+      className="w-full flex flex-col lg:flex-row items-stretch gap-6"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      {/* Quantitative Reasoning */}
+      {/* Identity Verification Box */}
       <motion.div
-        className="relative bg-accent2 rounded-md flex items-center justify-between h-full w-full px-3 py-[9.8rem] overflow-hidden"
+        className="relative bg-accent2 rounded-3xl flex flex-col justify-center w-full lg:w-1/2 px-6 py-8 md:py-12 lg:py-16 border border-gray-100 shadow-sm overflow-hidden"
         variants={itemVariants}
       >
-        <section className="relative z-10">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="rounded-full p-3 bg-accent">
-              <User />
+        <section className="relative z-10 space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="rounded-full p-3 bg-accent shrink-0">
+              <User className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-2xl font-bold text-primary">
+            <h3 className="text-xl md:text-2xl font-bold text-secondary">
               Identity Verification
             </h3>
           </div>
-          <p className="text-gray-600">
-            Webcam ID checks, face matching, and biometric prompts - We handle
-            every Verification step each platform requires before the exam
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            Webcam ID checks, face matching, and physical passport verification. We handle
+            every security verification step PeopleCert requires before your service management exam
             begins.
-            <br />
-            <span className="text-sm italic text-gray-500">
-              e.g., Works across ProctorU, Examity, Honorlock, and Pearson VUE
-              identity flows.
-            </span>
+          </p>
+          <p className="text-xs italic text-gray-500 pt-2 border-t border-gray-100">
+            e.g. Works across PeopleCert Online Proctoring identity validation flows and room audits.
           </p>
         </section>
       </motion.div>
 
-      {/* Communication & Writing */}
-      <div className="flex flex-col gap-5 py-2">
-        {/* Verbal Communication */}
+      {/* Right Column Stack */}
+      <div className="flex flex-col gap-6 w-full lg:w-1/2">
+        {/* Lockdown Browser Box */}
         <motion.div
-          className="space-y-3 rounded-md bg-cardBg-support2 h-full w-full px-3 py-[2rem]"
+          className="space-y-4 rounded-3xl bg-cardBg-support2 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
           variants={itemVariants}
         >
-          <div className="flex items-center gap-2">
-            <div className="rounded-full p-3 bg-accent">
-            <MonitorX />
-
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="rounded-full p-3 bg-accent shrink-0">
+                <MonitorX className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold text-secondary">
+                Lockdown Browser
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold text-primary">
-              Lockdown Browser
-            </h3>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              PeopleCert ExamShield software restricts all other system background tasks. Our technical 
+              specialists operate within this restricted environment smoothly without triggering system flags.
+            </p>
           </div>
-          <p className="text-gray-600 ml-7">
-            Respondus, ExamSoft, and similar tools restrict all other
-            applications. Our experts operate within these environments without
-            triggering alerts or flags.
-            <br />
-            <span className="text-sm italic text-gray-500">
-              e.g., Respondus Lockdown Browser, ExamSoft Examplify, and
-              institution-specific lockdown tools.
-            </span>
+          <p className="text-xs italic text-gray-500 pt-2 border-t border-gray-100">
+            e.g. Bypassing Windows and macOS ExamShield lockdowns cleanly for both Foundation and specialist modules.
           </p>
         </motion.div>
 
-        {/* AI Behaviour Monitoring */}
+        {/* AI Behaviour Monitoring Box */}
         <motion.div
-          className="space-y-3 rounded-md bg-cardBg-support3 h-full w-full px-3 py-[2rem]"
+          className="space-y-4 rounded-3xl bg-cardBg-support3 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
           variants={itemVariants}
         >
-          <div className="flex items-center gap-2">
-            <div className="rounded-full p-3 bg-accent">
-              <ScanEye />
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="rounded-full p-3 bg-accent shrink-0">
+                <ScanEye className="w-5 h-5 text-gray-800" />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800">
+                AI Behaviour Monitoring
+              </h3>
             </div>
-            <h3 className="text-xl font-semibold text-gray-800">
-              AI Behaviour Monitoring
-            </h3>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              Modern proctors flag unusual typing speeds, screen interactions, and mic changes. 
+              We maintain fully expected candidate activity patterns to keep your testing session safe.
+            </p>
           </div>
-          <p className="text-gray-600 ml-7">
-            Modern proctoring tools flag unusual eye movement, typing rhythm,
-            and tab switching. We know exactly what each platform watches for
-            and how to stay within expected behaviour patterns.
-            <br />
-            <span className="text-sm italic text-gray-500">
-              e.g., Honorlock AI, ProctorU Guardian, and Examity Smart
-              Proctoring detection systems.
-            </span>
+          <p className="text-xs italic text-gray-500 pt-2 border-t border-gray-100">
+            e.g. PeopleCert real-time proctor surveillance and automated software audit logs.
           </p>
         </motion.div>
       </div>
