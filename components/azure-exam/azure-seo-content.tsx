@@ -22,7 +22,7 @@ export default function AzureSeoContent() {
           }}
         >
           <h2 className="text-4xl font-bold mb-6 leading-tight">
-            Pay and Pass Microsoft Azure Exams No Months Of Prep Needed
+            Pay Someone To Take and Pass Microsoft Azure Exams No Months Of Prep Needed
           </h2>
           <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
             <p>
@@ -256,7 +256,7 @@ export default function AzureSeoContent() {
             </ul>
             <p className="py-3">
               Do not let a grueling cloud technical exam stand between you and your 
-              next promotion. Hire our elite Azure **proxy services** today and 
+              next promotion. Hire our elite Azure <strong>proxy services</strong> today and 
               pass with confidence.
             </p>
           </div>

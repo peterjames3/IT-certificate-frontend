@@ -1,7 +1,8 @@
 //import type { SanityDocument } from "@sanity/client";
 import Hero from "@/components/azure-exam/main-hero";
-//import VendorMatrixGrid from "@/components/azure-exam/vendor-matrix-grid";
-//import HireSomeone from "@/components/azure-exam/hire-someone";
+import VendorMatrixGrid from "@/components/azure-exam/vendor-matrix-grid";
+import HireSomeone from "@/components/azure-exam/hire-someone";
+import VendorMatrixTable from "@/components/azure-exam/vendor-matrix-table";
 import AzureSEOContent from "@/components/azure-exam/azure-seo-content";
 //import HowOurProctoredProcessWork from "@/components/azure-exam/how-our-proctored-process-work";
 import WhyChooseUs from "@/components/comptia-exam/why-choose-us";
@@ -36,9 +37,10 @@ export default async function AzureHomePage() {
     <>
       <AzureExamFAQSchema />
       <Hero />
-      {/* <VendorMatrixGrid />
-      <HireSomeone /> */}
+      <VendorMatrixGrid />
+      <HireSomeone />
       <AzureSEOContent />
+      <VendorMatrixTable />
       {/* <HowOurProctoredProcessWork /> */}
       {/* <ExamWeSupport azureExams={azureExams} /> */}
       <WhyChooseUs />

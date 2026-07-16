@@ -24,7 +24,7 @@ export const examAidCategories: ExamCategory = {
       name: "Take Azure Administrator (AZ-104) Exam for Me",
       slug: "pay-someone-to-take-azure-administrator-az-104-exam-for-me",
     },
-    {
+    {ls
       name: "Take Azure Solutions Architect Expert (AZ-305) Exam for Me",
       slug: "pay-someone-to-take-azure-solutions-architect-expert-az-30-exam-for-me",
     },

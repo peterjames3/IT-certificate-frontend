@@ -22,21 +22,20 @@ const LeftHero = () => {
               Hire Verified Azure Experts To{" "}
             </span>
             <span className="text-[#10b981]">Take Your Azure Exams </span>
-            <span className="text-secondary">
-              Secure, Confidential & Guaranteed{" "}
-            </span>
+            <span className="text-secondary">Secure & Confidential </span>
           </h3>
 
           <p className="text-gray-600 mb-8 text-lg leading-relaxed">
             If you struggle to balance your busy career with intensive cloud
             preparation, you can pay someone to take your Microsoft Azure exam
-            with total operational anonymity. Our professional exam takers leverage secure proxy services to clear all primary validation tracks, including
+            with total operational anonymity. Our professional exam takers
+            leverage secure proxy services to clear all primary validation
+            tracks, including
             <strong className="text-secondary font-medium">
               {" "}
-              tracks like AZ-900 to associate and expert
-            tracks like AZ-104, AZ-500, and AZ-305.
+              tracks like AZ-900 to associate and expert tracks like AZ-104,
+              AZ-500, and AZ-305.
             </strong>{" "}
-           
           </p>
 
           <motion.button
