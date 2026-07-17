@@ -282,3 +282,221 @@ export const comptiaexamsWeSupportQuery = groq`
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
+
+// Fetch Slugs for AWS Exam aid programs
+export const awsExamServicePathQuery = groq`
+  *[_type == "awsServicePage" && defined(slug.current)] {
+    "slug": slug.current
+  }
+`;
+
+// Get a single AWS exam service page by slug
+export const awsExamServicePageQuery = groq`
+  *[_type == "awsServicePage" && slug.current == $slug][0] {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+ 
+    // OG image for social sharing
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+ 
+    // Page builder sections
+    sections[] {
+      _type,
+ 
+      // ── Hero ──────────────────────────────────────────────
+      _type == "hero" => {
+        preHeading,
+        heading,
+        accentWord,
+        subtext,
+        ctaPrimary,
+        ctaSecondary,
+        "sections": sections[]-> {
+          title,
+          content,
+          tips,
+          icon
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        },
+        backgroundColor
+      },
+ 
+      // ── Content Section with Image ─────────────────────────
+      _type == "contentSectionWithImage" => {
+        sectionId,
+        heading,
+        subheading,
+        body, // Portable Text — rendered with <PortableText />
+        imagePosition,
+        imageSize,
+        backgroundColor,
+        "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+ 
+      // ── Certificate Overview ────────────────────────────────
+      _type == "certOverviewSection" => { _type, sectionId, certSlug },
+
+      // ── AWS Focused Content Section ──────────────────────────
+      _type == "awsFocusedContentSection" => {
+        _type,
+        sectionId,
+        heading,
+        body,
+        sidebarCards[]{
+          title,
+          accentColor,
+          items[]{ text, link }
+        },
+        backgroundColor,
+        ctaButton
+      },
+ 
+      // ── Steps / Process ───────────────────────────────────
+      _type == "stepsSection" => {
+        heading,
+        subheading,
+        steps[] {
+          stepNumber,
+          label,
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+ 
+      // ── Exam Structure ────────────────────────────────────
+      _type == "examStructureSection" => {
+        heading,
+        subheading,
+        body,
+        structurePoints[],
+        "diagramImage": diagramImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+ 
+      // ── Challenges ────────────────────────────────────────
+      _type == "challengesSection" => {
+        heading,
+        intro,
+        challenges[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+ 
+      // ── Unlock Path ───────────────────────────────────────
+      _type == "unlockPathSection" => {
+        heading,
+        subheading,
+        featureCards[] {
+          title,
+          description,
+          accentColor,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "sideImage": sideImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        }
+      },
+ 
+      // ── Why Choose Us ─────────────────────────────────────
+      _type == "whyChooseUsSection" => {
+        heading,
+        subheading,
+        intro,
+        reasons[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        }
+      },
+ 
+      // ── FAQ ───────────────────────────────────────────────
+      _type == "faqSection" => {
+        heading,
+        subheading,
+        faqs[] {
+          question,
+          answer, // Portable Text
+          category
+        },
+        ctaBlock
+      }
+    }
+  }
+`;
+
+// Get all AWS exam service pages (for listing/sitemap)
+export const allAwsExamServicePagesQuery = groq`
+  *[_type == "awsServicePage"] | order(_createdAt desc) {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current, 
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    }
+  }
+`;
+
+// Fetch all AWS exam service pages as a lightweight listing
+export const awsExamsWeSupportQuery = groq`
+  *[_type == "awsServicePage"] | order(seoTitle asc) {
+    _id,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "thumbnail": sections[_type == "hero"][0].heroImage {
+      alt,
+      "url": asset->url
+    },
+    "tagline": sections[_type == "hero"][0].subtext,
+  }
+`;

@@ -23,7 +23,7 @@ const LeftHero = () => {
             </span>
             <span className="text-[#10b981]">Take your CompTIA Exams </span>
             <span className="text-secondary">
-              Secure, Confidential & Guaranteed{" "}
+              Secure & Guaranteed{" "}
             </span>
           </h3>
 
@@ -36,8 +36,7 @@ const LeftHero = () => {
               {" "}
               Our verified CompTIA specialists cover all 19 certifications,
             </strong>{" "}
-            ranging from fundamental tracks like CompTIA A+ and Network+ to
-            high-tier tracks like Security+, CySA+, and PenTest+.
+            
           </p>
 
           <motion.button

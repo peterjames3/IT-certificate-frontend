@@ -85,20 +85,39 @@ export const examAidCategories: ExamCategory = {
 
 export const comptiaCategories: ExamCategory = {
   "CompTIA Core": [
-    { name: "Take CompTIA A+ Exam for Me", slug: "take-pmp-exam" },
-    { name: "Take CompTIA Network+ Exam for Me", slug: "take-pmp-exam" },
-    
-    { name: "Take CompTIA Data+ Exam for Me", slug: "pay-someone-to-take-my-comptia-data-plus-exam-for-me" }
+    { name: "Take CompTIA A+ Exam for Me", slug: "pay-someone-to-take-my-comptia-a-plus-exam-for-me" },
+    { name: "Take CompTIA Network+ Exam for Me", slug: "pay-someone-to-take-my-comptia-network-plus-exam-for-me" },
+      { name: "Take CompTIA Tech + Exam for Me", slug: "pay-someone-to-take-my-comptia-tech-plus-exam-for-me" },
+
+    {
+      name: "Take CompTIA Data+ Exam for Me",
+      slug: "pay-someone-to-take-my-comptia-data-plus-exam-for-me",
+    },
   ],
   "CompTIA Infrastructure": [
-    { name: "Take CompTIA Server+ for Me", slug: "take-ged-exam" },
-    { name: "Take CompTIA Cloud+ for me", slug: "take-hiset-exam" },
-    { name: "Take CompTIA Linux+ Exam for Me", slug: "take-pmp-exam" },
+    {
+      name: "Take CompTIA Server+ for Me",
+      slug: "pay-someone-to-take-my-comptia-server-plus-exam-for-me",
+    },
+    {
+      name: "Take CompTIA Cloud+ for me",
+      slug: "pay-someone-to-take-my-comptia-cloud-plus-exam-for-me",
+    },
+    { name: "Take CompTIA Linux+ Exam for Me", slug: "pay-someone-to-take-my-comptia-linux-plus-exam-for-me" },
   ],
   "CompTIA Cybersecurity": [
-    { name: "Take CompTIA CySA+ for Me", slug: "take-ged-exam" },
-    { name: "Take CompTIA PenTest+ for me", slug: "take-hiset-exam" },
-    { name: "Take CompTIA Security+ Exam for Me", slug: "pay-someone-to-take-my-comptia-security-plus-exam-for-me" },
+    {
+      name: "Take CompTIA CySA+ for Me",
+      slug: "pay-someone-to-take-my-comptia-cysa-plus-exam-for-me",
+    },
+    {
+      name: "Take CompTIA PenTest+ for me",
+      slug: "pay-someone-to-take-my-comptia-pentest-plus-exam-for-me",
+    },
+    {
+      name: "Take CompTIA Security+ Exam for Me",
+      slug: "pay-someone-to-take-my-comptia-security-plus-exam-for-me",
+    },
   ],
 };
 

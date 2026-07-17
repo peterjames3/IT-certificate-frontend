@@ -289,56 +289,56 @@ export default function ComptiaSeoContent() {
           <div className="px-3 py-6">
             <ul className="flex flex-col space-y-3 p-2 font-medium">
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-server+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-server-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My CompTIA Server+ Exam For Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-cysa+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cysa-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA CySA+ Exam for Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-network+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-network-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA Network+ Exam for Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-security+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-security-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA Security+ Exam for Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-linux+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-linux-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA Linux+ Exam for Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-cloud+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cloud-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA Cloud+ Exam for Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-pentest+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-pentest-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA PenTest+ Exam for Me
               </Link>
               <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/take-my-comptia-data+-exam-for-me"
+                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-data-plus-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}

@@ -44,7 +44,7 @@ const MATRIX_DATA = [
 
 export default function VendorMatrixTable() {
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto w-full">
+    <section className="py-20 px-6 max-w-310 mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-12">
         <span className="text-sm font-bold uppercase tracking-widest text-primary mb-2 block">

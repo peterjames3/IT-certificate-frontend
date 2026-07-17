@@ -167,7 +167,7 @@ export default function AzureSeoContent() {
             </ul>
 
             <p className="mb-3 pt-2">
-              After you hire an expert **exam taker** through TestHelpNow, you 
+              After you hire an expert <strong>Azure exam taker</strong> through TestHelpNow, you 
               work with professionals who are committed to achieving the best 
               possible outcome. You just need to say do my Azure exam for me, 
               and we match you with a verified specialist who holds that specific 
@@ -200,7 +200,7 @@ export default function AzureSeoContent() {
               verification process, you will upload pictures of your ID and the 
               testing room to the portal using your phone, then the proctor will 
               ask you some questions and ask you to show the room. Once they launch 
-              the exam, we take control of your computer and our expert **exam taker** 
+              the exam, we take control of your computer and our expert <strong>Azure exam taker </strong> 
               will answer each question on the Microsoft Azure exam for you diligently.
             </p>
           </div>
@@ -280,48 +280,42 @@ export default function AzureSeoContent() {
           </div>
           <div className="px-3 py-6">
             <ul className="flex flex-col space-y-3 p-2 font-medium">
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me/take-my-azure-az-900-exam-for-me"
+              <li
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure AZ-900 Exam For Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me/take-my-azure-az-104-exam-for-me"
+              </li>
+              <li
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure AZ-104 Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me/take-my-azure-az-305-exam-for-me"
+              </li>
+              <li
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure AZ-305 Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me/take-my-azure-az-500-exam-for-me"
+              </li>
+              <li
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure AZ-500 Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me/take-my-azure-dp-203-exam-for-me"
+              </li>
+              <li
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure DP-203 Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me/take-my-azure-ai-900-exam-for-me"
+              </li>
+              <li
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure AI-900 Exam for Me
-              </Link>
+              </li>
               <Link
                 href="/proctored-it-exam-help"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
