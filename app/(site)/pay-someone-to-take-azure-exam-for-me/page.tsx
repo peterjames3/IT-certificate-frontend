@@ -4,13 +4,11 @@ import VendorMatrixGrid from "@/components/azure-exam/vendor-matrix-grid";
 import HireSomeone from "@/components/azure-exam/hire-someone";
 import VendorMatrixTable from "@/components/azure-exam/vendor-matrix-table";
 import AzureSEOContent from "@/components/azure-exam/azure-seo-content";
-//import HowOurProctoredProcessWork from "@/components/azure-exam/how-our-proctored-process-work";
-import WhyChooseUs from "@/components/comptia-exam/why-choose-us";
+
+import WhyChooseUs from "@/components/azure-exam/why-choose-us";
 import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 import AzureFAQSection from "@/components/faq/azure-page-faq";
-//import { sanityFetch } from "@/sanity/lib/server-fetch";//
-//import { allAzureExamServicePagesQuery } from "@/sanity/lib/queries";
-//import ExamWeSupport from "@/components/azure-exam/exam-we-support";
+
 import AzureExamFAQSchema from "./_schema";
 
 export const metadata = {
@@ -29,9 +27,7 @@ export const metadata = {
 };
 
 export default async function AzureHomePage() {
-//   const azureExams = await sanityFetch<SanityDocument[]>({
-//     query: allAzureExamServicePagesQuery,
-//   });
+
   
   return (
     <>
@@ -41,8 +37,7 @@ export default async function AzureHomePage() {
       <HireSomeone />
       <AzureSEOContent />
       <VendorMatrixTable />
-      {/* <HowOurProctoredProcessWork /> */}
-      {/* <ExamWeSupport azureExams={azureExams} /> */}
+    
       <WhyChooseUs />
       <TestimonialsSection />
       <AzureFAQSection />

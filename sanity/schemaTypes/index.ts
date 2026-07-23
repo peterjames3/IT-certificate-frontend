@@ -10,6 +10,7 @@ import { ChallengesSectionType } from "./challengesSectionType";
 import { CompTIAExamsServicePageType } from "./comptiaexamsType";
 import { compTIAFocusedSchemaTypes } from "./compTIAFocusedSectionType";
 import { sectionType } from "./sectionType";
+import {awsFocusedSchemaTypes} from './AwsFocusedSectionType'
 import { certOverviewSectionType}  from "./certOverviewSectionType";
 import { ContentSectionWithImageType } from "./contentSectionWithImageType";
 export const schema: { types: SchemaTypeDefinition[] } = {
@@ -20,8 +21,9 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     authorType,
     sectionType,
     ...compTIAFocusedSchemaTypes,
+    ...awsFocusedSchemaTypes,
     CompTIAExamsServicePageType,
-AWSExamsServicePageType,
+    AWSExamsServicePageType,
     certOverviewSectionType,
     ContentSectionWithImageType,
     FaqSectionType,

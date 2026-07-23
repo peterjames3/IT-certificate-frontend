@@ -78,7 +78,7 @@ export default function AwsSeoContent() {
           }}
         >
           <h2 className="text-2xl font-semibold mt-8 mb-4">
-            Professional Proxy Testing for OnVUE, Honorlock, & Pearson VUE Platforms
+            Professional AWS Proxy Testing for OnVUE, Honorlock, & Pearson VUE Platforms
           </h2>
           <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
             <p>
@@ -167,7 +167,7 @@ export default function AwsSeoContent() {
             </ul>
 
             <p className="mb-3 pt-2">
-              After you hire an expert **exam taker** through TestHelpNow, you 
+              After you hire an expert <strong> AWS exam taker </strong> through TestHelpNow, you 
               work with professionals who are committed to achieving the best 
               possible outcome. You just need to say do my AWS exam for me, 
               and we match you with a verified specialist who holds that specific 
@@ -200,7 +200,7 @@ export default function AwsSeoContent() {
               verification process, you will upload pictures of your ID and the 
               testing room to the portal using your phone, then the proctor will 
               ask you some questions and ask you to show the room. Once they launch 
-              the exam, we take control of your computer and our expert **exam taker** 
+              the exam, we take control of your computer and our expert <strong> AWS exam taker </strong> 
               will answer each question on the Amazon Web Services exam for you diligently.
             </p>
           </div>
@@ -285,21 +285,21 @@ export default function AwsSeoContent() {
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My AWS Cloud Practitioner Exam For Me
+                Take AWS Cloud Practitioner Exam For Me
               </Link>
               <Link
                 href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-associate-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My AWS Solutions Architect Associate Exam for Me
+                Take  AWS Solutions Architect Associate Exam for Me
               </Link>
               <Link
                 href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-developer-associate-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My AWS Developer Associate Exam for Me
+                Take AWS Developer Associate Exam for Me
               </Link>
               <Link
                 href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-sysops-administrator-exam-for-me"
@@ -313,22 +313,51 @@ export default function AwsSeoContent() {
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My AWS Solutions Architect Professional Exam for Me
+                Take AWS Solutions Architect Professional Exam for Me
               </Link>
               <Link
                 href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-security-specialty-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My AWS Security Specialty Exam for Me
+                Take AWS Security Specialty Exam for Me
               </Link>
-              <Link
-                href="/proctored-it-exam-help"
+               <Link
+                href="/pay-someone-to-take-comptia-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                And other cloud-based setups (Azure, ITIL, etc.)
+                Take CompTIA Exam for Me
               </Link>
+                <Link
+                href="/pay-someone-to-take-aws-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take AWS Exam for Me
+              </Link>
+                <Link
+                href="/pay-someone-to-take-azure-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take Microsoft Azure Exam for Me
+              </Link>
+                <Link
+                href="/pay-someone-to-take-itil-v4"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take ITIL-V4 Exam for Me
+              </Link>
+                <Link
+                href="/pay-someone-to-take-cisco-ccna-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take Cisco CCNA Exam for Me
+              </Link>
+          
             </ul>
           </div>
         </motion.article>

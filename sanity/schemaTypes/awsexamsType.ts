@@ -44,7 +44,7 @@ export const AWSExamsServicePageType = defineType({
       of: [
         { type: "hero" },
         { type: "contentSectionWithImage" },
-        { type: "compTIAFocusedContentSection" },
+        { type: "awsFocusedContentSection" },
         { type: "certOverviewSection" },
         { type: "faqSection" },
       ],

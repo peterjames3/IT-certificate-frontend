@@ -4,19 +4,19 @@ import LearnOnlineBadge from "./learnonline-badge";
 
 export default function AboutLeft() {
   return (
-    <div className="relative w-full w-full mx-auto flex items-center justify-center ">
+    <div className="relative w-full h-full mx-auto flex  justify-center ">
       {/* 1. Recreated Geometric Circular Rings in the back */}
       <BackgroundRings />
 
       {/* 2. Main Characters Container */}
-      <div className="relative w-full h-full z-6">
+      <div className="relative w-full h-[30rem] z-6 ">
         <Image
-          src="/about-us-image-preview.png" // Replace with your isolated transparent PNG path
+          src="/about-us-image-preview.png" 
           alt="Male Instructor"
           width={1200}
           height={1200}
           priority
-          className="object-cover drop-shadow-[0_15px_15px_rgba(0,0,0,0.12)]"
+          className="object-cover h-full drop-shadow-[0_15px_15px_rgba(0,0,0,0.12)]"
         />
       </div>
 

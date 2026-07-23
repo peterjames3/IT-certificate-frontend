@@ -85,9 +85,18 @@ export const examAidCategories: ExamCategory = {
 
 export const comptiaCategories: ExamCategory = {
   "CompTIA Core": [
-    { name: "Take CompTIA A+ Exam for Me", slug: "pay-someone-to-take-my-comptia-a-plus-exam-for-me" },
-    { name: "Take CompTIA Network+ Exam for Me", slug: "pay-someone-to-take-my-comptia-network-plus-exam-for-me" },
-      { name: "Take CompTIA Tech + Exam for Me", slug: "pay-someone-to-take-my-comptia-tech-plus-exam-for-me" },
+    {
+      name: "Take CompTIA A+ Exam for Me",
+      slug: "pay-someone-to-take-my-comptia-a-plus-exam-for-me",
+    },
+    {
+      name: "Take CompTIA Network+ Exam for Me",
+      slug: "pay-someone-to-take-my-comptia-network-plus-exam-for-me",
+    },
+    {
+      name: "Take CompTIA Tech + Exam for Me",
+      slug: "pay-someone-to-take-my-comptia-tech-plus-exam-for-me",
+    },
 
     {
       name: "Take CompTIA Data+ Exam for Me",
@@ -103,7 +112,10 @@ export const comptiaCategories: ExamCategory = {
       name: "Take CompTIA Cloud+ for me",
       slug: "pay-someone-to-take-my-comptia-cloud-plus-exam-for-me",
     },
-    { name: "Take CompTIA Linux+ Exam for Me", slug: "pay-someone-to-take-my-comptia-linux-plus-exam-for-me" },
+    {
+      name: "Take CompTIA Linux+ Exam for Me",
+      slug: "pay-someone-to-take-my-comptia-linux-plus-exam-for-me",
+    },
   ],
   "CompTIA Cybersecurity": [
     {
@@ -117,6 +129,54 @@ export const comptiaCategories: ExamCategory = {
     {
       name: "Take CompTIA Security+ Exam for Me",
       slug: "pay-someone-to-take-my-comptia-security-plus-exam-for-me",
+    },
+  ],
+};
+export const awsCategories: ExamCategory = {
+  "AWS Foundational & Associate": [
+    {
+      name: "Take AWS Certified Cloud Practitioner Exam for Me",
+      slug: "pay-someone-to-take-my-aws-cloud-practitioner-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Solutions Architect Associate Exam for Me",
+      slug: "pay-someone-to-take-my-aws-solutions-architect-associate-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Developer Associate Exam for Me",
+      slug: "pay-someone-to-take-my-aws-developer-associate-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified SysOps Administrator Associate Exam for Me",
+      slug: "pay-someone-to-take-my-aws-sysops-administrator-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Data Engineer Associate Exam for Me",
+      slug: "pay-someone-to-take-my-aws-data-engineer-associate-exam-for-me",
+    },
+  ],
+  "AWS Professional": [
+    {
+      name: "Take AWS Certified Solutions Architect Professional Exam for Me",
+      slug: "pay-someone-to-take-my-aws-solutions-architect-professional-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified DevOps Engineer Professional Exam for Me",
+      slug: "pay-someone-to-take-my-aws-devops-engineer-professional-exam-for-me",
+    },
+  ],
+  "AWS Specialty": [
+    {
+      name: "Take AWS Certified Advanced Networking Specialty Exam for Me",
+      slug: "pay-someone-to-take-my-aws-advanced-networking-specialty-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Security Specialty Exam for Me",
+      slug: "pay-someone-to-take-my-aws-security-specialty-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Machine Learning Specialty Exam for Me",
+      slug: "pay-someone-to-take-my-aws-machine-learning-specialty-exam-for-me",
     },
   ],
 };
@@ -143,8 +203,10 @@ const categoryToSubmenu = (categories: ExamCategory, basePath: string) => {
 };
 
 export const MenuItems: MenuItem[] = [
-  { name: "Home", href: "/" },
-
+  {
+    name: "Home",
+    href: "/",
+  },
   {
     name: "Take My CompTIA Exam",
     href: "/pay-someone-to-take-comptia-exam-for-me",
@@ -153,13 +215,16 @@ export const MenuItems: MenuItem[] = [
       "/pay-someone-to-take-comptia-exam-for-me",
     ),
   },
-
+  // {
+  //   name: "Cisco-CCNA",
+  //   href: "pay-someone-to-take-cisco-cnna-exam-for-me",
+  // },
   {
     name: "Proctored IT Exam Help",
     href: "/proctored-it-exam-help",
+    // Keep this if it serves as a separate landing page for general support inquiries
     submenu: categoryToSubmenu(examAidCategories, "/proctored-exam-help"),
   },
-
   {
     name: "Certificate Tools",
     href: "it-certificate-tools",
@@ -186,6 +251,12 @@ export const MenuItems: MenuItem[] = [
       },
     ],
   },
-  { name: "Blog", href: "/blog" },
-  { name: "How It Works", href: "/how-it-works" },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "How It Works",
+    href: "/how-it-works",
+  },
 ];

@@ -43,17 +43,31 @@ export default function Footer() {
 
         {/* Solutions */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Solutions</h3>
+          <h3 className="text-xl font-semibold mb-4">Services</h3>
           <ul className="space-y-2 text-gray-300 text-[1rem] ">
             <li>
-              <Link href="/exam-aid">➜ Proctored Exam support</Link>
+              <Link href="/pay-someone-to-take-comptia-exam-for-me">
+                ➜ Take CompTIA Related Exams For Me{" "}
+              </Link>
             </li>
             <li>
-              <Link href="/test-prep">➜ Test Prep </Link>
+              <Link href="/pay-someone-to-take-aws-for-me">
+                ➜ Take AWS Related Exams For Me{" "}
+              </Link>
             </li>
             <li>
-              <Link href="/academic/tutoring">
-                ➜ One-on-One Online Tutoring
+              <Link href="/pay-someone-to-take-azure-exam-for-me">
+                ➜ Take Azure Related Exams For Me
+              </Link>
+            </li>
+            <li>
+              <Link href="/pay-someone-to-take-itil-v4">
+                ➜ Take ITIL V4 Related Exam For Me
+              </Link>
+            </li>
+            <li>
+              <Link href="/pay-someone-to-take-cisco-cnna-exam-for-me">
+                ➜ Take CCNA Related Exam For Me
               </Link>
             </li>
           </ul>

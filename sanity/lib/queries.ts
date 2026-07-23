@@ -493,10 +493,11 @@ export const awsExamsWeSupportQuery = groq`
     seoTitle,
     seoDescription,
     "slug": slug.current,
-    "thumbnail": sections[_type == "hero"][0].heroImage {
-      alt,
-      "url": asset->url
-    },
+    "ogImage":ogImage {
+     alt,
+     "url":asset->url
+     },
+
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
