@@ -94,7 +94,7 @@ export default function Navbar() {
             aria-label="Get help now"
             aria-pressed="false"
           >
-            Get Help Now
+            Order Now
           </button>
         </div>
 

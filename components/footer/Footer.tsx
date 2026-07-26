@@ -70,6 +70,11 @@ export default function Footer() {
                 ➜ Take CCNA Related Exam For Me
               </Link>
             </li>
+             <li>
+              <Link href="/pay-someone-to-take-isaca-exam-for-me">
+                ➜ Take ISACA Related Exam For Me
+              </Link>
+            </li>
           </ul>
         </div>
 

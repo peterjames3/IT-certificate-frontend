@@ -316,12 +316,69 @@ export default function AzureSeoContent() {
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take My Azure AI-900 Exam for Me
               </li>
+             
               <Link
-                href="/proctored-it-exam-help"
+                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-cloud-practitioner-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                And other Cloud or AWS Exam setups
+                Take AWS Cloud Practitioner Exam For Me
+              </Link>
+              <Link
+                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-associate-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take  AWS Solutions Architect Associate Exam for Me
+              </Link>
+              <Link
+                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-developer-associate-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take AWS Developer Associate Exam for Me
+              </Link>
+              <Link
+                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-sysops-administrator-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take My AWS SysOps Administrator Exam for Me
+              </Link>
+              <Link
+                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-professional-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take AWS Solutions Architect Professional Exam for Me
+              </Link>
+              <Link
+                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-security-specialty-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take AWS Security Specialty Exam for Me
+              </Link>
+               <Link
+                href="/pay-someone-to-take-comptia-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take CompTIA Exam for Me
+              </Link>
+                <Link
+                href="/pay-someone-to-take-aws-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take AWS Exam for Me
+              </Link>
+                <Link
+                href="/pay-someone-to-take-azure-exam-for-me"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Take Microsoft Azure Exam for Me
               </Link>
             </ul>
           </div>

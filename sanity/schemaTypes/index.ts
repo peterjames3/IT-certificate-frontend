@@ -10,9 +10,13 @@ import { ChallengesSectionType } from "./challengesSectionType";
 import { CompTIAExamsServicePageType } from "./comptiaexamsType";
 import { compTIAFocusedSchemaTypes } from "./compTIAFocusedSectionType";
 import { sectionType } from "./sectionType";
-import {awsFocusedSchemaTypes} from './AwsFocusedSectionType'
-import { certOverviewSectionType}  from "./certOverviewSectionType";
+import { awsFocusedSchemaTypes } from "./AwsFocusedSectionType";
+import { certOverviewSectionType } from "./certOverviewSectionType";
 import { ContentSectionWithImageType } from "./contentSectionWithImageType";
+import { ISACAExamsServicePageType } from "./isacaexamsType";
+import { isacaFocusedSchemaTypes } from "./IsacaFocusedSectionType";
+import { ISACAExamType } from "./isacaExamType";
+
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     blockContentType,
@@ -20,10 +24,17 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     postType,
     authorType,
     sectionType,
+    // ── CompTIA ──
     ...compTIAFocusedSchemaTypes,
-    ...awsFocusedSchemaTypes,
     CompTIAExamsServicePageType,
+    // ── AWS ──
+    ...awsFocusedSchemaTypes,
     AWSExamsServicePageType,
+    // ── ISACA ──
+    ...isacaFocusedSchemaTypes,
+    ISACAExamsServicePageType,
+    ISACAExamType,
+    // ── Shared / Common ──
     certOverviewSectionType,
     ContentSectionWithImageType,
     FaqSectionType,

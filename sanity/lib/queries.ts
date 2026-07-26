@@ -1,4 +1,20 @@
 import { groq } from "next-sanity";
+export interface ISACAExam {
+  code: string;
+  track: string;
+  role: string;
+  focus: string;
+  icon: string;
+  slug: string;
+}
+export const isacaExamsQuery = groq`*[_type == "isacaExam"]{
+  code,
+  track,
+  role,
+  focus,
+  icon,
+  "slug": slug.current
+}`;
 
 //Get all posts
 
@@ -498,6 +514,227 @@ export const awsExamsWeSupportQuery = groq`
      "url":asset->url
      },
 
+    "tagline": sections[_type == "hero"][0].subtext,
+  }
+`;
+
+// ── ISACA Queries ──
+
+// Fetch Slugs for ISACA Exam service pages
+export const isacaExamServicePathQuery = groq`
+  *[_type == "isacaServicePage" && defined(slug.current)] {
+    "slug": slug.current
+  }
+`;
+
+// Get a single ISACA exam service page by slug
+export const isacaExamServicePageQuery = groq`
+  *[_type == "isacaServicePage" && slug.current == $slug][0] {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+
+    // OG image for social sharing
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+
+    // Page builder sections
+    sections[] {
+      _type,
+
+      // ── Hero ──────────────────────────────────────────────
+      _type == "hero" => {
+        preHeading,
+        heading,
+        accentWord,
+        subtext,
+        ctaPrimary,
+        ctaSecondary,
+        "sections": sections[]-> {
+          title,
+          content,
+          tips,
+          icon
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        },
+        backgroundColor
+      },
+
+      // ── Content Section with Image ─────────────────────────
+      _type == "contentSectionWithImage" => {
+        sectionId,
+        heading,
+        subheading,
+        body, // Portable Text — rendered with <PortableText />
+        imagePosition,
+        imageSize,
+        backgroundColor,
+        "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+
+      // ── Certificate Overview ────────────────────────────────
+      _type == "certOverviewSection" => { _type, sectionId, certSlug },
+
+      // ── ISACA Focused Content Section ──────────────────────
+      _type == "isacaFocusedContentSection" => {
+        _type,
+        sectionId,
+        heading,
+        body,
+        sidebarCards[]{
+          title,
+          accentColor,
+          items[]{ text, link }
+        },
+        backgroundColor,
+        ctaButton
+      },
+
+      // ── Steps / Process ───────────────────────────────────
+      _type == "stepsSection" => {
+        heading,
+        subheading,
+        steps[] {
+          stepNumber,
+          label,
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+
+      // ── Exam Structure ────────────────────────────────────
+      _type == "examStructureSection" => {
+        heading,
+        subheading,
+        body,
+        structurePoints[],
+        "diagramImage": diagramImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+
+      // ── Challenges ────────────────────────────────────────
+      _type == "challengesSection" => {
+        heading,
+        intro,
+        challenges[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+
+      // ── Unlock Path ───────────────────────────────────────
+      _type == "unlockPathSection" => {
+        heading,
+        subheading,
+        featureCards[] {
+          title,
+          description,
+          accentColor,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "sideImage": sideImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        }
+      },
+
+      // ── Why Choose Us ─────────────────────────────────────
+      _type == "whyChooseUsSection" => {
+        heading,
+        subheading,
+        intro,
+        reasons[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        }
+      },
+
+      // ── FAQ ───────────────────────────────────────────────
+      _type == "faqSection" => {
+        heading,
+        subheading,
+        faqs[] {
+          question,
+          answer, // Portable Text
+          category
+        },
+        ctaBlock
+      }
+    }
+  }
+`;
+
+// Get all ISACA exam service pages (for listing/sitemap)
+export const allIsacaExamServicePagesQuery = groq`
+  *[_type == "isacaServicePage"] | order(_createdAt desc) {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    }
+  }
+`;
+
+// Fetch all ISACA exam service pages as a lightweight listing
+// Used in the "Exams We Support" section
+export const isacaExamsWeSupportQuery = groq`
+  *[_type == "isacaServicePage"] | order(seoTitle asc) {
+    _id,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
