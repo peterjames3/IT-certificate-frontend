@@ -1,7 +1,7 @@
 import type { SanityDocument } from "@sanity/client";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
 import Hero from "@/components/isaca-exam/main-hero";
-import VendorMatrixGrid from "@/components/isaca-exam/vendor-matrix-grid";
+
 import HireSomeone from "@/components/isaca-exam/hire-someone";
 import VendorMatrixTable from "@/components/isaca-exam/vendor-matrix-table";
 import ISACASEOContent from "@/components/isaca-exam/isaca-seo-content";
@@ -60,7 +60,7 @@ export default async function ISACAHomePage() {
     <>
       <ISACAExamFAQSchema />
       <Hero />
-      <VendorMatrixGrid />
+      
       <ISACACertificationOverview />
       <HireSomeone />
       <ISACASEOContent />
