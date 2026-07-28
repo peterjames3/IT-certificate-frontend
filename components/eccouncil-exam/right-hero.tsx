@@ -1,0 +1,105 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { User, MonitorX, ScanEye } from "lucide-react";
+
+export default function HeroRight() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <motion.div
+      className="w-full flex flex-col lg:flex-row items-stretch gap-6"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      {/* Identity Verification Box */}
+      <motion.div
+        className="relative bg-accent2 rounded-3xl flex flex-col justify-center w-full lg:w-1/2 px-6 py-8 md:py-12 lg:py-16 border border-gray-100 shadow-sm overflow-hidden"
+        variants={itemVariants}
+      >
+        <section className="relative z-10 space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="rounded-full p-3 bg-accent shrink-0">
+              <User className="w-6 h-6 text-primary" />
+            </div>
+            <h3 className="text-xl md:text-2xl font-bold text-secondary">
+              Identity Verification
+            </h3>
+          </div>
+          <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+            Webcam ID checks, face matching, and physical passport verification.
+            Our professional exam takers handle every security verification step
+            Pearson VUE requires before your EC-Council certification exam
+            begins.
+          </p>
+          
+        </section>
+      </motion.div>
+
+      {/* Right Column Stack */}
+      <div className="flex flex-col gap-6 w-full lg:w-1/2">
+        {/* Lockdown Browser Box */}
+        <motion.div
+          className="space-y-4 rounded-3xl bg-cardBg-support2 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
+          variants={itemVariants}
+        >
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="rounded-full p-3 bg-accent shrink-0">
+                <MonitorX className="w-5 h-5 text-primary" />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold text-secondary">
+                Lockdown Browser
+              </h3>
+            </div>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              Pearson VUE OnVUE software restricts all other system background
+              tasks. Our proxy services and technical specialists operate within
+              this restricted environment smoothly without triggering system
+              flags.
+            </p>
+          </div>
+          
+        </motion.div>
+
+        {/* AI Behaviour Monitoring Box */}
+        <motion.div
+          className="space-y-4 rounded-3xl bg-cardBg-support3 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
+          variants={itemVariants}
+        >
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <div className="rounded-full p-3 bg-accent shrink-0">
+                <ScanEye className="w-5 h-5 text-gray-800" />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800">
+                AI Behaviour Monitoring
+              </h3>
+            </div>
+            <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+              Modern proctors flag unusual typing speeds, screen interactions,
+              and mic changes. Our professional exam takers maintain fully
+              expected candidate activity patterns through our secure proxy
+              services.
+            </p>
+          </div>
+          
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
