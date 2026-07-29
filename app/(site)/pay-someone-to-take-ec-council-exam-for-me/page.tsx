@@ -3,13 +3,13 @@ import { sanityFetch } from "@/sanity/lib/server-fetch";
 import Hero from "@/components/eccouncil-exam/main-hero";
 
 import HireSomeone from "@/components/eccouncil-exam/hire-someone";
-//import VendorMatrixTable from "@/components/eccouncil-exam/vendor-matrix-table";
+import VendorMatrixTable from "@/components/eccouncil-exam/vendor-matrix-table";
 import ECCouncilSEOContent from "@/components/eccouncil-exam/eccouncil-seo-content";
 import WhyChooseUs from "@/components/eccouncil-exam/why-choose-us";
 import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 import ECCouncilFAQSection from "@/components/faq/eccouncil-page-faq";
 import ECCouncilExamFAQSchema from "./_schema";
-//import { eccouncilExamsQuery } from "@/sanity/lib/queries";
+import { eccouncilExamsQuery } from "@/sanity/lib/queries";
 import ECCouncilCertificationOverview from "@/components/eccouncil-exam/eccouncil-cert-overview";
 
 export const metadata = {
@@ -65,18 +65,19 @@ export const metadata = {
 };
 
 export default async function ECCouncilHomePage() {
-//   const eccouncilExams = await sanityFetch<SanityDocument[]>({
-//     query: eccouncilExamsQuery,
-//   });
+   const eccouncilExams = await sanityFetch<SanityDocument[]>({
+     query: eccouncilExamsQuery,
+   });
 
-//   const examData =
-//     eccouncilExams?.map((exam: SanityDocument) => ({
-//       code: exam.code,
-//       track: exam.track,
-//       role: exam.role,
-//       focus: exam.focus,
-//       slug: exam.slug,
-//     })) || [];
+console.log(eccouncilExams.length)
+   const examData =
+     eccouncilExams?.map((exam: SanityDocument) => ({
+       code: exam.code,
+       track: exam.track,
+       role: exam.role,
+       focus: exam.focus,
+       slug: exam.slug,
+     })) || [];
 
   
   return (
@@ -87,7 +88,7 @@ export default async function ECCouncilHomePage() {
       <ECCouncilCertificationOverview />
       <HireSomeone />
        <ECCouncilSEOContent /> 
-      {/* <VendorMatrixTable exams={examData} provider="eccouncil" /> */}
+       <VendorMatrixTable exams={examData} provider="eccouncil" /> 
        <WhyChooseUs /> 
        <TestimonialsSection /> 
        <ECCouncilFAQSection /> 
