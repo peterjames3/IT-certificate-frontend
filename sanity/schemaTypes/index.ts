@@ -16,6 +16,10 @@ import { ContentSectionWithImageType } from "./contentSectionWithImageType";
 import { ISACAExamsServicePageType } from "./isacaexamsType";
 import { isacaFocusedSchemaTypes } from "./IsacaFocusedSectionType";
 import { ISACAExamType } from "./isacaExamType";
+import { ECCouncilServicePageType } from "./eccouncilexamsType";
+import { eccouncilFocusedSchemaTypes } from "./eccouncilFocusedSectionType";
+import { ECCouncilExamType } from "./eccouncilExamType";
+
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -34,6 +38,10 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ...isacaFocusedSchemaTypes,
     ISACAExamsServicePageType,
     ISACAExamType,
+     // ── EC-Council ──
+    ...eccouncilFocusedSchemaTypes,
+    ECCouncilServicePageType,
+    ECCouncilExamType,
     // ── Shared / Common ──
     certOverviewSectionType,
     ContentSectionWithImageType,

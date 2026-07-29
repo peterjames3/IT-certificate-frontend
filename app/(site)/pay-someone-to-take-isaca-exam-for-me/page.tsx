@@ -55,7 +55,7 @@ export default async function ISACAHomePage() {
       slug: exam.slug,
     })) || [];
 
-  console.log(isacaExams.length);
+ 
   return (
     <>
       <ISACAExamFAQSchema />

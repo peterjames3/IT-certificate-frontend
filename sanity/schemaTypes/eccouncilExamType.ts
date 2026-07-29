@@ -1,0 +1,91 @@
+// sanity/schemaTypes/eccouncilExamType.ts
+import { defineType, defineField } from "sanity";
+
+export const ECCouncilExamType = defineType({
+  name: "eccouncilExam",
+  title: "EC-Council Exam",
+  type: "document",
+  fields: [
+    defineField({
+      name: "code",
+      title: "Exam Code",
+      type: "string",
+      description: "e.g., CEH, ECSA, CHFI, CND, CCISO, LPT",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "track",
+      title: "Certification Track",
+      type: "string",
+      description: "e.g., Certified Ethical Hacker",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "role",
+      title: "Targeted Professional Role",
+      type: "string",
+      description: "e.g., Penetration Tester, Security Analyst, Forensic Investigator",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "focus",
+      title: "Core Focus Areas",
+      type: "text",
+      description: "Brief description of exam focus areas including practical skills",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: { source: "code", maxLength: 96 },
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "icon",
+      title: "Icon",
+      type: "string",
+      description: "Icon name from Lucide",
+      options: {
+        list: [
+          { title: "Terminal", value: "terminal" },
+          { title: "Shield", value: "shield" },
+          { title: "Lock", value: "lock" },
+          { title: "Network", value: "network" },
+          { title: "Server", value: "server" },
+          { title: "Database", value: "database" },
+          { title: "Cloud", value: "cloud" },
+          { title: "CPU", value: "cpu" },
+          { title: "Router", value: "router" },
+          { title: "Globe", value: "globe" },
+          { title: "Wifi", value: "wifi" },
+          { title: "Eye", value: "eye" },
+          { title: "File Check", value: "fileCheck" },
+          { title: "Briefcase", value: "briefcase" },
+          { title: "Users", value: "users" },
+          { title: "Bar Chart", value: "barChart" },
+          { title: "Book Open", value: "bookOpen" },
+          { title: "Bug", value: "bug" },
+          { title: "Sword", value: "sword" },
+          { title: "Target", value: "target" },
+          { title: "Key", value: "key" },
+          { title: "Scan", value: "scan" },
+          { title: "Fingerprint", value: "fingerprint" },
+          { title: "Alert Triangle", value: "alertTriangle" },
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+    }),
+    // ── Optional: Link to the service page ──
+    defineField({
+      name: "servicePage",
+      title: "Related Service Page",
+      type: "reference",
+      to: [{ type: "eccouncilServicePage" }],
+      description: "Link to the corresponding EC-Council service page",
+    }),
+  ],
+  preview: {
+    select: { title: "code", subtitle: "track" },
+  },
+});

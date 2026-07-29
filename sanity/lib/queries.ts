@@ -738,3 +738,233 @@ export const isacaExamsWeSupportQuery = groq`
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
+
+export const eccouncilExamsQuery = groq`*[_type == "eccouncilExam"]{
+  code,
+  track,
+  role,
+  focus,
+  icon,
+  "slug": slug.current
+}`;
+
+
+// ── EC-Council Queries ──
+
+// Fetch Slugs for EC-Council Exam service pages
+export const eccouncilExamServicePathQuery = groq`
+  *[_type == "eccouncilServicePage" && defined(slug.current)] {
+    "slug": slug.current
+  }
+`;
+
+// Get a single EC-Council exam service page by slug
+export const eccouncilExamServicePageQuery = groq`
+  *[_type == "eccouncilServicePage" && slug.current == $slug][0] {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+
+    // OG image for social sharing
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+
+    // Page builder sections
+    sections[] {
+      _type,
+
+      // ── Hero ──────────────────────────────────────────────
+      _type == "hero" => {
+        preHeading,
+        heading,
+        accentWord,
+        subtext,
+        ctaPrimary,
+        ctaSecondary,
+        "sections": sections[]-> {
+          title,
+          content,
+          tips,
+          icon
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        },
+        backgroundColor
+      },
+
+      // ── Content Section with Image ─────────────────────────
+      _type == "contentSectionWithImage" => {
+        sectionId,
+        heading,
+        subheading,
+        body, // Portable Text — rendered with <PortableText />
+        imagePosition,
+        imageSize,
+        backgroundColor,
+        "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+
+      // ── Certificate Overview ────────────────────────────────
+      _type == "certOverviewSection" => { _type, sectionId, certSlug },
+
+      // ── EC-Council Focused Content Section ──────────────────
+      _type == "eccouncilFocusedContentSection" => {
+        _type,
+        sectionId,
+        heading,
+        body,
+        sidebarCards[]{
+          title,
+          accentColor,
+          items[]{ text, link }
+        },
+        backgroundColor,
+        ctaButton
+      },
+
+      // ── Steps / Process ───────────────────────────────────
+      _type == "stepsSection" => {
+        heading,
+        subheading,
+        steps[] {
+          stepNumber,
+          label,
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+
+      // ── Exam Structure ────────────────────────────────────
+      _type == "examStructureSection" => {
+        heading,
+        subheading,
+        body,
+        structurePoints[],
+        "diagramImage": diagramImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+
+      // ── Challenges ────────────────────────────────────────
+      _type == "challengesSection" => {
+        heading,
+        intro,
+        challenges[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        ctaButton
+      },
+
+      // ── Unlock Path ───────────────────────────────────────
+      _type == "unlockPathSection" => {
+        heading,
+        subheading,
+        featureCards[] {
+          title,
+          description,
+          accentColor,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "sideImage": sideImage {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        }
+      },
+
+      // ── Why Choose Us ─────────────────────────────────────
+      _type == "whyChooseUsSection" => {
+        heading,
+        subheading,
+        intro,
+        reasons[] {
+          title,
+          description,
+          "icon": icon {
+            alt,
+            "url": asset->url
+          }
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        }
+      },
+
+      // ── FAQ ───────────────────────────────────────────────
+      _type == "faqSection" => {
+        heading,
+        subheading,
+        faqs[] {
+          question,
+          answer, // Portable Text
+          category
+        },
+        ctaBlock
+      }
+    }
+  }
+`;
+
+// Get all EC-Council exam service pages (for listing/sitemap)
+export const allEccouncilExamServicePagesQuery = groq`
+  *[_type == "eccouncilServicePage"] | order(_createdAt desc) {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    }
+  }
+`;
+
+// Fetch all EC-Council exam service pages as a lightweight listing
+export const eccouncilExamsWeSupportQuery = groq`
+  *[_type == "eccouncilServicePage"] | order(seoTitle asc) {
+    _id,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+    "tagline": sections[_type == "hero"][0].subtext,
+  }
+`;
