@@ -186,9 +186,9 @@ export default function ProctoredSeoContent() {
       <div className="w-full md:w-[35%] space-y-12">
         {/* Box 1: Core Tech Links */}
         <article className="border border-gray-300 overflow-hidden rounded-lg space-y-2">
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>
-              IT Certifications <br /> We Cover
+              Proctored IT Exam Certifications <br /> We Cover
             </h2>
           </div>
           <div className="px-3 py-6">
@@ -220,7 +220,7 @@ export default function ProctoredSeoContent() {
 
         {/* Box 2: Selling points tailored for IT professionals */}
         <article className="border overflow-hidden border-gray-300 rounded-lg space-y-2">
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>Why We&apos;re #1 for IT Exam Help</h2>
           </div>
           <div className="px-4 py-6">
@@ -251,7 +251,7 @@ export default function ProctoredSeoContent() {
 
         {/* Box 3: Types of Proctored Spaces */}
         <article className="border overflow-hidden border-gray-300 rounded-lg space-y-2">
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">

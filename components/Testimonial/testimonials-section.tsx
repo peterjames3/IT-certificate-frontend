@@ -76,7 +76,7 @@ export default function TestimonialsPage() {
   return (
     <div className="py-16 relative bg-white">
       <section className="w-full mx-auto max-w-full lg:max-w-310 px-3">
-        <h2 className="text-center text-3xl font-extrabold text-slate-900 mb-2 tracking-tight">
+        <h2 className="text-center text-3xl font-extrabold text-secondary mb-2 tracking-tight">
           Verified Professional Reviews
         </h2>
         <p className="text-center text-gray-500 text-[1.2rem] md:text-base mb-12 max-w-xl mx-auto">

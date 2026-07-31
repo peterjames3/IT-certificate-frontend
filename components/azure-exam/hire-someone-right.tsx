@@ -4,7 +4,7 @@ import {
   MonitorOff,
   Timer,
   Wifi,
-  Eye,  
+  Eye,
   ClipboardCheck,
 } from "lucide-react";
 
@@ -12,35 +12,28 @@ export default function HireSomeoneRight() {
   const features = [
     {
       label: "Lockdown Browser",
-      icon: <MonitorOff className="w-6 h-6 text-green-500" />,
-      color: "bg-emerald-50 text-emerald-700 border-emerald-100",
+      icon: <MonitorOff className="size-6 " />,
     },
     {
       label: "Identity verification",
-      icon: <ScanFace className="w-6 h-6 text-green-500" />,
-      color: "bg-blue-50 text-blue-700 border-blue-100",
+      icon: <ScanFace className="size-6" />,
     },
     {
       label: "AI behaviour Monitoring",
-      icon: <Eye className="w-6 h-6 text-green-500" />,
-      color: "bg-accent-50 text-accent-600 border-orange-100",
+      icon: <Eye className="size-6 " />,
     },
     {
       label: "Timed Pressure",
       icon: <Timer className="w-6 h-6 text-green-500" />,
-      color: "bg-[#D9F3D8] text-secondary-400 border-[#D9F3D8]",
     },
     {
       label: "Post-exam Debrief",
-      icon: <ClipboardCheck className="w-6 h-6 text-green-500" />,
-      color: "bg-blue-50 text-blue-700 border-blue-100",
+      icon: <ClipboardCheck className="size-6" />,
     },
-       {
+    {
       label: "Technical disconnects",
-      
-      icon: <Wifi className="w-6 h-6 text-green-500" />,
-      color: "bg-[#D9F3D8] text-secondary-400 border-[#D9F3D8]",
 
+      icon: <Wifi className="size-6 " />,
     },
   ];
   return (
@@ -69,8 +62,7 @@ export default function HireSomeoneRight() {
             <FeatureButton
               key={index}
               label={feature.label}
-              icon={feature.icon}
-              colorClass={feature.color}
+              icon={feature.icon as unknown as string}
             />
           ))}
         </div>

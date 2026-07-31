@@ -88,7 +88,7 @@ console.log(eccouncilExams.length)
       <ECCouncilCertificationOverview />
       <HireSomeone />
        <ECCouncilSEOContent /> 
-       <VendorMatrixTable exams={examData} provider="eccouncil" /> 
+       <VendorMatrixTable exams={examData} provider="ec-council" /> 
        <WhyChooseUs /> 
        <TestimonialsSection /> 
        <ECCouncilFAQSection /> 

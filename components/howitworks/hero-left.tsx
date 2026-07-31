@@ -14,18 +14,18 @@ const LeftHero = () => {
       <div>
         <div>
           {/* SEO Short-Tail Target: Tells Google exactly what the page is about */}
-          <h1 className="text-sm font-semibold tracking-wider uppercase text-primary mb-2">
+          <h2 className="text-sm font-semibold tracking-wider uppercase text-primary mb-2">
             Secure IT Certification Exam Assistance
-          </h1>
+          </h2>
 
           {/* Core Hook & Value Prop */}
-          <h2 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-6 leading-tight">
-            <span className="text-secondary">Want to Understand How Our </span>
-            <span className="text-[#10b981]">
-              Managed Technical Environments{" "}
+          <h3 className="text-3xl sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.1rem] font-bold mb-6 leading-tight">
+            <span className="text-secondary">Want to Understand How Our Proctored IT </span>
+            <span className="text-accent underline italic">
+               Exam {" "}
             </span>
-            <span className="text-secondary">Work Before You Commit?</span>
-          </h2>
+            <span className="text-secondary">Help Work Before You Commit?</span>
+          </h3>
 
           {/* Body Text: Natural Long-Tail Integration (No registration, clears strict proctor checks) */}
           <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-xl">

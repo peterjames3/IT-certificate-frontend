@@ -9,14 +9,14 @@ export default function AboutLeft() {
       <BackgroundRings />
 
       {/* 2. Main Characters Container */}
-      <div className="relative w-full h-[30rem] z-6 ">
+      <div className="relative w-full h-[38rem] z-6 ">
         <Image
-          src="/about-us-image-preview.png" 
+          src="/gentleman-holding-laptop2.png" 
           alt="Male Instructor"
           width={1200}
           height={1200}
           priority
-          className="object-cover h-full drop-shadow-[0_15px_15px_rgba(0,0,0,0.12)]"
+          className="object-cover h-full "
         />
       </div>
 

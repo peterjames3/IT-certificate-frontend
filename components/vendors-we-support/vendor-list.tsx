@@ -54,7 +54,7 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about Cloud exam help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-cloud-exam-for-me",
+      href: "/pay-someone-to-take-aws-exam-for-me",
     },
   },
   {
@@ -76,7 +76,7 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about Networking help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-cisco-exam-for-me",
+      href: "/pay-someone-to-take-cisco-cnna-exam-for-me",
     },
   },
   {
@@ -98,29 +98,31 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about Security exam help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-cybersecurity-exam-for-me",
+      href: "/pay-someone-to-take-ec-council-exam-for-me",
     },
   },
   {
     icon: LayoutGrid,
-    title: "Project Management & ITSM Help",
-    subtitle: "PMP, Agile & ITIL Frameworks",
-    tags: ["Project Management", "IT Service Management"],
+    title: "ISACA Certification Exam Help",
+    subtitle: "CISA · CISM · CRISC · CGEIT · CDPSE",
+    tags: ["IT Audit", "Security", "Risk", "Governance", "Privacy"],
     description:
-      "Process optimization support for enterprise delivery leads. Complete structural oversight for passing service delivery methodologies under strict PMI PMP or ITIL v4 specifications.",
+      "Professional exam taker support for ISACA certifications using secure proxy services. Guaranteed passing results for CISA, CISM, CRISC, CGEIT, and CDPSE with complete profile confidentiality.",
     features: [
-      "PMP 180-question domain management delivery",
-      "ITIL v4 Service operations maps verification",
-      "Agile Scrum (PSM/CSM) validation options",
+      "CISA IT audit and governance exam support",
+      "CISM security management certification assistance",
+      "CRISC risk and control validation services",
+      "CGEIT enterprise governance exam help",
+      "CDPSE data privacy engineering solutions",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
-      { value: "310+", label: "Managers certified" },
+      { value: "500+", label: "Professionals certified" },
       { value: "4.9★", label: "Rating" },
     ],
     learnMore: {
-      label: "Learn more about PMP & ITIL help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-pmp-exam-for-me",
+      label: "Learn more about ISACA Exam help →",
+      href: "/pay-someone-to-take-isaca-exam-for-me",
     },
   },
   {
@@ -145,26 +147,29 @@ const examServices = [
       href: "/proctored-exam-help/pay-someone-to-take-my-linux-exam-for-me",
     },
   },
-  {
+ {
     icon: Layers,
-    title: "Virtualization & Data Center Systems",
-    subtitle: "VMware Infrastructures",
-    tags: ["Virtualization", "Data Center Platforms"],
+    title: "ITIL Certification Exam Help",
+    subtitle: "ITIL 4 Foundation · Specialist · Strategist",
+    tags: ["ITSM", "ITIL", "Service Management"],
     description:
-      "Strategic verification models matching Software-Defined Data Center architectures. Clear configuration controls targeting VMware Certified Professional (VCP) pipelines.",
+      "Pay someone to take your ITIL exam with guaranteed passing results. Our professional exam takers use secure proxy services to handle ITIL 4 Foundation, Specialist, and Strategist certifications with complete profile confidentiality.",
     features: [
-      "VMware VCP baseline execution tracking",
-      "Hypervisor storage & configuration maps",
-      "Data Center virtualization infrastructure profiles",
+      "Pay someone to take ITIL 4 Foundation exam",
+      "ITIL Specialist create, deliver & support modules",
+      "Pay someone to take ITIL Strategist exam",
+      "Managing Professional (MP) transition exam help",
+      "Strategic Leader (SL) certification guidance",
+      "Secure proxy services for all ITIL tracks",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
-      { value: "95+", label: "VCPs passed" },
-      { value: "4.7★", label: "Rating" },
+      { value: "200+", label: "Professionals certified" },
+      { value: "4.8★", label: "Rating" },
     ],
     learnMore: {
-      label: "Learn more about VMware help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-vmware-exam-for-me",
+      label: "Learn more about ITIL exam  help →",
+      href: "/pay-someone-to-take-itil-v4",
     },
   },
 ];

@@ -2,7 +2,7 @@
 
 export default function  WavyTexture() {
   return (
-    <div className="w-24 h-24 text-emerald-500/40 opacity-80">
+    <div className="w-24 h-24 text-accent-500/40 opacity-80">
       <svg viewBox="0 0 100 100" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
         <path d="M0,10 Q12.5,20 25,10 T50,10 T75,10 T100,10" />
         <path d="M0,25 Q12.5,35 25,25 T50,25 T75,25 T100,25" />

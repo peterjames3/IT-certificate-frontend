@@ -2,28 +2,32 @@
 import { motion } from "framer-motion";
 import FeatureButton from "./feature-button";
 import GraphicCluster from "./graphic-cluster";
+import {
+  
+  MonitorOff,
+  Timer,
+  
+  Eye,  
+  ClipboardCheck,
+} from "lucide-react";
 
 export default function LearningSection() {
   const features = [
     {
-      label: "Cert exam help online",
-      icon: "⏱️",
-      color: "bg-emerald-50 text-emerald-700 border-emerald-100",
+      label: "Lockdown Browser",
+      icon: <MonitorOff className="size-6"/>,
     },
     {
-      label: "Pass CompTIA fast",
-      icon: "⚡",
-      color: "bg-orange-50 text-orange-700 border-orange-100",
+      label: "AI behaviour Monitoring",
+      icon: <Eye className="size-6"/>,
     },
     {
-      label: "AWS cert cheat pass alternative",
-      icon: "☁️",
-      color: "bg-purple-50 text-purple-700 border-purple-100",
+      label: "Time Pressure",
+      icon: <Timer className="size-6"/>,
     },
     {
-      label: "Cheapest reliable proxy service",
-      icon: "💎",
-      color: "bg-blue-50 text-blue-700 border-blue-100",
+      label: "Post-exam Debrief",
+      icon: <ClipboardCheck className='size-6'/>,
     },
   ];
 
@@ -49,7 +53,7 @@ export default function LearningSection() {
           <p className="text-slate-600 max-w-xl leading-relaxed text-sm md:text-base mt-4">
             Struggling with a looming deadline or figuring out{" "}
             <span className="font-semibold text-slate-800">
-              how to pass CompTIA Network+ without studying
+              how to pass CompTIA, AWS, Azure, ITIL-v4, ISACA, GCP, etc  without studying
             </span>
             ? Our system acts as an ultimate{" "}
             <span className="font-semibold text-slate-800">
@@ -66,8 +70,7 @@ export default function LearningSection() {
               <FeatureButton
                 key={index}
                 label={feature.label}
-                icon={feature.icon}
-                colorClass={feature.color}
+                icon={feature.icon as unknown as string}
               />
             ))}
           </div>

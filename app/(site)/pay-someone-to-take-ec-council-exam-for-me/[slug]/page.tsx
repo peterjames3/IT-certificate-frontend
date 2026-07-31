@@ -1,4 +1,4 @@
-import { ecCouncilExamServicePageQuery, ecCouncilExamServicePathQuery } from "@/sanity/lib/queries";
+import { eccouncilExamServicePageQuery, eccouncilExamServicePathQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
 import { notFound } from 'next/navigation';
@@ -58,7 +58,7 @@ export interface ContentSectionData {
 }
 
 export interface ECCouncilFocusedContentSectionData {
-  _type: "ecCouncilFocusedContentSection";
+  _type: "eccouncilFocusedContentSection";
   sectionId?: string;
   heading?: string;
   body?: RichText;
@@ -179,7 +179,7 @@ export interface ExamServicePageData {
 
 // ── Static params ───────────────────────────────────────────
 export async function generateStaticParams() {
-  const pages = await client.fetch(ecCouncilExamServicePathQuery);
+  const pages = await client.fetch(eccouncilExamServicePathQuery);
   return pages.map((page: { slug: string }) => ({ slug: page.slug }));
 }
 
@@ -189,7 +189,7 @@ type Params = Promise<{ slug: string }>;
 export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
   const page = await sanityFetch<ExamServicePageData>({
-    query: ecCouncilExamServicePageQuery,
+    query: eccouncilExamServicePageQuery,
     params: { slug },
   });
 
@@ -237,7 +237,7 @@ async function renderSection(section: PageSection, index: number) {
           data={section}
         />
       );
-    case "ecCouncilFocusedContentSection":
+    case "eccouncilFocusedContentSection":
       return (
         <ECCouncilFocusedContentSection
           key={section.sectionId ?? index}
@@ -276,7 +276,7 @@ export default async function ECCouncilExamServicePage({ params }: { params: Par
   const { slug } = await params;
 
   const page = await sanityFetch<ExamServicePageData>({
-    query: ecCouncilExamServicePageQuery,
+    query: eccouncilExamServicePageQuery,
     params: { slug },
   });
 
