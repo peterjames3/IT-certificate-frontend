@@ -291,7 +291,7 @@ export default function ECCouncilSEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border border-gray-300 overflow-hidden rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>
               EC-Council Exam Certifications <br /> We Take for Clients
             </h2>
@@ -373,7 +373,7 @@ export default function ECCouncilSEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black  p-4 text-xl">
             <h2>Why We&apos;re #1 for EC-Council Exam Help</h2>
           </div>
           <div className="px-4 py-6">
@@ -414,7 +414,7 @@ export default function ECCouncilSEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">

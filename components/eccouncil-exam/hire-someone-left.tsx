@@ -5,12 +5,12 @@ export default function HireSomeoneLeft() {
     <div className="relative w-full h-full mx-auto flex  justify-center ">
       <div className="relative w-full h-[30rem] z-6 ">
         <Image
-          src="/students-holding-books1.png"
+          src="/students-holding-books2.png"
           alt="student  doing eccouncil  proctored exam"
           width={1200}
           height={1200}
           priority
-          className="object-cover h-full drop-shadow-[0_15px_15px_rgba(0,0,0,0.12)]"
+          className="object-cover h-full bg-gradient-to-b from-gray-50 to white "
         />
       </div>
 
