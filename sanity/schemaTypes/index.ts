@@ -19,7 +19,9 @@ import { ISACAExamType } from "./isacaExamType";
 import { ECCouncilServicePageType } from "./eccouncilexamsType";
 import { eccouncilFocusedSchemaTypes } from "./eccouncilFocusedSectionType";
 import { ECCouncilExamType } from "./eccouncilExamType";
-
+import { AzureServicePageType } from "./azureexamsType";
+import { azureFocusedSchemaTypes } from "./azureFocusedSectionType";
+import { AzureExamType } from "./azureExamType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -38,10 +40,14 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ...isacaFocusedSchemaTypes,
     ISACAExamsServicePageType,
     ISACAExamType,
-     // ── EC-Council ──
+    // ── EC-Council ──
     ...eccouncilFocusedSchemaTypes,
     ECCouncilServicePageType,
     ECCouncilExamType,
+    // ── Azure (NEW) ──
+    ...azureFocusedSchemaTypes, 
+    AzureServicePageType,
+    AzureExamType,
     // ── Shared / Common ──
     certOverviewSectionType,
     ContentSectionWithImageType,

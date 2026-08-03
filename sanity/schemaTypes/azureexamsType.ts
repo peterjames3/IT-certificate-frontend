@@ -1,0 +1,64 @@
+// sanity/schemaTypes/azureServicePageType.ts
+import { defineType } from "sanity";
+
+export const AzureServicePageType = defineType({
+  name: "azureServicePage",
+  title: "Azure Exams Service Page",
+  type: "document",
+  fields: [
+    // ── SEO ──
+    {
+      name: "seoTitle",
+      title: "SEO Title",
+      type: "string",
+      description: "Shown in browser tab and Google results (~60 chars)",
+      validation: (Rule) => Rule.max(60),
+    },
+    {
+      name: "seoDescription",
+      title: "Meta Description",
+      type: "text",
+      rows: 3,
+      description: "Google snippet (~250 chars)",
+      validation: (Rule) => Rule.max(250),
+    },
+    {
+      name: "ogImage",
+      title: "Social Share Image (OG Image)",
+      type: "image",
+      description: "Used when shared on social media (1200×630px recommended)",
+      options: { hotspot: true },
+      fields: [{ name: "alt", type: "string", title: "Alt text" }],
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: { source: "seoTitle", maxLength: 96 },
+      validation: (Rule) => Rule.required(),
+    },
+    // ── Page sections (page builder) ──
+    {
+      name: "sections",
+      title: "Page Sections",
+      type: "array",
+      of: [
+        { type: "hero" },
+        { type: "contentSectionWithImage" },
+        { type: "azureFocusedContentSection" }, // Changed from isacaFocusedContentSection
+        { type: "certOverviewSection" },
+        { type: "faqSection" },
+        // ── Additional Azure-specific sections ──
+        { type: "azureCertificationGrid" }, // Optional: Grid of Azure certs
+        { type: "azureExamStructure" }, // Optional: Exam structure breakdown
+        { type: "azureBenefitsSection" }, // Optional: Benefits of using Azure
+      ],
+    },
+  ],
+  preview: {
+    select: { title: "seoTitle", slug: "slug.current" },
+    prepare({ title, slug }) {
+      return { title, subtitle: `/${slug}` };
+    },
+  },
+});
