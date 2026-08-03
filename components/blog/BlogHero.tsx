@@ -14,7 +14,7 @@ export default function BlogHero() {
       />
       <header className="absolute top-[60%] left-1/2 flex flex-col items-center justify-center pt-0 md:pt-28 md:text-start transition -translate-x-1/2 -translate-y-1/2  w-full sm:max-w-[600px] md:max-w-[840px] lg:max-w-[64rem] px-5 sm:px-0 text-background gap-3 ">
         <h2 className=" display pb-5 font-bold sm:pb-2 underline">
-          <span className="font-extrabold underline text-primary "> Blog </span>
+          <span className="font-extrabold underline text-white  "> Blog </span>
           Section
         </h2>
         <p className="text-white font-semibold">

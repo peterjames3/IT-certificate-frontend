@@ -8,7 +8,7 @@ import AzureSEOContent from "@/components/azure-exam/azure-seo-content";
 import WhyChooseUs from "@/components/azure-exam/why-choose-us";
 import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 import AzureFAQSection from "@/components/faq/azure-page-faq";
-
+import AzureCertificateOverview from  "@/components/azure-exam/azure-cert-overview";
 import AzureExamFAQSchema from "./_schema";
 
 export const metadata = {
@@ -33,6 +33,7 @@ export default async function AzureHomePage() {
     <>
       <AzureExamFAQSchema />
       <Hero />
+      <AzureCertificateOverview />
       <VendorMatrixGrid />
       <HireSomeone />
       <AzureSEOContent />

@@ -82,7 +82,7 @@ export default function ISACAFocusedContentSection({ data }: Props) {
             >
               <div
                 className="px-5 py-4 font-semibold text-white"
-                style={{ backgroundColor: card.accentColor ?? "#10b981" }}
+                style={{ backgroundColor: card.accentColor ?? "#010B13" }}
               >
                 {card.title}
               </div>

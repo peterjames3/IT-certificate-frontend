@@ -16,37 +16,74 @@ export const isacaExamsQuery = groq`*[_type == "isacaExam"]{
   "slug": slug.current
 }`;
 
-//Get all posts
 
+
+// ── Get all posts for listing ──────────────────────────────
 export const postsQuery = groq`
-*[_type == "post"]{
-   _id,
-   _createdAt,
-   description,
+  *[_type == "post"] | order(publishedAt desc, _createdAt desc) {
+    _id,
+    _createdAt,
     title,
-   slug,
-   mainImage,
-  "imageURL": mainImage.asset->url,
-   "authorName": author->name,
-   "categories": categories[]->{title, description},
- }
- `;
+    slug,
+    excerpt,
+    mainImage {
+      alt,
+      "url": asset->url
+    },
+    "authorName": author->name,
+    "categories": categories[]->{title, description},
+    publishedAt,
+    // SEO fields for listing page metadata
+    seo {
+      seoTitle,
+      seoDescription,
+      seoKeywords
+    }
+  }
+`;
 
-// Get a single post by its slug
+// ── Get a single post by its slug ───────────────────────────
 export const postQuery = groq`
   *[_type == "post" && slug.current == $slug][0] {
     _id,
     _createdAt,
+    _updatedAt,
     title,
-    mainImage,
-    "imageURL": mainImage.asset->url,
-    "authorName": author->name,
-    "categories": categories[]->{title, description},
-    body, // Full body content for PortableText rendering
+    slug,
+    excerpt,
+    mainImage {
+      alt,
+      "url": asset->url
+    },
+    "author": author-> {
+      name,
+      image {
+        alt,
+        "url": asset->url
+      }
+    },
+    "categories": categories[]-> {
+      title,
+      description,
+      "slug": slug.current
+    },
+    publishedAt,
+    body,
+    // SEO fields
+    seo {
+      seoTitle,
+      seoDescription,
+      seoKeywords
+    },
+    // OG Image for social sharing
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
     // Extract headings for table of contents
     "headings": body[][
       _type == "block" &&
-      (style == "h2" || style == "h3") // Querying for h2 and h3
+      (style == "h2" || style == "h3")
     ] {
       _key,
       style,
@@ -56,25 +93,60 @@ export const postQuery = groq`
     }
   }
 `;
-// Get all post slugs
-export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)]{
-  "slug": slug.current
-}`;
 
-// Get the latest posts by published date, limited to the first 5 posts
+// ── Get all post slugs for static generation ───────────────
+export const postPathsQuery = groq`
+  *[_type == "post" && defined(slug.current)] {
+    "slug": slug.current
+  }
+`;
+
+// ── Get latest posts for sidebar / related posts ────────────
 export const latestPostsQuery = groq`
-  *[_type == "post"] | order(_createdAt desc) [0...8] {
-  _id,
-    _createdAt,
+  *[_type == "post"] | order(publishedAt desc, _createdAt desc) [0...5] {
+    _id,
     title,
     slug,
-    body,
-    mainImage,
-    "imageURL": mainImage.asset->url,
+    excerpt,
+    mainImage {
+      alt,
+      "url": asset->url
+    },
+    publishedAt,
     "authorName": author->name,
-     "authorImage": author->image.asset->url,
-    "categories": categories[]->{title, description}
-    
+    "categories": categories[]->{title}
+  }
+`;
+// ── Get oldest posts for sidebar / related posts ────────────
+export const oldestPostsQuery = groq`
+  *[_type == "post"] | order(publishedAt asc, _createdAt asc) [0...3] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    mainImage {
+      alt,
+      "url": asset->url
+    },
+    publishedAt,
+    "authorName": author->name,
+    "categories": categories[]->{title}
+  }
+`;
+
+// ── Get related posts by category ───────────────────────────
+export const relatedPostsQuery = groq`
+  *[_type == "post" && slug.current != $slug && count(categories[@._ref in $categoryIds]) > 0] | order(publishedAt desc, _createdAt desc) [0...4] {
+    _id,
+    title,
+    slug,
+    excerpt,
+    mainImage {
+      alt,
+      "url": asset->url
+    },
+    publishedAt,
+    "authorName": author->name
   }
 `;
 

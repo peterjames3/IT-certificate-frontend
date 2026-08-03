@@ -1,8 +1,10 @@
-// components/HeroLeft.tsx
-import React from "react";
-import { ArrowRight, Star } from "lucide-react"; // Ensure lucide-react is installed
+'use client'
+import { ArrowRight, Star } from "lucide-react"; 
 
-export const HeroLeft = () => {
+interface HeroLeftProps {
+  onScrollToCertifications?: () => void;
+}
+export const HeroLeft = ({ onScrollToCertifications }: HeroLeftProps) => {
   return (
     <div className="flex flex-col justify-center space-y-6 w-full text-left">
       {/* Badge Notice */}
@@ -54,10 +56,13 @@ export const HeroLeft = () => {
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
 
-        <button className="inline-flex items-center gap-1.5 bg-transparent hover:bg-slate-50 text-slate-800 font-bold px-6 py-4 rounded-full transition-colors group">
-          See Supported Certs
-          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" />
-        </button>
+          <button 
+        onClick={onScrollToCertifications}
+        className="inline-flex items-center gap-1.5 bg-transparent hover:bg-slate-50 text-slate-800 font-bold px-6 py-4 rounded-full transition-colors group"
+      >
+        See Supported Certs
+        <ArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" />
+      </button>
       </div>
 
       {/* Ratings & Social Proof Divider */}

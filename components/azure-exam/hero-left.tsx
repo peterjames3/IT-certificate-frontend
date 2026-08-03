@@ -19,9 +19,9 @@ const LeftHero = () => {
 
           <h3 className="text-2xl sm:text-[2.5rem] lg:text-[2.6rem] xl:text-[2.8rem] font-bold mb-6 leading-tight">
             <span className="text-secondary">
-              Hire Verified Azure Experts To{" "}
+              Hire Verified Azure Experts To Take Your{" "}
             </span>
-            <span className="text-[#10b981]">Take Your Azure Exams </span>
+            <span className="italic font-serif font-normal underline  decoration-accent-400"> Azure Exams </span>
             <span className="text-secondary">Secure & Confidential </span>
           </h3>
 
@@ -44,7 +44,7 @@ const LeftHero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Exam Help Now! <ArrowRight />
+            Order This Exam Now! <ArrowRight />
           </motion.button>
         </div>
       </div>

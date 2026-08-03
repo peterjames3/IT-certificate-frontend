@@ -220,14 +220,14 @@ export const MenuItems: MenuItem[] = [
   //   href: "pay-someone-to-take-cisco-cnna-exam-for-me",
   // },
   {
-    name: "Proctored IT Exam Help",
-    href: "/proctored-it-exam-help",
+    name: "Proctored Exam Help",
+    href: "#",
     // Keep this if it serves as a separate landing page for general support inquiries
     submenu: categoryToSubmenu(examAidCategories, "/proctored-exam-help"),
   },
   {
     name: "Certificate Tools",
-    href: "it-certificate-tools",
+    href: "#",
     submenu: [
       {
         name: "Compare Certifications",

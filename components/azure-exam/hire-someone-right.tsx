@@ -1,6 +1,6 @@
 import FeatureButton from "../learning-section/feature-button";
 import {
-  ScanFace,
+  
   MonitorOff,
   Timer,
   Wifi,
@@ -14,10 +14,7 @@ export default function HireSomeoneRight() {
       label: "Lockdown Browser",
       icon: <MonitorOff className="size-6 " />,
     },
-    {
-      label: "Identity verification",
-      icon: <ScanFace className="size-6" />,
-    },
+    
     {
       label: "AI behaviour Monitoring",
       icon: <Eye className="size-6 " />,
@@ -41,13 +38,16 @@ export default function HireSomeoneRight() {
       <article>
         <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 leading-snug">
           Looking to Hire Someone to{" "}
-          <span className="text-accent-700">Take My Azure Exam</span>? Here Is
+          <span className="text-accent-500">Take My Azure Exam</span>? Here Is
           What We Handle for You.{" "}
         </h2>
-        <p className="text-lg mb-2 ">
-          Proctored platforms are built to be stressful: webcam checks, timed
-          pressure etc. Our experts handle every challenge Azure proctored exams
-          throw at you standard.
+        <p className="text-lg text-secondary-700 mb-6 max-w-2xl leading-relaxed">
+          Azure exams are genuinely challenging, featuring complex
+          scenario-based questions combined with demanding hands-on lab
+          simulations that test your real cloud architecture and administration
+          skills. Our professional exam takers use advanced secure proxy
+          services to handle every intricate scenario Azure proctored exams
+          present, ensuring you achieve certification success.
         </p>
       </article>
       <article className="space-y-2">

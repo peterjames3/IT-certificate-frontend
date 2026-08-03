@@ -281,7 +281,7 @@ export default function ComptiaSeoContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border border-gray-300 overflow-hidden rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>
               CompTIA Exam Certifications <br /> We Take for Clients
             </h2>
@@ -344,7 +344,7 @@ export default function ComptiaSeoContent() {
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take my CompTIA Data+ Exam for Me
               </Link>
-             
+
               <Link
                 href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-cloud-practitioner-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
@@ -357,7 +357,7 @@ export default function ComptiaSeoContent() {
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take  AWS Solutions Architect Associate Exam for Me
+                Take AWS Solutions Architect Associate Exam for Me
               </Link>
               <Link
                 href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-developer-associate-exam-for-me"
@@ -387,21 +387,21 @@ export default function ComptiaSeoContent() {
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take AWS Security Specialty Exam for Me
               </Link>
-               <Link
+              <Link
                 href="/pay-someone-to-take-comptia-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take CompTIA Exam for Me
               </Link>
-                <Link
+              <Link
                 href="/pay-someone-to-take-aws-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Take AWS Exam for Me
               </Link>
-                <Link
+              <Link
                 href="/pay-someone-to-take-azure-exam-for-me"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
               >
@@ -420,7 +420,7 @@ export default function ComptiaSeoContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>Why We&apos;re #1 for IT Exam Help</h2>
           </div>
           <div className="px-4 py-6">
@@ -457,7 +457,7 @@ export default function ComptiaSeoContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-button-login-default p-4 text-xl">
+          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">
@@ -480,7 +480,11 @@ export default function ComptiaSeoContent() {
               </li>
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Corporate Vendor Audits
+                ExamSoft & Examity
+              </li>
+              <li className="flex items-center gap-2">
+                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
+                Respondus & ProctorTrack
               </li>
             </ul>
           </div>

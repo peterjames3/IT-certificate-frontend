@@ -6,18 +6,18 @@ type Category = {
   title: string;
   excerpt: string;
 };
-import { postsQuery } from "@/sanity/lib/queries";
+import { oldestPostsQuery } from "@/sanity/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { format } from "date-fns";
+//import { format } from "date-fns";
 
-export default async function BlogPosts() {
+export default async function OldestBlogPost() {
   let posts: SanityDocument[] = [];
 
   try {
     posts = await sanityFetch<SanityDocument[]>({
-      query: postsQuery,
+      query: oldestPostsQuery,
     });
   } catch (error) {
     console.log(`Error Fetching Posts: ${error}`);
@@ -31,7 +31,7 @@ export default async function BlogPosts() {
     );
   }
   return (
-    <section className=" wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className=" wrapper grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {posts.map((post, index) => (
         <Link
           href={`/blog/${post.slug.current}`}
@@ -64,10 +64,6 @@ export default async function BlogPosts() {
               {post.title}
             </h3>
             
-            <time className="absolute bg-[#10b981] text-white top-30 right-0 rounded-sm shadow-sm p-2">
-              {format(new Date(post._createdAt), "MM/dd/yyyy")}
-            </time>
-
             <div className="flex items-center justify-between">
               <div className="text-sm text-tertiary-white/70 ">
                 <span>By: {post.authorName || "Unknown Author"}</span>

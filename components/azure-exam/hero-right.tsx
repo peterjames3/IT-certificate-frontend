@@ -22,7 +22,7 @@ export default function RightHero() {
           rounded="rounded-bl-[100px]"
         />
         <StudentImage
-          src="/comptia-cloud+.webp"
+          src="/azure-data-fundamentals-600x600-2.png"
           alt="CompTIA Cloud + badge"
           rounded="rounded-br-[100px]"
         />

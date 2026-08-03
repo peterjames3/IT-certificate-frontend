@@ -78,7 +78,7 @@ export default function AboutRight() {
       {/* CTA */}
       <div className="pt-3">
         <Link
-          href="#"
+          href="/blog/proctored-exam-help-services-your-complete-guide-to-stress-free-certification"
           className="inline-flex items-center gap-2 text-sm font-semibold text-secondary-900 hover:text-primary transition-colors group"
         >
           More About

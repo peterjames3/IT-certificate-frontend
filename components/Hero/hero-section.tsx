@@ -4,7 +4,11 @@
 import { HeroLeft } from "./hero-left";
 import { HeroRight } from "./hero-right";
 import { motion } from "framer-motion";
-export default function HeroSection() {
+
+interface HeroSectionProps {
+  onScrollToCertifications?: () => void; 
+}
+export default function HeroSection({ onScrollToCertifications }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden bg-linear-to-tr from-primary-50 via-[#ffffff] to-[#f0f9ff] py-16 md:py-24  mt-35">
       {/* Background Decorative Mesh Blobs */}
@@ -15,7 +19,7 @@ export default function HeroSection() {
       <div className="w-full px-3  max-w-full lg:max-w-310 mx-auto flex flex-col gap-10 lg:flex-row md:justify-between">
         {/* Left Interactive Column */}
         <div className="w-full lg:w-1/2">
-          <HeroLeft />
+          <HeroLeft onScrollToCertifications={onScrollToCertifications} />
         </div>
 
         {/* Right Graphical Column */}

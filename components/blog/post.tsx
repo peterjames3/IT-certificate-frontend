@@ -3,18 +3,12 @@ import TableOfContents from "./table-Of-content";
 import { portableTextComponents } from "./portable-text-components";
 import Image from "next/image";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react"; // Assuming this import is from @portabletext/react
+import { PortableText } from "@portabletext/react";
 import SocialShare from "./social-share";
-//import type { ComponentType } from "react";
+import { Proctored } from "@/components/ui/proctored-banner";
 import { format } from "date-fns";
-import { createImageUrlBuilder } from "@sanity/image-url";
-import { client } from "@/sanity/lib/client";
-import RecentPosts from "./recent-posts";
 
-const builder = createImageUrlBuilder(client);
-const urlFor = (source: string) => {
-  return builder.image(source);
-};
+import RecentPosts from "./recent-posts";
 
 type Category = {
   title: string;
@@ -70,13 +64,10 @@ export default function Post({ post }: { post: SanityDocument }) {
             </span>
           </header>
           <figure className="w-full h-80 rounded-md overflow-hidden">
-            {post?.mainImage && (
+            {post?.mainImage?.url && (
               <Image
-                src={
-                  urlFor(post.mainImage).width(1200).height(650).url() ||
-                  "/3d-view-personal-computer-with-vegetation.jpg"
-                }
-                alt={post?.mainImage?.alt || "Post image"}
+                src={post.mainImage.url}
+                alt={post.mainImage.alt || "Post image"}
                 width={1000}
                 height={650}
                 className="rounded-md"
@@ -111,12 +102,20 @@ export default function Post({ post }: { post: SanityDocument }) {
         {/* Right Social Share - Sticky */}
         <section className="col-span-1 p-4 min-h-120 sticky top-10 h-screen overflow-y-auto">
           <div className="sticky top-26">
-            <header className="text-foreground mb-12 border-l-4 rounded-sm border-foreground/90 px-2 title font-semibold ">
-              Recently Published
-            </header>
-            <RecentPosts />
+            <Proctored />
           </div>
+         
         </section>
+      </div>
+      <div>
+        <header className="text-foreground mb-12 border-l-4 rounded-sm border-foreground/90 px-2 title font-semibold ">
+              Related Published Posts
+            </header>
+            <RecentPosts 
+            currentSlug={post.slug.current} 
+  categoryIds={post.categories?.map((c: { _id: string }) => c._id) || []} />
+          
+
       </div>
     </div>
   );

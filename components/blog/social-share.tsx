@@ -5,14 +5,12 @@ import {
   RedditShareButton,
   XShareButton,
   LinkedinShareButton,
-  WhatsappShareButton,
-  EmailShareButton,
+ 
   FacebookIcon,
   RedditIcon, 
   XIcon ,
   LinkedinIcon,
-  WhatsappIcon,
-  EmailIcon,
+ 
 } from "react-share";
 
 export default function SocialShare({ title }: { title: string }) {
@@ -36,8 +34,7 @@ export default function SocialShare({ title }: { title: string }) {
     { Component: RedditShareButton, Icon: RedditIcon, name: "Reddit" },
     { Component: XShareButton, Icon: XIcon, name: "Twitter" },
     { Component: LinkedinShareButton, Icon: LinkedinIcon, name: "LinkedIn" },
-    { Component: WhatsappShareButton, Icon: WhatsappIcon, name: "WhatsApp" },
-    { Component: EmailShareButton, Icon: EmailIcon, name: "Email" },
+
   ];
 
   return (

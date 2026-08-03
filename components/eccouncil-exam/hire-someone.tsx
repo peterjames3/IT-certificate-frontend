@@ -5,7 +5,7 @@ import HireSomeoneRight from "./hire-someone-right";
 
 export default function HireSomeoneSection() {
   return (
-    <section className="w-full py-16 px-4 lg:px-8 bg-gradient-to-b from-gray-50 to-white  ">
+    <section className="w-full py-16 px-4 lg:px-8 bg-linear-to-b from-gray-50 to-white  ">
       <div className="max-w-full mx-auto flex flex-col-reverse md:flex-row gap-18 md:gap-12 items-center lg:max-w-310">
         <motion.div
           className="w-full lg:w-1/2"

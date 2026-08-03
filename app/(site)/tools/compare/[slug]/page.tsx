@@ -19,17 +19,14 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-// ── Static generation for popular pairs ────────────────────────────────────
-// These are built at build time → instantly served, fully indexable on day one.
+
 export async function generateStaticParams() {
   return POPULAR_COMPARISONS.map((pair) => ({
     slug: buildCompareSlug(pair),
   }));
 }
 
-// Any slug NOT in generateStaticParams is rendered on-demand on first visit,
-// then cached (ISR) — so the second visitor and Googlebot's recrawl get a
-// fast, cached response too.
+
 export const dynamicParams = true;
 
 // ── Metadata — unique per comparison, crawlable in <head> ─────────────────
@@ -91,7 +88,6 @@ export default async function ComparisonSlugPage({ params }: PageProps) {
 
   const names = data.certs.map((c) => c.acronym).join(" vs ");
 
-  // Article structured data — helps Google understand this is comparison content
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -103,7 +99,6 @@ export default async function ComparisonSlugPage({ params }: PageProps) {
     dateModified: data.generatedAt,
   };
 
-  // FAQ-style structured data using the verdict fields — eligible for rich results
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -148,7 +143,7 @@ export default async function ComparisonSlugPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Breadcrumb back to the interactive picker */}
+      
       <Link
         href="/tools/compare"
         className="inline-flex items-center gap-1.5 text-sm text-secondary-500 hover:text-primary-600 transition-colors mb-6"
@@ -157,25 +152,24 @@ export default async function ComparisonSlugPage({ params }: PageProps) {
         Compare other certifications
       </Link>
 
-      {/* Crawlable header — real H1, real text, not behind a form */}
+     
       <div className="mb-10 max-w-3xl">
         <span className="text-sm font-medium text-primary-500 uppercase tracking-wide">
           Certificate Tools
         </span>
-        <h1 className="text-3xl font-bold text-secondary-800 mt-1">
+        <h2 className="text-3xl font-bold text-secondary-800 mt-1">
           {names}: Which Certification Should You Get?
-        </h1>
+        </h2>
         <p className="text-secondary-600 mt-3 leading-relaxed">
           {data.verdict.summary}
         </p>
       </div>
 
-      {/* Existing results component — already fully designed, reused as-is */}
       <CompareResults data={data} />
 
-      {/* Crawlable closing CTA */}
-      <div className="mt-12 max-w-3xl text-center bg-neutral-50 rounded-xl p-8">
-        <p className="text-secondary-600 text-sm mb-4">
+      {/*  CTA */}
+      <div className="mt-12 max-w-310 text-center bg-neutral-50 rounded-xl p-8">
+        <p className="text-secondary-600 text-p mb-4">
           Want to compare different certifications, or add a third one to this
           comparison?
         </p>

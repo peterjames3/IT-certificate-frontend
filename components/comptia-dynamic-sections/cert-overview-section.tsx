@@ -11,7 +11,7 @@ export interface CertOverviewSectionData {
 
 interface Props {
   data: CertOverviewSectionData;
-  initialCert?: Certification; // fetched server-side in page.tsx
+  initialCert?: Certification;
 }
 
 const TOKENS = {
@@ -41,7 +41,7 @@ function StatCard({ label, value }: { label: string; value: string }) {
     <div className="border px-4 py-3" style={{ borderColor: TOKENS.hairline }}>
       <p
         className="mb-1 text-[11px] uppercase tracking-[0.1em]"
-        style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink, opacity: 0.6 }}
+        style={{ color: TOKENS.ink, opacity: 0.6 }}
       >
         {label}
       </p>
@@ -91,12 +91,18 @@ function DomainBars({ domains }: { domains: Certification["domains"] }) {
             </span>
             <span
               className="shrink-0 text-xs"
-              style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.signal }}
+              style={{
+                fontFamily: "'IBM Plex Mono', monospace",
+                color: TOKENS.signal,
+              }}
             >
               {d.weightPercent}%
             </span>
           </div>
-          <div className="h-1.5 w-full" style={{ backgroundColor: TOKENS.hairline }}>
+          <div
+            className="h-1.5 w-full"
+            style={{ backgroundColor: TOKENS.hairline }}
+          >
             <div
               className="h-1.5"
               style={{
@@ -112,11 +118,15 @@ function DomainBars({ domains }: { domains: Certification["domains"] }) {
 }
 
 export default function CertOverviewSection({ data, initialCert }: Props) {
-  const { data: cert, isLoading, error } = useCertification(data.certSlug, initialCert);
+  const {
+    data: cert,
+    isLoading,
+    error,
+  } = useCertification(data.certSlug, initialCert);
 
   if (isLoading) {
     return (
-      <section style={{ backgroundColor: TOKENS.paper }} className="py-16">
+      <section className=" bg-linear-to-b from-gray-50 to-white py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div
             className="h-6 w-48 animate-pulse"
@@ -133,11 +143,14 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
 
   if (error || !cert) {
     return (
-      <section style={{ backgroundColor: TOKENS.paper }} className="py-16">
+      <section className="bg-linear-to-b from-gray-50 to-white py-16">
         <div className="mx-auto max-w-6xl px-6">
           <p
             className="text-sm"
-            style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink }}
+            style={{
+            
+              color: TOKENS.ink,
+            }}
           >
             Couldn&apos;t load exam details right now.
           </p>
@@ -147,17 +160,23 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
   }
 
   return (
-    <section style={{ backgroundColor: TOKENS.paper }} className="py-16">
+    <section className="bg-linear-to-b from-gray-50 to-white py-16">
       <div className="mx-auto max-w-6xl px-6">
         <p
           className="mb-3 text-xs font-medium uppercase tracking-[0.14em]"
-          style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.signal }}
+          style={{
+            
+            color: TOKENS.signal,
+          }}
         >
           Exam overview
         </p>
         <h2
           className="mb-8 text-3xl font-bold sm:text-4xl"
-          style={{ fontFamily: "'Space Grotesk', sans-serif", color: TOKENS.ink }}
+          style={{
+            
+            color: TOKENS.ink,
+          }}
         >
           {cert.name}
         </h2>
@@ -168,7 +187,10 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
             <div>
               <p
                 className="mb-2 text-[11px] uppercase tracking-[0.1em]"
-                style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink, opacity: 0.6 }}
+                style={{
+                  color: TOKENS.ink,
+                  opacity: 0.6,
+                }}
               >
                 Difficulty level
               </p>
@@ -185,7 +207,10 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
             <div>
               <p
                 className="mb-2 text-[11px] uppercase tracking-[0.1em]"
-                style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink, opacity: 0.6 }}
+                style={{
+                  color: TOKENS.ink,
+                  opacity: 0.6,
+                }}
               >
                 Renewal
               </p>
@@ -207,7 +232,10 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
               />
               <span
                 className="text-xs uppercase tracking-[0.08em]"
-                style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink }}
+                style={{
+          
+                  color: TOKENS.ink,
+                }}
               >
                 {cert.jobDemand} job demand
               </span>
@@ -218,7 +246,10 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
           <div>
             <p
               className="mb-3 text-[11px] uppercase tracking-[0.1em]"
-              style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink, opacity: 0.6 }}
+              style={{
+                color: TOKENS.ink,
+                opacity: 0.6,
+              }}
             >
               Exam domains
             </p>
@@ -227,12 +258,18 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
         </div>
 
         {/* Ideal for / prerequisites */}
-        <div className="mt-10 flex flex-wrap gap-8 border-t pt-8" style={{ borderColor: TOKENS.hairline }}>
+        <div
+          className="mt-10 flex flex-wrap gap-8 border-t pt-8"
+          style={{ borderColor: TOKENS.hairline }}
+        >
           {cert.idealFor?.length > 0 && (
             <div>
               <p
                 className="mb-2 text-[11px] uppercase tracking-[0.1em]"
-                style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink, opacity: 0.6 }}
+                style={{
+                  color: TOKENS.ink,
+                  opacity: 0.6,
+                }}
               >
                 Ideal for
               </p>
@@ -254,7 +291,11 @@ export default function CertOverviewSection({ data, initialCert }: Props) {
             <div>
               <p
                 className="mb-2 text-[11px] uppercase tracking-[0.1em]"
-                style={{ fontFamily: "'IBM Plex Mono', monospace", color: TOKENS.ink, opacity: 0.6 }}
+                style={{
+                  fontFamily: "'IBM Plex Mono', monospace",
+                  color: TOKENS.ink,
+                  opacity: 0.6,
+                }}
               >
                 Prerequisites
               </p>

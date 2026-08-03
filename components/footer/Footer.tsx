@@ -29,21 +29,19 @@ export default function Footer() {
                 className="object-contain"
               />
               <span className="font-semibold">
-                <span className="text-foreground">TestHelp</span>
-                <span className="text-gray-400">Now</span>.
+                <span className="text-foreground">ProctoredExam</span>
+                <span className="text-gray-400">Help</span>.
               </span>
             </Link>
           </div>
 
           <p className="p-text text-gray-300">
-            Your trusted partner for academic success. We help students excel in
-            their exams and classes with personalized support.
-          </p>
+            We are a one-stop solution for all your Proctored Online Exams. We offer flexible  and customizable offer to all individuals depending on their educational qualification and certification they want to achieve.   </p>
         </div>
 
         {/* Solutions */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Services</h3>
+          <h3 className="text-xl font-semibold mb-4">Certifications</h3>
           <ul className="space-y-2 text-gray-300 text-[1rem] ">
             <li>
               <Link href="/pay-someone-to-take-comptia-exam-for-me">
@@ -51,10 +49,15 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/pay-someone-to-take-aws-for-me">
+              <Link href="/pay-someone-to-take-aws-exam-for-me">
                 ➜ Take AWS Related Exams For Me{" "}
               </Link>
             </li>
+            <li>
+              <Link href="/pay-someone-to-take-ec-council-exam-for-me">
+                ➜ Take EC-Council Related Exam For Me
+              </Link>
+            </li> 
             <li>
               <Link href="/pay-someone-to-take-azure-exam-for-me">
                 ➜ Take Azure Related Exams For Me
@@ -80,7 +83,7 @@ export default function Footer() {
 
         {/* Company */}
         <div>
-          <h3 className=" text-xl font-semibold mb-4">Company</h3>
+          <h3 className=" text-xl font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-gray-300 text-[1rem]">
             <li>
               <Link href="/faq">➜ FAQs</Link>

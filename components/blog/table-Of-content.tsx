@@ -60,7 +60,7 @@ export default function TableOfContents({ headings }: { headings: Heading[] }) {
   };
 
   return (
-    <div className="sticky top-24 hidden md:block h-88 overflow-y-scroll">
+    <div className="sticky top-24 hidden md:block h-120 overflow-y-scroll">
       <h3 className="title font-bold mb-4">📌 Table of Contents</h3>
       <ul className="space-y-2">
         {headings.map((heading) => {

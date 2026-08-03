@@ -1,4 +1,3 @@
-// app/tools/layout.tsx
 import type { ReactNode } from "react";
 import { ToolNavLink } from "@/components/ui/tool-nav-link";
 export const metadata = {

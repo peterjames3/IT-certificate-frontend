@@ -54,10 +54,7 @@ export default function AwsFocusedContentSection({ data }: Props) {
 
           {body && (
             <div className="prose prose-gray max-w-none text-gray-700">
-              <PortableText 
-                value={body}
-                components={portableTextComponents} 
-              />
+              <PortableText value={body} components={portableTextComponents} />
             </div>
           )}
 
@@ -84,7 +81,7 @@ export default function AwsFocusedContentSection({ data }: Props) {
             >
               <div
                 className="px-5 py-4 font-semibold text-white"
-                style={{ backgroundColor: card.accentColor ?? "#10b981" }}
+                style={{ backgroundColor: card.accentColor ?? "#010B13" }}
               >
                 {card.title}
               </div>

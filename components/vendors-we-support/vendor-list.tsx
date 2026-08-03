@@ -10,12 +10,14 @@ import {
   Terminal,
   Layers,
   ShieldCheck,
+  Server,
+  
 } from "lucide-react";
 
 const examServices = [
   {
     icon: Award,
-    title: "Foundational Cert proxy service",
+    title: "Foundational Cert Proxy Service",
     subtitle: "CompTIA Tracks (A+, Network+, Security+)",
     tags: ["Pass CompTIA fast", "⭐ Core Security"],
     description:
@@ -37,24 +39,48 @@ const examServices = [
   },
   {
     icon: Cloud,
-    title: "AWS Exam Proxy & Cloud Systems",
-    subtitle: "AWS, Azure & Google Cloud (GCP)",
-    tags: ["Cloud Platforms", "⭐ Hyper-Scale Architecture"],
+    title: "AWS Exam Proxy & Cloud Architecture",
+    subtitle: "Amazon Web Services Certifications",
+    tags: ["AWS Cloud", "⭐ Solutions Architect"],
     description:
-      "Comprehensive multi-cloud proxy testing IT configurations. Sit back while certified infrastructure experts connect securely to pass advanced role-based vendor platforms on your first attempt.",
+      "Comprehensive AWS proxy testing configurations for all certification levels. Our certified infrastructure experts connect securely to pass AWS exams on your first attempt.",
     features: [
-      "Pay someone to take my AWS Solutions Architect exam maps",
-      "Hire an expert to pass Azure AZ-104 administrator codes",
-      "Can I pay someone to do my GCP Cloud Engineer test instances",
+      "Pay someone to take my AWS Solutions Architect exam",
+      "AWS SysOps Administrator associate certification support",
+      "AWS Developer associate exam proxy services",
+      "AWS Security specialty validation assistance",
     ],
     stats: [
       { value: "100%", label: "Pass rate" },
-      { value: "380+", label: "Engineers passed" },
+      { value: "200+", label: "Engineers passed" },
       { value: "4.9★", label: "Rating" },
     ],
     learnMore: {
-      label: "Learn more about Cloud exam help →",
+      label: "Learn more about AWS exam help →",
       href: "/pay-someone-to-take-aws-exam-for-me",
+    },
+  },
+  {
+    icon: Server,
+    title: "Azure Exam Proxy & Cloud Solutions",
+    subtitle: "Microsoft Azure Certifications",
+    tags: ["Azure Cloud", "⭐ AZ-104 & AZ-305"],
+    description:
+      "Professional Azure exam proxy services for all Microsoft certification tracks. Our certified Azure experts handle your exam with complete confidentiality.",
+    features: [
+      "Pay someone to take my AZ-900 Azure Fundamentals exam",
+      "Azure Administrator AZ-104 certification support",
+      "Azure Solutions Architect AZ-305 exam proxy",
+      "Azure Security Engineer AZ-500 validation help",
+    ],
+    stats: [
+      { value: "100%", label: "Pass rate" },
+      { value: "180+", label: "Engineers passed" },
+      { value: "4.9★", label: "Rating" },
+    ],
+    learnMore: {
+      label: "Learn more about Azure exam help →",
+      href: "/pay-someone-to-take-azure-exam-for-me",
     },
   },
   {
@@ -76,7 +102,7 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about Networking help →",
-      href: "/pay-someone-to-take-cisco-cnna-exam-for-me",
+      href: "/pay-someone-to-take-cisco-ccna-exam-for-me",
     },
   },
   {
@@ -147,7 +173,7 @@ const examServices = [
       href: "/proctored-exam-help/pay-someone-to-take-my-linux-exam-for-me",
     },
   },
- {
+  {
     icon: Layers,
     title: "ITIL Certification Exam Help",
     subtitle: "ITIL 4 Foundation · Specialist · Strategist",
@@ -168,18 +194,19 @@ const examServices = [
       { value: "4.8★", label: "Rating" },
     ],
     learnMore: {
-      label: "Learn more about ITIL exam  help →",
+      label: "Learn more about ITIL exam help →",
       href: "/pay-someone-to-take-itil-v4",
     },
   },
 ];
+
 export default function VendorListSection() {
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+ 
 
   return (
     <motion.section
+    
+    id='certification'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -201,7 +228,7 @@ export default function VendorListSection() {
         transition={{ delay: 0.4, duration: 0.8 }}
       >
         Main domains where our Certified engineering and security specialists
-        will to help you pass your technical certification exams.
+        will help you pass your technical certification exams.
       </motion.p>
 
       <motion.div
@@ -304,13 +331,6 @@ export default function VendorListSection() {
                 ))}
               </div>
 
-              {/* Pricing */}
-              {/* <p className="text-gray-400 text-sm">
-                Starting from{" "}
-                <span className="text-white font-bold">{service.price}</span> ·
-                free quote in 60 sec
-              </p> */}
-
               {/* Guarantee */}
               <div className="flex items-center gap-2 bg-green-950/50 border border-green-800/50 rounded-lg px-4 py-2.5 text-white text-sm font-medium">
                 <ShieldCheck size={16} strokeWidth={2} />
@@ -319,7 +339,7 @@ export default function VendorListSection() {
 
               {/* CTAs */}
               <button
-                onClick={handleClick}
+                
                 className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-base px-8 py-3 rounded-xl cursor-pointer transition-colors"
               >
                 Get a free quote →
