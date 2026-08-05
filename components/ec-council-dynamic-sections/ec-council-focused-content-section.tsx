@@ -2,34 +2,18 @@ import { PortableText } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
 import { CircleArrowRight } from "lucide-react";
 import { portableTextComponents } from "../blog/portable-text-components";
-
-// ── Types ─────────────────────────────────────────────────
-export interface SidebarListItem {
-  text: string;
-  link?: string;
-}
-
-export interface SidebarCard {
-  title: string;
-  accentColor?: string; // hex string from Sanity color field, e.g. "#10b981"
-  items: SidebarListItem[];
-}
-
-export interface CtaButton {
-  label: string;
-  href: string;
-  variant?: "primary" | "secondary" | "outline";
-}
-
-export interface ECCouncilFocusedContentSectionData {
-  _type: "ecCouncilFocusedContentSection";
-  sectionId?: string;
+type ECCouncilFocusedContentSectionData = {
   heading?: string;
   body?: PortableTextBlock[];
-  sidebarCards: SidebarCard[];
+  sidebarCards?: Array<{
+    title?: string;
+    accentColor?: string;
+    items?: Array<{ text?: string; link?: string }>;
+  }>;
   backgroundColor?: string;
-  ctaButton?: CtaButton;
-}
+  ctaButton?: { label?: string; href?: string; variant?: "outline" | string } | null;
+};
+
 
 interface Props {
   data: ECCouncilFocusedContentSectionData;

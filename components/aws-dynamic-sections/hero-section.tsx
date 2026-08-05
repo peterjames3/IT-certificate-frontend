@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useUIState } from "@/context/UIContext";
 import { motion, AnimatePresence } from "framer-motion";
-import type { HeroSectionData } from "@/app/(site)/pay-someone-to-take-comptia-exam-for-me/[slug]/page";
+import type { HeroSectionData, SectionItem } from "@/lib/defination";
 import FloatingElements from "../animation/FloatingElements";
 import {
   ArrowLeft,
@@ -13,16 +13,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-
-interface SectionItem {
-  title: string;
-  content: string;
-  tips?: string[];
-  icon?: string;
-}
-
 interface HeroSectionProps {
-  data: HeroSectionData & { sections: SectionItem[] };
+  data: HeroSectionData ;
 }
 
 const getSectionIcon = (title: string) => {
@@ -83,7 +75,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
         <AnimatePresence mode="wait">
           <motion.div
             key="form"
-            className="py-[5rem] w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3"
+            className="py-20 w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
@@ -91,7 +83,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           />
         </AnimatePresence>
       ) : (
-        <div className="pt-[10rem] pb-16 w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3 flex flex-col gap-10 lg:flex-row md:justify-between items-center">
+        <div className="pt-40 pb-16 w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3 flex flex-col gap-10 lg:flex-row md:justify-between items-center">
           {/* ── Left — text ───────────────────────────── */}
           <div className="w-full lg:w-1/2 items-center ">
             <button

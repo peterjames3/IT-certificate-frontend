@@ -1,84 +1,140 @@
-import { ExamCategory, AcademicService, MenuItem } from "./defination";
+import { ExamCategory, MenuItem } from "./defination";
 
 export const examAidCategories: ExamCategory = {
   "AWS Certifications": [
-    {
-      name: "Take AWS cerfied Cloud Practitioner (CLF-C02) Exam for Me",
-      slug: "pay-someone-to-take-aws-cloud-practitionerclf-c02-exam-for-me",
+     {
+      name: "AWS Related Exams",
+      slug: "pay-someone-to-take-aws-exam-for-me",
     },
     {
-      name: "Take AWS Solutions Architect Associate (SAA-C03) Exam for Me",
-      slug: "pay-someone-to-take-aws-solutions-architect-associate-saa-c03-exam-for-me",
+      name: "Take AWS Certified Cloud Practitioner Exam for Me",
+      slug: "pay-someone-to-take-aws-exam-for-me/take-my-aws-cloud-practitioner-exam-for-me",
     },
     {
-      name: "Take AWS SysOps Administrator Associate (SOA-C02) Exam for Me)",
-      slug: "pay-someone-to-take-aws-sysops-administrator-soa-c02-exam-for-me",
+      name: "Take AWS Certified Solutions Architect Associate Exam for Me",
+      slug: "pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-associate-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified SysOps Administrator Associate Exam for Me",
+      slug: "pay-someone-to-take-aws-exam-for-me/take-my-aws-sysops-administrator-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Solutions Architect Professional Exam for Me",
+      slug: "pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-professional-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Security Specialty Exam for Me",
+      slug: "pay-someone-to-take-aws-exam-for-me/take-my-aws-security-specialty-exam-for-me",
+    },
+    {
+      name: "Take AWS Certified Advanced Networking Specialty Exam for Me",
+      slug: "pay-someone-to-take-aws-exam-for-me/take-my-aws-advanced-networking-specialty-exam-for-me",
     },
   ],
   "Microsoft Azure": [
     {
+      name: "Microsoft Azure Related Exams",
+      slug: "pay-someone-to-take-azure-exam-for-me",
+    },
+    {
       name: "Take Azure Fundamentals (AZ-900) Exam for Me",
-      slug: "pay-someone-to-take-azure-fundamentals-az-900-exam-for-me",
+      slug: "pay-someone-to-take-azure-exam-for-me/az-900",
     },
     {
       name: "Take Azure Administrator (AZ-104) Exam for Me",
-      slug: "pay-someone-to-take-azure-administrator-az-104-exam-for-me",
+      slug: "pay-someone-to-take-azure-exam-for-me/az-104",
     },
     {
       name: "Take Azure Solutions Architect Expert (AZ-305) Exam for Me",
-      slug: "pay-someone-to-take-azure-solutions-architect-expert-az-30-exam-for-me",
+      slug: "pay-someone-to-take-azure-exam-for-me/az-305",
+    },
+    {
+      name: "Take Azure DevOps Engineer (AZ-400) Exam for Me",
+      slug: "pay-someone-to-take-azure-exam-for-me/az-400",
+    },
+    {
+      name: "Take Azure Security Engineer (AZ-500) Exam for Me",
+      slug: "pay-someone-to-take-azure-exam-for-me/az-500",
+    },
+    {
+      name: "Take Azure Network Engineer (AZ-700) Exam for Me",
+      slug: "pay-someone-to-take-azure-exam-for-me/az-700",
+    },
+    {
+      name: "Take Azure Data Fundamentals (DP-900) Exam for Me",
+      slug: "pay-someone-to-take-azure-exam-for-me/dp-900",
+    },
+    {
+      name: "Take Azure Data Engineer (DP-203) Exam for Me",
+      slug: "pay-someone-to-take-azure-exam-for-me/dp-203",
+    },
+    {
+      name: "Take Azure AI Engineer (AI-102) Exam for Me",
+      slug: "pay-someone-to-take-azure-exam-for-me/ai-102",
     },
   ],
-  "Linux Administration": [
+   "EC-Council": [
     {
-      name: "Take Red Hat Certified System Administrator (RHCSA EX200) Exam for Me",
-      slug: "pay-some-to-take-rhcsa-exam-ex200-for-me",
+      name: "EC-Council Related Exams",
+      slug: "pay-someone-to-take-ec-council-exam-for-me",
     },
     {
-      name: "Take Linux Foundation Certified System Administrator (LFCS) Exam for Me",
-      slug: "pay-someone-to-take-lfcs-certification-exam-for-me",
-    },
-  ],
-  "ISC² & ISACA": [
-    {
-      name: "Take ISC² Certified Information Systems Security Professional (CISSP)for Me",
-      slug: "pay-someone-to-take-isc2-cissp-exam-for-me",
+      name: "Take Certified Ethical Hacker (CEH) Exam for Me",
+      slug: "pay-someone-to-take-ec-council-exam-for-me/ceh",
     },
     {
-      name: "Take ISACA Certified Information Systems Auditor (CISA)for Me ",
-      slug: "pay-someone-to-take-isaca-cisa-exam-for-me",
+      name: "Take Certified Chief Information Security Officer (CCISO) Exam for Me",
+      slug: "pay-someone-to-take-ec-council-exam-for-me/cciso",
     },
     {
-      name: "Take ISACA Certified Information Security Manager (CISM) for Me",
-      slug: "pay-someone-to-take-isaca-cism-exam-for-me",
-    },
-  ],
-  Fortinet: [
-    {
-      name: "Take Fortinet Certified Associate (FCA / NSE 1-3) Exam for me",
-      slug: "pay-someone-to-take-fortinet-fca-certification-for-me",
+      name: "Take Certified Network Defender (CND) Exam for Me",
+      slug: "pay-someone-to-take-ec-council-exam-for-me/cnd",
     },
     {
-      name: "Take Fortinet Certified Professional (FCP / NSE 4-6) for Me",
-      slug: "pay-someone-to-take-fortinet-fcp-nse4-exam-for-me",
+      name: "Take Certified Threat Intelligence Analyst (CTIA) Exam for Me",
+      slug: "pay-someone-to-take-ec-council-exam-for-me/ctia",
+    },
+    {
+      name: "Take Computer Hacking Forensic Investigator (CHFI) Exam for Me",
+      slug: "pay-someone-to-take-ec-council-exam-for-me/chfi",
     },
   ],
-  "Google Cloud & Oracle": [
+   "ISACA": [
     {
-      name: "Take Google Cloud Associate Cloud Engineer (ACE) Exam for Me",
-      slug: "pay-someone-to-pass-gcp-associate-cloud-engineer-exam-for-me",
+      name: "ISACA Related Exams",
+      slug: "pay-someone-to-take-isaca-exam-for-me",
     },
     {
-      name: "Take Google Cloud Professional Cloud Architect (PCA) Exam for me",
-      slug: "pay-someone-to-pass-gcp-professional-cloud-architect-exam-for-me",
+      name: "Take Certified Information Systems Auditor (CISA) Exam for Me",
+      slug: "pay-someone-to-take-isaca-exam-for-me/cisa",
     },
     {
-      name: "Take Oracle Cloud Infrastructure Foundations (OCI) Exam for Me",
-      slug: "pay-someone-to-pass-oracle-cloud-infrastructure-foundations-exam-for-me",
+      name: "Take Certified Information Security Manager (CISM) Exam for Me",
+      slug: "pay-someone-to-take-isaca-exam-for-me/cism",
     },
     {
-      name: "Take Oracle Certified Professional Java SE Exam for Me",
-      slug: "pay-someone-to-pass-oracle-java-se-professional-exam-for-me",
+      name: "Take Certified in Risk and Information Systems Control (CRISC) Exam for Me",
+      slug: "pay-someone-to-take-isaca-exam-for-me/crisc",
+    },
+    {
+      name: "Take Certified in the Governance of Enterprise IT (CGEIT) Exam for Me",
+      slug: "pay-someone-to-take-isaca-exam-for-me/cgeit",
+    },
+    {
+      name: "Take Certified Data Privacy Solutions Engineer (CDPSE) Exam for Me",
+      slug: "pay-someone-to-take-isaca-exam-for-me/cdpse",
+    },
+  ],
+ "Cisco": [
+    {
+      name: "Take Cisco CCNA Exam for Me",
+      slug: "pay-someone-to-take-cisco-ccna-exam-for-me",
+    },
+  ],
+  "ITIL": [
+    {
+      name: "Take ITIL V4 Exam for Me",
+      slug: "pay-someone-to-take-itil-v4",
     },
   ],
 };
@@ -132,73 +188,27 @@ export const comptiaCategories: ExamCategory = {
     },
   ],
 };
-export const awsCategories: ExamCategory = {
-  "AWS Foundational & Associate": [
-    {
-      name: "Take AWS Certified Cloud Practitioner Exam for Me",
-      slug: "pay-someone-to-take-my-aws-cloud-practitioner-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified Solutions Architect Associate Exam for Me",
-      slug: "pay-someone-to-take-my-aws-solutions-architect-associate-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified Developer Associate Exam for Me",
-      slug: "pay-someone-to-take-my-aws-developer-associate-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified SysOps Administrator Associate Exam for Me",
-      slug: "pay-someone-to-take-my-aws-sysops-administrator-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified Data Engineer Associate Exam for Me",
-      slug: "pay-someone-to-take-my-aws-data-engineer-associate-exam-for-me",
-    },
-  ],
-  "AWS Professional": [
-    {
-      name: "Take AWS Certified Solutions Architect Professional Exam for Me",
-      slug: "pay-someone-to-take-my-aws-solutions-architect-professional-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified DevOps Engineer Professional Exam for Me",
-      slug: "pay-someone-to-take-my-aws-devops-engineer-professional-exam-for-me",
-    },
-  ],
-  "AWS Specialty": [
-    {
-      name: "Take AWS Certified Advanced Networking Specialty Exam for Me",
-      slug: "pay-someone-to-take-my-aws-advanced-networking-specialty-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified Security Specialty Exam for Me",
-      slug: "pay-someone-to-take-my-aws-security-specialty-exam-for-me",
-    },
-    {
-      name: "Take AWS Certified Machine Learning Specialty Exam for Me",
-      slug: "pay-someone-to-take-my-aws-machine-learning-specialty-exam-for-me",
-    },
-  ],
-};
 
-export const academicServices: AcademicService[] = [
-  // { name: "Assignment Help", href: "/academic/assignment-help" },
-  { name: "Online Tutoring Services", href: "/academic/tutoring" },
-  // { name: "Class Assistant", href: "/academic/class-assistant" },
-];
+
 
 // Helper function to convert ExamCategory to SubMenuItem[]
-const categoryToSubmenu = (categories: ExamCategory, basePath: string) => {
+const categoryToSubmenu = (categories: ExamCategory, basePath?: string) => {
   return Object.entries(categories).flatMap(([group, items]) => [
     { name: group, href: "#", group }, // Group header
-    ...items.map((item) => ({
-      name: item.name,
-      href: `${basePath}/${item.slug
-        .toLowerCase()
-        // .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9-]/g, "")}`,
-      group,
-    })),
+    ...items.map((item) => {
+      // If basePath is provided, prepend it; otherwise use the slug directly
+      const href = basePath 
+        ? `${basePath}/${item.slug
+            .toLowerCase()
+            .replace(/[^a-z0-9-]/g, "")}`
+        : `/${item.slug}`;
+      
+      return {
+        name: item.name,
+        href: href,
+        group,
+      };
+    }),
   ]);
 };
 
@@ -215,15 +225,12 @@ export const MenuItems: MenuItem[] = [
       "/pay-someone-to-take-comptia-exam-for-me",
     ),
   },
-  // {
-  //   name: "Cisco-CCNA",
-  //   href: "pay-someone-to-take-cisco-cnna-exam-for-me",
-  // },
+  
   {
     name: "Proctored Exam Help",
     href: "#",
     // Keep this if it serves as a separate landing page for general support inquiries
-    submenu: categoryToSubmenu(examAidCategories, "/proctored-exam-help"),
+    submenu: categoryToSubmenu(examAidCategories),
   },
   {
     name: "Certificate Tools",
