@@ -7,7 +7,6 @@ import {
   Network,
   ShieldAlert,
   LayoutGrid,
-  Terminal,
   Layers,
   ShieldCheck,
   Server,

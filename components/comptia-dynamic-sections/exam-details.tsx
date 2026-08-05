@@ -2,7 +2,7 @@ import Image from "next/image";
 //import Link from "next/link";
 import { portableTextComponents } from "@/components/blog/portable-text-components";
 import { PortableText } from "@portabletext/react";
-import type { ContentSectionData } from "@/app/(site)/pay-someone-to-take-comptia-exam-for-me/[slug]/page";
+import type { ContentSectionData } from "@/lib/defination";
 
 const sizeMap: Record<string, string> = {
   "33": "lg:w-1/3",
@@ -60,7 +60,7 @@ export default function ExamDetails({ data }: { data: ContentSectionData }) {
         {/* Image column */}
         {hasImage && (
           <div
-            className={`relative w-full ${imgWidthClass} min-h-[40rem] lg:min-h-[40rem] overflow-hidden  flex-shrink-0`}
+            className={`relative w-full ${imgWidthClass} min-h-160 lg:min-h-160 overflow-hidden shrink-0`}
           >
             <Image
               src={image!.url}

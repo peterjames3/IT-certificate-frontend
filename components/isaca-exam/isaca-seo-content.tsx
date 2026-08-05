@@ -283,55 +283,387 @@ export default function ISACASEOContent() {
         </motion.article>
       </article>
 
-      {/* Sidebar Content fine-tuned for high-value targets */}
+      {/* ===== UPDATED SIDEBAR ===== */}
       <div className="w-full md:w-[35%] space-y-12">
-        {/* Box 1: Core Tech Links */}
+        
+        {/* BOX 1: ISACA Certifications (Current Cluster) */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-          className="border border-gray-300 overflow-hidden rounded-lg space-y-2"
+          className="border border-gray-300 overflow-hidden rounded-lg"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
-            <h2>
-              ISACA Certifications <br /> Our Exam Takers Cover
-            </h2>
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>ISACA Proctored Exam Help Services</h2>
           </div>
           <div className="px-3 py-6">
-            <ul className="flex flex-col space-y-3 p-2 font-medium">
-              <li className="flex items-center gap-2 hover:text-emerald-600 transition-colors">
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CISA Exam For Me
+            <p className="text-sm text-gray-600 px-2 mb-3">
+              Choose your ISACA certification and let our experts handle it:
+            </p>
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* Current Cluster - ISACA (with descriptions) */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cism"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ISACA-CISM
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Information Security Manager
+                    </span>
+                  </div>
+                </Link>
               </li>
-              <li className="flex items-center gap-2 hover:text-emerald-600 transition-colors">
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CISM Exam For Me
+              <li>
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cisa"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ISACA-CISA
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Information Systems Auditor
+                    </span>
+                  </div>
+                </Link>
               </li>
-              <li className="flex items-center gap-2 hover:text-emerald-600 transition-colors">
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CRISC Exam For Me
+              <li>
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/crisc"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ISACA-CRISC
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified in Risk and Information Systems Control
+                    </span>
+                  </div>
+                </Link>
               </li>
-              <li className="flex items-center gap-2 hover:text-emerald-600 transition-colors">
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CGEIT Exam For Me
+              <li>
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cdpse"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ISACA-CDPSE
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Data Privacy Solutions Engineer
+                    </span>
+                  </div>
+                </Link>
               </li>
-              <li className="flex items-center gap-2 hover:text-emerald-600 transition-colors">
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CDPSE Exam For Me
+              <li>
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cgeit"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ISACA-CGEIT
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified in the Governance of Enterprise IT
+                    </span>
+                  </div>
+                </Link>
               </li>
-              <Link
-                href="/proctored-it-exam-help"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                And other IT Governance or Security Exam setups
-              </Link>
             </ul>
           </div>
         </motion.article>
 
-        {/* Box 2: Selling points tailored for IT professionals */}
+        {/* BOX 2: Related Security Certifications */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>Related Security & IT Certifications</h2>
+          </div>
+          <div className="px-3 py-6">
+            <p className="text-sm text-gray-600 px-2 mb-3">
+              Exploring other certifications? We can help with these too:
+            </p>
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* CompTIA Family */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  CompTIA Related Exams
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-security-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CompTIA Security+</span>
+                    <span className="text-xs text-gray-500 block">Entry-level security</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cysa-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CompTIA CYSA+</span>
+                    <span className="text-xs text-gray-500 block">Security analytics</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-network-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CompTIA Network+</span>
+                    <span className="text-xs text-gray-500 block">Foundational networking</span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* EC-Council Family */}
+              <li className="mt-2">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  EC-Council
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/ceh"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">EC-Council CEH</span>
+                    <span className="text-xs text-gray-500 block">Ethical hacking</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/cnd"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">EC-Council CND</span>
+                    <span className="text-xs text-gray-500 block">Network defense</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/chfi"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">EC-Council CHFI</span>
+                    <span className="text-xs text-gray-500 block">Computer forensics</span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 3: Cloud Certifications */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>Cloud Certifications</h2>
+          </div>
+          <div className="px-3 py-6">
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* Azure Family */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  Microsoft Azure
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-900"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">AZ-900</span>
+                    <span className="text-xs text-gray-500 block">Azure Fundamentals</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-104"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">AZ-104</span>
+                    <span className="text-xs text-gray-500 block">Azure Administrator</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-305"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">AZ-305</span>
+                    <span className="text-xs text-gray-500 block">Solutions Architect</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-500"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">AZ-500</span>
+                    <span className="text-xs text-gray-500 block">Azure Security Engineer</span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* AWS Family */}
+              <li className="mt-2">
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  AWS
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-cloud-practitioner-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">AWS Cloud Practitioner</span>
+                    <span className="text-xs text-gray-500 block">Foundational cloud</span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-associate-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">AWS Solutions Architect Associate</span>
+                    <span className="text-xs text-gray-500 block">Cloud architecture</span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 4: IT Governance, Networking & Project Management */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>IT Governance, Networking & Project Management</h2>
+          </div>
+          <div className="px-3 py-6">
+            <ul className="flex flex-col space-y-3 p-2">
+              <li>
+                <Link
+                  href="/pay-someone-to-take-itil-v4"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">ITIL</span>
+                    <span className="text-xs text-gray-500 block">IT Service Management</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pay-someone-to-take-cisco-ccna-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">Cisco CCNA</span>
+                    <span className="text-xs text-gray-500 block">Network Administration</span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">PMP</span>
+                    <span className="text-xs text-gray-500 block">Project Management Professional</span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 5: Why We're #1 (Unchanged) */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -339,7 +671,7 @@ export default function ISACASEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
+          <div className="font-medium text-white bg-black p-4 text-xl">
             <h2>Why We&apos;re #1 for IT Exam Help</h2>
           </div>
           <div className="px-4 py-6">
@@ -368,7 +700,7 @@ export default function ISACASEOContent() {
           </div>
         </motion.article>
 
-        {/* Box 3: Types of Proctored Spaces */}
+        {/* BOX 6: Proctored Environments (Unchanged) */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -376,7 +708,7 @@ export default function ISACASEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
+          <div className="font-medium text-white bg-black p-4 text-xl">
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">
@@ -397,7 +729,7 @@ export default function ISACASEOContent() {
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 Honorlock and Proctorio Exams
               </li>
-                <li className="flex items-center gap-2">
+              <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
                 ExamSoft & Examity
               </li>

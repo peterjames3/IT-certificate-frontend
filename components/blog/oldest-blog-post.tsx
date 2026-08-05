@@ -51,7 +51,7 @@ export default async function OldestBlogPost() {
             />
           </figure>
           <figcaption className="flex flex-col gap-2 p-3">
-            <div className="w-[13rem] bg-tertiary text-center text-secondary label-text rounded-lg py-[0.29rem] font-medium">
+            <div className="w-52 bg-tertiary text-center text-secondary label-text rounded-lg py-[0.29rem] font-medium">
               {(post.categories ?? []).map((category: Category, id: number) => (
                 <ul key={id}>
                   {" "}

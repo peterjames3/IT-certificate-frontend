@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-
 interface HeroSectionProps {
   data: HeroSectionData;
 }
@@ -71,7 +70,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
   return (
     <section
       id="hero-main"
-      className="relative bg-linear-to-tr from-primary-50 via-[#ffffff] to-[#f0f9ff] min-h-[10rem] z-10 py-20"
+      className="relative bg-linear-to-tr from-primary-50 via-[#ffffff] to-[#f0f9ff] min-h-40 z-10 py-20"
     >
       {isVisible ? (
         <AnimatePresence mode="wait">
