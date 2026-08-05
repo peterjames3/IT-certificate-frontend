@@ -316,6 +316,48 @@ export default function ProctoredSeoContent() {
                 <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
                 Azure
               </Link>
+               <Link
+                href="/pay-someone-to-take-azure-exam-for-me/az-900"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
+                AZ-900
+              </Link>
+               <Link
+                href="/pay-someone-to-take-azure-exam-for-me/az-700"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
+                AZ-700
+              </Link>
+               <Link
+                href="/pay-someone-to-take-azure-exam-for-me/az-500"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
+                AZ-500
+              </Link>
+               <Link
+                href="/pay-someone-to-take-azure-exam-for-me/az-400"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
+                AZ-400
+              </Link>
+               <Link
+                href="/pay-someone-to-take-azure-exam-for-me/az-305"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
+                AZ-305
+              </Link>
+               <Link
+                href="/pay-someone-to-take-azure-exam-for-me/dp-900"
+                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
+              >
+                <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />{" "}
+                DP-900
+              </Link>
               <Link
                 href="/pay-someone-to-take-itil-v4"
                 className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold text-xl"

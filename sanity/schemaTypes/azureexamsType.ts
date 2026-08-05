@@ -45,13 +45,10 @@ export const AzureServicePageType = defineType({
       of: [
         { type: "hero" },
         { type: "contentSectionWithImage" },
-        { type: "azureFocusedContentSection" }, // Changed from isacaFocusedContentSection
+        { type: "azureFocusedContentSection" },
         { type: "certOverviewSection" },
         { type: "faqSection" },
-        // ── Additional Azure-specific sections ──
-        { type: "azureCertificationGrid" }, // Optional: Grid of Azure certs
-        { type: "azureExamStructure" }, // Optional: Exam structure breakdown
-        { type: "azureBenefitsSection" }, // Optional: Benefits of using Azure
+  
       ],
     },
   ],

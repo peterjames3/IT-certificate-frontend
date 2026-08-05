@@ -151,28 +151,7 @@ const examServices = [
       href: "/pay-someone-to-take-isaca-exam-for-me",
     },
   },
-  {
-    icon: Terminal,
-    title: "Linux & Enterprise Systems",
-    subtitle: "LPI & Red Hat Operations",
-    tags: ["Pass Red Hat exam online", "Open Source Labs"],
-    description:
-      "Targeted Linux Professional Institute LPI exam help services paired with automated deployment setups. Complete performance verification labs successfully without hours of CLI preparation.",
-    features: [
-      "Pay someone to pass Red Hat Certified System Administrator (RHCSA)",
-      "Take my Red Hat Certified Engineer lab exam for me schedules",
-      "Professional proxy testing for enterprise Linux certs (LPIC Tiers)",
-    ],
-    stats: [
-      { value: "100%", label: "Pass rate" },
-      { value: "140+", label: "SysAdmins passed" },
-      { value: "4.8★", label: "Rating" },
-    ],
-    learnMore: {
-      label: "Learn more about Linux exam help →",
-      href: "/proctored-exam-help/pay-someone-to-take-my-linux-exam-for-me",
-    },
-  },
+  
   {
     icon: Layers,
     title: "ITIL Certification Exam Help",

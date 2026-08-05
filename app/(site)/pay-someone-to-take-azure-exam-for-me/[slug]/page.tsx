@@ -1,7 +1,10 @@
-import { azureExamServicePageQuery, azureExamServicePathQuery } from "@/sanity/lib/queries";
+import {
+  azureExamServicePageQuery,
+  azureExamServicePathQuery,
+} from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { client } from "@/sanity/lib/client";
-import { notFound } from 'next/navigation';
+import { notFound } from "next/navigation";
 import { PortableTextBlock } from "@portabletext/types";
 import { getCertification } from "@/services/certification.service";
 
@@ -270,7 +273,11 @@ async function renderSection(section: PageSection, index: number) {
 // ── Page ────────────────────────────────────────────────────
 export const revalidate = 3600;
 
-export default async function AzureExamServicePage({ params }: { params: Params }) {
+export default async function AzureExamServicePage({
+  params,
+}: {
+  params: Params;
+}) {
   const { slug } = await params;
 
   const page = await sanityFetch<ExamServicePageData>({
@@ -281,7 +288,7 @@ export default async function AzureExamServicePage({ params }: { params: Params 
   if (!page) notFound();
 
   const renderedSections = await Promise.all(
-    page.sections?.map((section, index) => renderSection(section, index)) ?? []
+    page.sections?.map((section, index) => renderSection(section, index)) ?? [],
   );
 
   return <main>{renderedSections}</main>;
