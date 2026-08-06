@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            At TestHelpNow, there are several key reasons why you should trust our 
+            At ProctoredExamHelp, there are several key reasons why you should trust our 
             specialists to manage your IT service management certification. We have established an 
             exceptional reputation in the service delivery field and have grown to become the premier 
             choice for enterprise IT professionals. Some of these advantages include:

@@ -47,18 +47,18 @@ export default function ECCouncilSEOContent() {
               certification such as the LPT (Licensed Penetration Tester) the
               prep time extends far longer, sometimes stretching for over 2
               years for some candidates. If you have a busy job and want to pass
-              the EC-Council certification fast we offer a &apos;Take My EC-Council
-              Exam For Me&apos; service. Whereby you basically pay us and we take the
-              EC-Council certification exam for you.
+              the EC-Council certification fast we offer a &apos;Take My
+              EC-Council Exam For Me&apos; service. Whereby you basically pay us
+              and we take the EC-Council certification exam for you.
             </p>
             <p>
               How does this work? Well as you likely know EC-Council exams can
               be taken at home and not just test centers. When taken at home an
               EC-Council exam is typically proctored or protected by a virtual
               human proctor who monitors your screen and monitors you using
-              webcam video and microphone. But there&apos;s a second component, the
-              proctoring browser which locks down your computer and stops you
-              from being able to use any other resources during the test and
+              webcam video and microphone. But there&apos;s a second component,
+              the proctoring browser which locks down your computer and stops
+              you from being able to use any other resources during the test and
               blocks all unauthorized applications from running. We can bypass
               all the security measures deployed by EC-Council&apos;s testing
               platforms and basically connect into your computer and answer the
@@ -88,25 +88,25 @@ export default function ECCouncilSEOContent() {
           </h2>
           <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
             <p>
-              But won&apos;t the proctoring software detect your remote connecting
-              during the test? No it will not. We have developed custom software
-              that allows us to completely bypass EC-Council platform security
-              measures. A reminder: EC-Council uses advanced proctoring
-              solutions through ECC Exam Center and Pearson VUE to protect the
-              integrity of certifications such as CEH, ECSA, CHFI, CND, CCISO,
-              and LPT. So when you take an EC-Council exam from home you are
-              forced to use their secure browser which locks down your computer
-              and stops you from being able to use any other application
-              typically. But for TestHelpNow clients who wish to utilize our
-              exam proxy services for EC-Council exams we have expended
-              substantial effort to figure out how to bypass proctoring
+              But won&apos;t the proctoring software detect your remote
+              connecting during the test? No it will not. We have developed
+              custom software that allows us to completely bypass EC-Council
+              platform security measures. A reminder: EC-Council uses advanced
+              proctoring solutions through ECC Exam Center and Pearson VUE to
+              protect the integrity of certifications such as CEH, ECSA, CHFI,
+              CND, CCISO, and LPT. So when you take an EC-Council exam from home
+              you are forced to use their secure browser which locks down your
+              computer and stops you from being able to use any other
+              application typically. But for TestHelpNow clients who wish to
+              utilize our exam proxy services for EC-Council exams we have
+              expended substantial effort to figure out how to bypass proctoring
               software. Our method of taking EC-Council exams for clients is
               safe and secure allowing us to take control of your computer and
               answer the questions on the EC-Council exam you want passed. We
               also do not need clients to use secondary monitors or any extra
               hardware. Our EC-Council exam bypass is seamless and allows us to
-              be in full control of a client&apos;s computer as we take the exam for
-              you.
+              be in full control of a client&apos;s computer as we take the exam
+              for you.
             </p>
           </div>
         </motion.article>
@@ -145,18 +145,19 @@ export default function ECCouncilSEOContent() {
                 </span>
                 Security professionals often work on 24/7 incident response
                 rotations or intense penetration testing engagements. Delegating
-                your upcoming certification deadline ensures you don&apos;t sacrifice
-                critical security operations for certification compliance.
+                your upcoming certification deadline ensures you don&apos;t
+                sacrifice critical security operations for certification
+                compliance.
               </li>
               <li>
                 <span className="font-semibold block text-secondary-600">
                   Complex Practical Lab Dynamics:
                 </span>
                 Even highly experienced ethical hackers struggle with
-                EC-Council&apos;s practical simulations and timed lab instances. Our
-                domain specialists possess deep hands-on penetration testing and
-                network defense expertise to navigate tricky test architectures
-                perfectly.
+                EC-Council&apos;s practical simulations and timed lab instances.
+                Our domain specialists possess deep hands-on penetration testing
+                and network defense expertise to navigate tricky test
+                architectures perfectly.
               </li>
               <li>
                 <span className="font-semibold block text-secondary-600">
@@ -256,8 +257,8 @@ export default function ECCouncilSEOContent() {
                   Pass or First-Time Refund Guarantee:
                 </span>
                 We hold our ethical hacking experts to high delivery standards.
-                In the highly unlikely event that a target passing score isn&apos;t
-                achieved, we offer a full policy refund.
+                In the highly unlikely event that a target passing score
+                isn&apos;t achieved, we offer a full policy refund.
               </li>
               <li>
                 <span className="font-semibold">Hardware-Level Anonymity:</span>
@@ -273,99 +274,377 @@ export default function ECCouncilSEOContent() {
               </li>
             </ul>
             <p className="py-3">
-              Don&apos;t let a grueling technical exam stand between you and your
-              next promotion or security leadership role. Hire our elite
+              Don&apos;t let a grueling technical exam stand between you and
+              your next promotion or security leadership role. Hire our elite
               EC-Council exam proxy services today and pass with confidence.
             </p>
           </div>
         </motion.article>
       </article>
 
-      {/* Sidebar Content fine-tuned for high-value targets */}
+      {/* ===== UPDATED EC-COUNCIL SIDEBAR ===== */}
       <div className="w-full md:w-[35%] space-y-12">
-        {/* Box 1: Core EC-Council Links */}
+        {/* BOX 1: EC-Council Certifications (Current Cluster) */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-          className="border border-gray-300 overflow-hidden rounded-lg space-y-2"
+          className="border border-gray-300 overflow-hidden rounded-lg"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
-            <h2>
-              EC-Council Exam Certifications <br /> We Take for Clients
-            </h2>
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>EC-Council Proctored Exam Help Services</h2>
           </div>
           <div className="px-3 py-6">
-            <ul className="flex flex-col space-y-3 p-2 font-medium">
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me/take-my-ceh-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CEH Exam For Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me/take-my-ecsa-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my ECSA Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me/take-my-chfi-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CHFI Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me/take-my-cnd-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CND Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me/take-my-cciso-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CCISO Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me/take-my-lpt-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my LPT Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-eccouncil-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take EC-Council Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take Microsoft Azure Exam for Me
-              </Link>
+            <p className="text-sm text-gray-600 px-2 mb-3">
+              Choose your EC-Council certification and let our experts handle
+              it:
+            </p>
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* Core EC-Council Certifications */}
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/ceh"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CEH
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Ethical Hacker
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/cnd"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CND
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Network Defender
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/ctia"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CTIA
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Threat Intelligence Analyst
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/chfi"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CHFI
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Computer Hacking Forensic Investigator
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/cciso"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CCISO
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Certified Chief Information Security Officer
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      EC-Council Exam Help
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      All certifications covered
+                    </span>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
         </motion.article>
 
-        {/* Box 2: Selling points tailored for cybersecurity professionals */}
+        {/* BOX 2: Related Security Certifications */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>Related Security Certifications</h2>
+          </div>
+          <div className="px-3 py-6">
+            <p className="text-sm text-gray-600 px-2 mb-3">
+              Exploring other security certifications? We can help with these
+              too:
+            </p>
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* CompTIA Family */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  CompTIA Certifications
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-security-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">
+                      CompTIA Security+
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Entry-level security
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cysa-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">
+                      CompTIA CySA+
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Security analytics
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* ISACA Family */}
+              <li className="mt-2">
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  ISACA Certifications
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cism"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CISM</span>
+                    <span className="text-xs text-gray-500 block">
+                      Security management
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cisa"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CISA</span>
+                    <span className="text-xs text-gray-500 block">
+                      IT audit & control
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* CISSP - Blog Link */}
+              <li className="mt-2">
+                <Link
+                  href="/blog/isaca-vs-isc2"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CISSP
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Certified Information Systems Security Professional
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 3: Cloud & Networking Certifications */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>Cloud & Networking Certifications</h2>
+          </div>
+          <div className="px-3 py-6">
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* AWS Security Specialty */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-security-specialty-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      AWS Security Specialty
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Cloud security
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* Azure AZ-500 */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-500"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      Azure AZ-500
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Azure Security Engineer
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* Cisco CCNA */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-cisco-ccna-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      Cisco CCNA
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Network administration
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* CompTIA Network+ */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-network-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Network+
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Foundational networking
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* ITIL & PMP */}
+              <li className="mt-2 pt-2 border-t border-gray-100">
+                <Link
+                  href="/pay-someone-to-take-itil-v4"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ITIL v4
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      IT Service Management
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      PMP
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Project Management Professional
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 4: Why We're #1 for EC-Council Exam Help */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -373,7 +652,7 @@ export default function ECCouncilSEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-black  p-4 text-xl">
+          <div className="font-medium text-white bg-black p-4 text-xl">
             <h2>Why We&apos;re #1 for EC-Council Exam Help</h2>
           </div>
           <div className="px-4 py-6">
@@ -406,7 +685,7 @@ export default function ECCouncilSEOContent() {
           </div>
         </motion.article>
 
-        {/* Box 3: Types of Proctored Spaces */}
+        {/* BOX 5: Proctored Environments */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -414,7 +693,7 @@ export default function ECCouncilSEOContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
+          <div className="font-medium text-white bg-black p-4 text-xl">
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">

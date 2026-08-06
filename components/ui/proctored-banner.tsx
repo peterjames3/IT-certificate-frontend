@@ -3,21 +3,9 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useUIDispatch } from "@/context/UIContext";
+import { useRouter } from 'next/navigation'
 export const Proctored = () => {
-  const dispatch = useUIDispatch();
-
-  const handleClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-
-    setTimeout(() => {
-      dispatch({ type: "SHOW_HELP" });
-    }, 1000);
-  };
-
+ const router = useRouter()
   return (
     <motion.section
       className="relative py-6 px-8  overflow-hidden h-auto flex items-center"
@@ -34,7 +22,7 @@ export const Proctored = () => {
         transition={{ duration: 1.2, ease: "easeOut" }}
       >
         <Image
-          src="/banner image desktop.png" // Replace with your image path
+          src="/banner image desktop.png" 
           alt="Students studying"
           fill
           className="object-cover"
@@ -71,7 +59,7 @@ export const Proctored = () => {
           whileTap={{ scale: 0.95 }}
         >
           <button
-            onClick={handleClick}
+            onClick={() => router.push('/order')}
             className="bg-white hover:cursor-pointer text-primary font-semibold px-8 py-3 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all"
           >
             Order Now

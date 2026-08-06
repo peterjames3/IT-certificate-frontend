@@ -22,6 +22,9 @@ export const POPULAR_COMPARISONS: Array<[string, string]> = [
   ["google-ace", "aws-cloud-practitioner"],
   ["comptia-a-plus", "comptia-network-plus"],
   ["gcih", "comptia-cysa-plus"],
+  ["itil", "cobit", "iso-20000"],
+  ["itil", "pmp", "cgeit"],
+  ["itil-v4", "itil-v3"],
 ];
 
 /** "cissp" + "ccsp" → "cissp-vs-ccsp" (alphabetically sorted for a stable canonical URL) */

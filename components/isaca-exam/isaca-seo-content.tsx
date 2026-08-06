@@ -12,6 +12,147 @@ export default function ISACASEOContent() {
       <article className="w-full md:w-[65%]">
         {/* Main SEO Header - High Intent Keyword targeting IT industry */}
         <motion.article
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+>
+  <h2 className="text-3xl font-bold mb-4">
+    What Is ISACA Certification and Why Does It Matter for IT Professionals?
+  </h2>
+  <div className="mb-4 space-y-3 leading-relaxed text-[1.1rem]">
+    <p>
+      ISACA (Information Systems Audit and Control Association) is a global 
+      professional organization that offers some of the most respected 
+      certifications in IT governance, security, risk management, and data 
+      privacy. Established in 1969, ISACA has become the gold standard for 
+      professionals seeking to validate their expertise in enterprise IT 
+      environments.
+    </p>
+    <p>
+      The five core ISACA certifications are:
+    </p>
+    <ul className="list-disc pl-6 space-y-2">
+      <li>
+        <strong>CISA (Certified Information Systems Auditor)</strong> — 
+        Validates expertise in IT audit, control, and assurance. Ideal for 
+        IT auditors, compliance officers, and internal audit professionals.
+        <Link href="/pay-someone-to-take-isaca-exam-for-me/cisa" className="text-primary ml-2 hover:underline">
+          Learn about CISA exam help →
+        </Link>
+      </li>
+      <li>
+        <strong>CISM (Certified Information Security Manager)</strong> — 
+        Focuses on information security management and governance. Best for 
+        security managers, directors, and CISOs.
+        <Link href="/pay-someone-to-take-isaca-exam-for-me/cism" className="text-primary ml-2 hover:underline">
+          Learn about CISM exam help →
+        </Link>
+      </li>
+      <li>
+        <strong>CRISC (Certified in Risk and Information Systems Control)</strong> — 
+        Emphasizes IT risk management and control. Ideal for risk professionals, 
+        compliance leads, and security analysts.
+        <Link href="/pay-someone-to-take-isaca-exam-for-me/crisc" className="text-primary ml-2 hover:underline">
+          Learn about CRISC exam help →
+        </Link>
+      </li>
+      <li>
+        <strong>CGEIT (Certified in the Governance of Enterprise IT)</strong> — 
+        Focuses on IT governance frameworks and strategic alignment. Best for 
+        IT governance directors and CIOs.
+        <Link href="/pay-someone-to-take-isaca-exam-for-me/cgeit" className="text-primary ml-2 hover:underline">
+          Learn about CGEIT exam help →
+        </Link>
+      </li>
+      <li>
+        <strong>CDPSE (Certified Data Privacy Solutions Engineer)</strong> — 
+        Validates expertise in data privacy governance and implementation. 
+        Ideal for privacy officers and data protection leads.
+        <Link href="/pay-someone-to-take-isaca-exam-for-me/cdpse" className="text-primary ml-2 hover:underline">
+          Learn about CDPSE exam help →
+        </Link>
+      </li>
+    </ul>
+  </div>
+</motion.article>
+
+{/* NEW: MOFU - Exam Difficulty & Study Requirements */}
+<motion.article
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+>
+  <h2 className="text-2xl font-semibold mt-8 mb-4">
+    How Hard Are ISACA Exams and How Long Does Preparation Take?
+  </h2>
+  <div className="mb-4 space-y-3 leading-relaxed text-[1.1rem]">
+    <p>
+      ISACA exams are notoriously challenging, with first-time pass rates 
+      typically ranging from <strong>40% to 60%</strong>. Each certification 
+      requires in-depth knowledge of complex frameworks, methodologies, and 
+      real-world scenarios.
+    </p>
+    
+    <div className="overflow-x-auto my-4">
+      <table className="w-full text-sm border-collapse">
+        <thead>
+          <tr className="bg-gray-100">
+            <th className="border p-2 text-left">Certification</th>
+            <th className="border p-2 text-left">Questions</th>
+            <th className="border p-2 text-left">Time</th>
+            <th className="border p-2 text-left">Recommended Study</th>
+            <th className="border p-2 text-left">Pass Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border p-2 font-semibold">CISA</td>
+            <td className="border p-2">150</td>
+            <td className="border p-2">4 hours</td>
+            <td className="border p-2">3-4 months</td>
+            <td className="border p-2">~50%</td>
+          </tr>
+          <tr>
+            <td className="border p-2 font-semibold">CISM</td>
+            <td className="border p-2">150</td>
+            <td className="border p-2">4 hours</td>
+            <td className="border p-2">4-6 months</td>
+            <td className="border p-2">~55%</td>
+          </tr>
+          <tr>
+            <td className="border p-2 font-semibold">CRISC</td>
+            <td className="border p-2">150</td>
+            <td className="border p-2">4 hours</td>
+            <td className="border p-2">3-5 months</td>
+            <td className="border p-2">~48%</td>
+          </tr>
+          <tr>
+            <td className="border p-2 font-semibold">CGEIT</td>
+            <td className="border p-2">150</td>
+            <td className="border p-2">4 hours</td>
+            <td className="border p-2">6-12 months</td>
+            <td className="border p-2">~40%</td>
+          </tr>
+          <tr>
+            <td className="border p-2 font-semibold">CDPSE</td>
+            <td className="border p-2">150</td>
+            <td className="border p-2">4 hours</td>
+            <td className="border p-2">3-6 months</td>
+            <td className="border p-2">~45%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <p className="text-sm text-gray-500">
+      * Pass rates are approximate and may vary based on exam version and 
+      candidate experience. Source: ISACA candidate reports.
+    </p>
+  </div>
+</motion.article>
+        <motion.article
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}

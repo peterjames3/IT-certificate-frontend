@@ -45,9 +45,7 @@ export default function HeroRightContent() {
             every security verification step PeopleCert requires before your service management exam
             begins.
           </p>
-          <p className="text-xs italic text-gray-500 pt-2 border-t border-gray-100">
-            e.g. Works across PeopleCert Online Proctoring identity validation flows and room audits.
-          </p>
+          
         </section>
       </motion.div>
 
@@ -72,9 +70,7 @@ export default function HeroRightContent() {
               specialists operate within this restricted environment smoothly without triggering system flags.
             </p>
           </div>
-          <p className="text-xs italic text-gray-500 pt-2 border-t border-gray-100">
-            e.g. Bypassing Windows and macOS ExamShield lockdowns cleanly for both Foundation and specialist modules.
-          </p>
+          
         </motion.div>
 
         {/* AI Behaviour Monitoring Box */}
@@ -96,9 +92,7 @@ export default function HeroRightContent() {
               We maintain fully expected candidate activity patterns to keep your testing session safe.
             </p>
           </div>
-          <p className="text-xs italic text-gray-500 pt-2 border-t border-gray-100">
-            e.g. PeopleCert real-time proctor surveillance and automated software audit logs.
-          </p>
+          
         </motion.div>
       </div>
     </motion.div>

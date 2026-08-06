@@ -1,5 +1,5 @@
 import Hero from "@/components/itil-exam/main-hero";
-import VendorMatrixGrid from "@/components/itil-exam/vendor-matrix-grid";
+
 import HireSomeone from "@/components/itil-exam/hire-someone";
 import VendorMatrixTable from "@/components/itil-exam/vendor-matrix-table";
 import ItilSEOContent from "@/components/itil-exam/itil-seo-content";
@@ -7,7 +7,7 @@ import WhyChooseUs from "@/components/itil-exam/why-choose-us";
 import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 import ItilFAQSection from "@/components/faq/itil-page-faq";
 import ItilExamFAQSchema from "./_schema";
-
+import CourseCategories from "@/components/itil-exam/itil-cert-overview";
 export const metadata = {
   title: "Take My ITIL Exam: Expert PeopleCert Certification Assistance",
   description:
@@ -28,7 +28,8 @@ export default async function ItilHomePage() {
     <>
       <ItilExamFAQSchema />
       <Hero />
-      <VendorMatrixGrid />
+      <CourseCategories />
+      
       <HireSomeone />
       <ItilSEOContent />
       <VendorMatrixTable />

@@ -134,7 +134,7 @@ export const examAidCategories: ExamCategory = {
   "ITIL": [
     {
       name: "Take ITIL V4 Exam for Me",
-      slug: "pay-someone-to-take-itil-v4",
+      slug: "pay-someone-to-take-itil-exam-for-me",
     },
   ],
 };

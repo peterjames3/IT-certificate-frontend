@@ -222,8 +222,8 @@ export default function ComptiaSeoContent() {
           }}
         >
           <h2 className="text-2xl font-semibold mt-8 mb-4">
-            Pay Someone to Take My CompTIA Exam Exam with Full Privacy
-            Safeguards & Guaranteed CopTIA Exam Proxy Service
+            Pay Someone to Take My CompTIA Exam with Full Privacy Safeguards &
+            Guaranteed CompTIA Exam Proxy Service
           </h2>
           <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
             <p>
@@ -271,148 +271,465 @@ export default function ComptiaSeoContent() {
         </motion.article>
       </article>
 
-      {/* Sidebar Content fine-tuned for high-value targets */}
+      {/* ===== UPDATED COMPTIA SIDEBAR ===== */}
       <div className="w-full md:w-[35%] space-y-12">
-        {/* Box 1: Core Tech Links */}
+        {/* BOX 1: CompTIA Certifications (Current Cluster) */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
-          className="border border-gray-300 overflow-hidden rounded-lg space-y-2"
+          className="border border-gray-300 overflow-hidden rounded-lg"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
-            <h2>
-              CompTIA Exam Certifications <br /> We Take for Clients
-            </h2>
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>CompTIA Proctored Exam Help Services</h2>
           </div>
           <div className="px-3 py-6">
-            <ul className="flex flex-col space-y-3 p-2 font-medium">
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-server-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My CompTIA Server+ Exam For Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cysa-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA CySA+ Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-network-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA Network+ Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-security-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA Security+ Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-linux-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA Linux+ Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cloud-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA Cloud+ Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-pentest-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA PenTest+ Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-data-plus-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take my CompTIA Data+ Exam for Me
-              </Link>
-
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-cloud-practitioner-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Cloud Practitioner Exam For Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-associate-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Solutions Architect Associate Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-developer-associate-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Developer Associate Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-sysops-administrator-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take My AWS SysOps Administrator Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-professional-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Solutions Architect Professional Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-security-specialty-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Security Specialty Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-comptia-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take CompTIA Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-aws-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take AWS Exam for Me
-              </Link>
-              <Link
-                href="/pay-someone-to-take-azure-exam-for-me"
-                className="flex items-center gap-2 hover:text-emerald-600 transition-colors"
-              >
-                <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Take Microsoft Azure Exam for Me
-              </Link>
+            <p className="text-sm text-gray-600 px-2 mb-3">
+              Choose your CompTIA certification and let our experts handle it:
+            </p>
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* Core CompTIA Certifications */}
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-a-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA A+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      IT Technician & Support
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-network-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Network+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Network Administration
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-security-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Security+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Entry-level Security
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cysa-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA CySA+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Security Analytics
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-pentest-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA PenTest+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Penetration Testing
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-linux-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Linux+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Linux Administration
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-cloud-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Cloud+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Cloud Computing
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="border-b border-gray-100 pb-2">
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-server-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Server+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Server Administration
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-data-plus-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CompTIA Data+
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      Data Analytics
+                    </span>
+                  </div>
+                </Link>
+              </li>
             </ul>
           </div>
         </motion.article>
 
-        {/* Box 2: Selling points tailored for IT professionals */}
+        {/* BOX 2: Related Security Certifications */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>Related Security & IT Certifications</h2>
+          </div>
+          <div className="px-3 py-6">
+            <p className="text-sm text-gray-600 px-2 mb-3">
+              Exploring other certifications? We can help with these too:
+            </p>
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* EC-Council Family */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  EC-Council Certifications
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/ceh"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CEH</span>
+                    <span className="text-xs text-gray-500 block">
+                      Ethical Hacking
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-ec-council-exam-for-me/chfi"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CHFI</span>
+                    <span className="text-xs text-gray-500 block">
+                      Computer Forensics
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* ISACA Family */}
+              <li className="mt-2">
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me"
+                  className="flex items-center gap-2 hover:text-emerald-600 transition-colors font-bold"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0" />
+                  ISACA Certifications
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cisa"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CISA</span>
+                    <span className="text-xs text-gray-500 block">
+                      IT Audit & Control
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li className="pl-6">
+                <Link
+                  href="/pay-someone-to-take-isaca-exam-for-me/cism"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="group-hover:text-emerald-600">CISM</span>
+                    <span className="text-xs text-gray-500 block">
+                      Security Management
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* CISSP - Blog Link */}
+              <li className="mt-2">
+                <Link
+                  href="/blog/isaca-vs-isc2"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      CISSP
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Certified Information Systems Security Professional
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 3: Cloud & Networking Certifications */}
+        <motion.article
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+          className="border border-gray-300 overflow-hidden rounded-lg"
+        >
+          <div className="font-medium text-white bg-black p-4 text-xl">
+            <h2>Cloud & Networking Certifications</h2>
+          </div>
+          <div className="px-3 py-6">
+            <ul className="flex flex-col space-y-3 p-2">
+              {/* AWS Cloud Practitioner */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-cloud-practitioner-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      AWS Cloud Practitioner
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Foundational cloud
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* AWS Solutions Architect */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-solutions-architect-associate-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      AWS Solutions Architect
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Cloud architecture
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* AWS Security Specialty */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-aws-exam-for-me/take-my-aws-security-specialty-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      AWS Security Specialty
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Cloud security
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* Azure AZ-900 */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-900"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      Azure AZ-900
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Azure Fundamentals
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* Azure AZ-104 */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-104"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      Azure AZ-104
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Azure Administrator
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* Azure AZ-500 */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-azure-exam-for-me/az-500"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      Azure AZ-500
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Azure Security Engineer
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* Cisco CCNA */}
+              <li>
+                <Link
+                  href="/pay-someone-to-take-cisco-ccna-exam-for-me"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      Cisco CCNA
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Network administration
+                    </span>
+                  </div>
+                </Link>
+              </li>
+
+              {/* ITIL & PMP */}
+              <li className="mt-2 pt-2 border-t border-gray-100">
+                <Link
+                  href="/pay-someone-to-take-itil-v4"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      ITIL v4
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      IT Service Management
+                    </span>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification"
+                  className="flex items-start gap-2 hover:text-emerald-600 transition-colors group"
+                >
+                  <CircleArrowRight className="size-5 text-emerald-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold block group-hover:text-emerald-600">
+                      PMP
+                    </span>
+                    <span className="text-xs text-gray-500 block">
+                      Project Management Professional
+                    </span>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </motion.article>
+
+        {/* BOX 4: Why We're #1 for IT Exam Help */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -420,7 +737,7 @@ export default function ComptiaSeoContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
+          <div className="font-medium text-white bg-black p-4 text-xl">
             <h2>Why We&apos;re #1 for IT Exam Help</h2>
           </div>
           <div className="px-4 py-6">
@@ -449,7 +766,7 @@ export default function ComptiaSeoContent() {
           </div>
         </motion.article>
 
-        {/* Box 3: Types of Proctored Spaces */}
+        {/* BOX 5: Proctored Environments */}
         <motion.article
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -457,7 +774,7 @@ export default function ComptiaSeoContent() {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
-          <div className="font-medium text-button-textColor bg-black p-4 text-xl">
+          <div className="font-medium text-white bg-black p-4 text-xl">
             <h2>Proctored Environments Handled</h2>
           </div>
           <div className="px-4 py-6">

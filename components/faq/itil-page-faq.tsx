@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Server,
   Cloud,
+ 
 } from "lucide-react";
 import { useState } from "react";
 
@@ -20,13 +21,89 @@ export default function ItilFAQSection() {
       questions: [
         {
           question: "Can I reliably pay someone to take my ITIL exam for me?",
-          answer:
-            "Yes, absolutely. Our platform connects you with a highly qualified IT service management exam taker who specializes in the Service Value System, service value chains, guiding principles, and enterprise service delivery practices. When you choose to pay someone to take my ITIL exam for me, we manage the entire lifecycle of the testing appointment from registration verification to final score updates, ensuring a guaranteed passing result without any career hassle.",
+          answer: (
+            <>
+              Yes, absolutely. Our platform connects you with a highly qualified
+              IT service management exam taker who specializes in the Service
+              Value System, service value chains, guiding principles, and
+              enterprise service delivery practices. When you choose to pay
+              someone to take my ITIL exam for me, we manage the entire
+              lifecycle of the testing appointment from registration
+              verification to final score updates, ensuring a guaranteed passing
+              result without any career hassle.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm font-medium text-gray-700">
+                  We also offer similar services for:
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Link
+                    href="/pay-someone-to-take-itil-v4"
+                    className="text-xs bg-blue-50 text-primary px-3 py-1 rounded-full hover:bg-blue-100 transition-colors"
+                  >
+                    ITIL Foundation
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-cds-exam-for-me"
+                    className="text-xs bg-blue-50 text-primary px-3 py-1 rounded-full hover:bg-blue-100 transition-colors"
+                  >
+                    ITIL CDS
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-dsv-exam-for-me"
+                    className="text-xs bg-blue-50 text-primary px-3 py-1 rounded-full hover:bg-blue-100 transition-colors"
+                  >
+                    ITIL DSV
+                  </Link>
+                </div>
+              </div>
+            </>
+          ),
         },
         {
-          question: "How do I get started with a professional exam taker for my test?",
-          answer:
-            "Getting started is simple and streamlined. You just provide us with your preferred testing window and registration details. We will then assign a dedicated, certified exam taker to your profile who is an expert in the exact ITIL v4 Foundation or managing professional modules covered by your exam. They handle the evaluation parameters cleanly while you maintain full oversight of the process.",
+          question:
+            "How do I get started with a professional exam taker for my test?",
+          answer: (
+            <>
+              Getting started is simple and streamlined. You just provide us
+              with your preferred testing window and registration details. We
+              will then assign a dedicated, certified exam taker to your profile
+              who is an expert in the exact ITIL v4 Foundation or managing
+              professional modules covered by your exam. They handle the
+              evaluation parameters cleanly while you maintain full oversight of
+              the process.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm font-medium text-gray-700">
+                  Popular ITIL certifications we handle:
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Link
+                    href="/pay-someone-to-take-itil-v4"
+                    className="text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full hover:bg-emerald-100 transition-colors"
+                  >
+                    ITIL 4 Foundation →
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-cds-exam-for-me"
+                    className="text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full hover:bg-emerald-100 transition-colors"
+                  >
+                    CDS →
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-dsv-exam-for-me"
+                    className="text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full hover:bg-emerald-100 transition-colors"
+                  >
+                    DSV →
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-hvit-exam-for-me"
+                    className="text-xs bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full hover:bg-emerald-100 transition-colors"
+                  >
+                    HVIT →
+                  </Link>
+                </div>
+              </div>
+            </>
+          ),
         },
         {
           question: "How quickly can someone take my online ITIL exam?",
@@ -34,12 +111,52 @@ export default function ItilFAQSection() {
             "Most requests are completed within 48 to 72 hours from your first contact. For urgent situations, we offer expedited 24-hour service. Contact us immediately with your exam date and we will accommodate you.",
         },
         {
-          question: "How much does it cost to pay someone to take my ITIL exam for me?",
-          answer:
-            "Our pricing models are fully customized to match your specific timeline and the technical level of the exam you need to clear. Foundational certifications like ITIL 4 Foundation have a lower pricing index compared to expert-level tracks like the ITIL Managing Professional or Strategic Leader modules. When you decide to pay someone to take my ITIL exam for me, we provide a transparent, all-inclusive quote that covers the technical setup, secure routing configurations, and the fee for your assigned specialist.",
+          question:
+            "How much does it cost to pay someone to take my ITIL exam for me?",
+          answer: (
+            <>
+              Our pricing models are fully customized to match your specific
+              timeline and the technical level of the exam you need to clear.
+              Foundational certifications like ITIL 4 Foundation have a lower
+              pricing index compared to expert-level tracks like the ITIL
+              Managing Professional or Strategic Leader modules. When you decide
+              to pay someone to take my ITIL exam for me, we provide a
+              transparent, all-inclusive quote that covers the technical setup,
+              secure routing configurations, and the fee for your assigned
+              specialist.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm text-gray-600">
+                  <span className="font-medium">
+                    Looking for other certification pricing?
+                  </span>{" "}
+                  <Link
+                    href="/pay-someone-to-take-isaca-exam-for-me/cgeit"
+                    className="text-primary hover:underline"
+                  >
+                    CGEIT exam costs
+                  </Link>
+                  {" • "}
+                  <Link
+                    href="/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification"
+                    className="text-primary hover:underline"
+                  >
+                    PMP exam costs
+                  </Link>
+                  {" • "}
+                  <Link
+                    href="/pay-someone-to-take-azure-exam-for-me"
+                    className="text-primary hover:underline"
+                  >
+                    Azure exam costs
+                  </Link>
+                </p>
+              </div>
+            </>
+          ),
         },
         {
-          question: "How far in advance do I need to book a professional exam taker?",
+          question:
+            "How far in advance do I need to book a professional exam taker?",
           answer:
             "We highly recommend scheduling your slot at least three to five days before your desired testing date. This advance window allows our backend engineering team to perform system testing and ensure your local workspace is completely optimized. However, we also offer express booking slots if you need urgent take my exam help on short notice, depending on the availability of our certified ITSM professionals.",
         },
@@ -50,22 +167,60 @@ export default function ItilFAQSection() {
       icon: <ShieldCheck className="w-5 h-5 text-emerald-600" />,
       questions: [
         {
-          question: "How do your proxy services protect my identity and registration profile?",
-          answer:
-            "We prioritize operational anonymity above all else. Our premium proxy services utilize secure, highly customized hardware layers and custom network configurations to establish a clean connection. This ensures that when our expert takes the exam on your behalf, the connection appears entirely native, leaving absolutely zero digital footprints or registration red flags on the testing platform.",
+          question:
+            "How do your proxy services protect my identity and registration profile?",
+          answer: (
+            <>
+              We prioritize operational anonymity above all else. Our premium
+              proxy services utilize secure, highly customized hardware layers
+              and custom network configurations to establish a clean connection.
+              This ensures that when our expert takes the exam on your behalf,
+              the connection appears entirely native, leaving absolutely zero
+              digital footprints or registration red flags on the testing
+              platform.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm font-medium text-gray-700">
+                  Our proxy services also support:
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Link
+                    href="/pay-someone-to-take-aws-exam-for-me"
+                    className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >
+                    AWS exams
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-azure-exam-for-me"
+                    className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >
+                    Azure exams
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-comptia-exam-for-me"
+                    className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full hover:bg-gray-200 transition-colors"
+                  >
+                    CompTIA exams
+                  </Link>
+                </div>
+              </div>
+            </>
+          ),
         },
         {
-          question: "Will anyone know that I decided to pay someone to take my ITIL exam for me?",
+          question:
+            "Will anyone know that I decided to pay someone to take my ITIL exam for me?",
           answer:
             "Never. Our platform operates under a strict, military-grade confidentiality framework. All client interactions, personal data, and transaction details are completely encrypted and restricted from external access. The deployment of our specialized proxy services is handled discreetly, meaning your testing secrets and professional profile remain 100% confidential and safe.",
         },
         {
-          question: "Are your proxy services compatible with the latest PeopleCert proctoring updates?",
+          question:
+            "Are your proxy services compatible with the latest PeopleCert proctoring updates?",
           answer:
             "Yes, our network protocols are constantly updated to stay ahead of platform security modifications. Our specialized proxy services operate beneath the operating system layer, meaning they do not trigger any background process warnings or security flags inside the ExamShield lockdown browser. Your virtual environment remains completely clean, safe, and fully undetectable to AI-driven behavior monitoring tools.",
         },
         {
-          question: "What technical setup is required on my end to utilize your proxy services?",
+          question:
+            "What technical setup is required on my end to utilize your proxy services?",
           answer:
             "You do not need any advanced technical expertise or specialized hardware. Our backend engineering team handles all the heavy lifting. Before your scheduled exam time, we establish a secure baseline workspace utilizing our advanced proxy services to map out an error-free testing bridge. We run background diagnostics ahead of time to confirm the link is fully stabilized for the exam taker.",
         },
@@ -76,24 +231,175 @@ export default function ItilFAQSection() {
       icon: <Server className="w-5 h-5 text-orange-500" />,
       questions: [
         {
-          question: "Can your platform handle the complex scenario-based questions inside ITIL exams?",
-          answer:
-            "Yes, our system is engineered specifically for advanced lifecycle and management modules. Higher tier ITIL v4 assessments feature complex, multi-layered scenario-based questions that test practical governance, stakeholder value delivery, and digital strategy. Because we connect using advanced, real-time routing frameworks rather than lagging software mirrors, our exam taker can evaluate options and execute answers naturally, aligning perfectly with human interaction metrics.",
+          question:
+            "Can your platform handle the complex scenario-based questions inside ITIL exams?",
+          answer: (
+            <>
+              Yes, our system is engineered specifically for advanced lifecycle
+              and management modules. Higher tier ITIL v4 assessments feature
+              complex, multi-layered scenario-based questions that test
+              practical governance, stakeholder value delivery, and digital
+              strategy. Because we connect using advanced, real-time routing
+              frameworks rather than lagging software mirrors, our exam taker
+              can evaluate options and execute answers naturally, aligning
+              perfectly with human interaction metrics.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm font-medium text-gray-700">
+                  We also handle advanced certifications for:
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Link
+                    href="/pay-someone-to-take-isaca-exam-for-me/cgeit"
+                    className="text-xs bg-orange-50 text-orange-700 px-3 py-1 rounded-full hover:bg-orange-100 transition-colors"
+                  >
+                    CGEIT (Governance)
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-isaca-exam-for-me/cism"
+                    className="text-xs bg-orange-50 text-orange-700 px-3 py-1 rounded-full hover:bg-orange-100 transition-colors"
+                  >
+                    CISM (Management)
+                  </Link>
+                  <Link
+                    href="/blog/pay-someone-to-pass-my-pmp-exam-fast-safe-and-100-guaranteed-pmp-certification"
+                    className="text-xs bg-orange-50 text-orange-700 px-3 py-1 rounded-full hover:bg-orange-100 transition-colors"
+                  >
+                    PMP (Project Management)
+                  </Link>
+                </div>
+              </div>
+            </>
+          ),
         },
         {
-          question: "Can a single exam taker assist me with multiple ITIL certifications?",
-          answer:
-            "Absolutely. Many of our clients utilize our services to bundle multiple certifications together, such as taking the ITIL 4 Foundation followed by specialist modules like Create, Deliver and Support (CDS) or Drive Stakeholder Value (DSV) to secure their Managing Professional designation quickly. We can pair you with a dedicated exam taker who holds multiple active ITIL credentials, allowing you to systematically build a highly competitive ITSM portfolio in a fraction of the traditional time.",
+          question:
+            "Can a single exam taker assist me with multiple ITIL certifications?",
+          answer: (
+            <>
+              Absolutely. Many of our clients utilize our services to bundle
+              multiple certifications together, such as taking the ITIL 4
+              Foundation followed by specialist modules like Create, Deliver and
+              Support (CDS) or Drive Stakeholder Value (DSV) to secure their
+              Managing Professional designation quickly. We can pair you with a
+              dedicated exam taker who holds multiple active ITIL credentials,
+              allowing you to systematically build a highly competitive ITSM
+              portfolio in a fraction of the traditional time.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm text-gray-600">
+                  <span className="font-medium">
+                    Explore other certification bundles:
+                  </span>{" "}
+                  <Link
+                    href="/pay-someone-to-take-comptia-exam-for-me"
+                    className="text-primary hover:underline"
+                  >
+                    CompTIA Stackable Certifications
+                  </Link>
+                  {" • "}
+                  <Link
+                    href="/pay-someone-to-take-isaca-exam-for-me"
+                    className="text-primary hover:underline"
+                  >
+                    ISACA Certification Path
+                  </Link>
+                  {" • "}
+                  <Link
+                    href="/pay-someone-to-take-aws-exam-for-me"
+                    className="text-primary hover:underline"
+                  >
+                    AWS Certification Path
+                  </Link>
+                </p>
+              </div>
+            </>
+          ),
         },
         {
-          question: "Why do professionals choose specialized proxy services over traditional studying?",
-          answer:
-            "Preparing for advanced certifications like ITIL v4 Managing Professional requires mastering immense frameworks, service lifecycle mappings, and theoretical value models, which takes hundreds of hours of study time. Busy professionals choose our specialized proxy services to bypass this grueling preparation period entirely. It is a strategic career decision that protects your time, eliminates testing anxiety, and guarantees a passing credential on your first attempt.",
+          question:
+            "Why do professionals choose specialized proxy services over traditional studying?",
+          answer: (
+            <>
+              Preparing for advanced certifications like ITIL v4 Managing
+              Professional requires mastering immense frameworks, service
+              lifecycle mappings, and theoretical value models, which takes
+              hundreds of hours of study time. Busy professionals choose our
+              specialized proxy services to bypass this grueling preparation
+              period entirely. It is a strategic career decision that protects
+              your time, eliminates testing anxiety, and guarantees a passing
+              credential on your first attempt.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm font-medium text-gray-700">
+                  Other professionals choose our services for:
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Link
+                    href="/pay-someone-to-take-cisco-ccna-exam-for-me"
+                    className="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full hover:bg-purple-100 transition-colors"
+                  >
+                    Cisco CCNA
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-ec-council-exam-for-me/ceh"
+                    className="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full hover:bg-purple-100 transition-colors"
+                  >
+                    CEH
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-comptia-exam-for-me/pay-someone-to-take-my-comptia-security-plus-exam-for-me"
+                    className="text-xs bg-purple-50 text-purple-700 px-3 py-1 rounded-full hover:bg-purple-100 transition-colors"
+                  >
+                    CompTIA Security+
+                  </Link>
+                </div>
+              </div>
+            </>
+          ),
         },
         {
-          question: "What happens if an unexpected issue impacts my validation result?",
-          answer:
-            "We stand behind our complete pass-assurance framework. In the highly unlikely event of a technical disruption, local ISP dropout, or sudden proctor engine crash, our team provides comprehensive support to reschedule your appointment or completely refund your initial investment. When you trust an elite exam taker on our platform, you are locking in an elite, stress-free certification route backed by ironclad outcome guarantees.",
+          question:
+            "What happens if an unexpected issue impacts my validation result?",
+          answer: (
+            <>
+              We stand behind our complete pass-assurance framework. In the
+              highly unlikely event of a technical disruption, local ISP
+              dropout, or sudden proctor engine crash, our team provides
+              comprehensive support to reschedule your appointment or completely
+              refund your initial investment. When you trust an elite exam taker
+              on our platform, you are locking in an elite, stress-free
+              certification route backed by ironclad outcome guarantees.
+              <div className="mt-3 pt-3 border-t border-gray-200">
+                <p className="text-sm font-medium text-gray-700">
+                  Our guarantee applies to all certification exams including:
+                </p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <Link
+                    href="/pay-someone-to-take-aws-exam-for-me"
+                    className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full hover:bg-green-100 transition-colors"
+                  >
+                    AWS Certifications
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-azure-exam-for-me"
+                    className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full hover:bg-green-100 transition-colors"
+                  >
+                    Azure Certifications
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-comptia-exam-for-me"
+                    className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full hover:bg-green-100 transition-colors"
+                  >
+                    CompTIA Certifications
+                  </Link>
+                  <Link
+                    href="/pay-someone-to-take-isaca-exam-for-me"
+                    className="text-xs bg-green-50 text-green-700 px-3 py-1 rounded-full hover:bg-green-100 transition-colors"
+                  >
+                    ISACA Certifications
+                  </Link>
+                </div>
+              </div>
+            </>
+          ),
         },
       ],
     },
@@ -198,12 +504,64 @@ export default function ItilFAQSection() {
           <p className="text-gray-600 mb-6">
             Need to verify a specific ITIL v4 exam code timeline?
           </p>
-          <Link
-            href="/order"
-            className="px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-900 transition-colors shadow-sm inline-block"
-          >
-            Configure Your Exam Order
-          </Link>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/order"
+              className="px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary-900 transition-colors shadow-sm inline-block"
+            >
+              Configure Your Exam Order
+            </Link>
+            <Link
+              href="/pay-someone-to-take-itil-v4"
+              className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors inline-block"
+            >
+              ITIL 4 Foundation
+            </Link>
+            <Link
+              href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-cds-exam-for-me"
+              className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors inline-block"
+            >
+              ITIL CDS
+            </Link>
+          </div>
+
+          <div className="mt-4 text-sm text-gray-500">
+            <span>Or explore other certifications: </span>
+            <Link
+              href="/pay-someone-to-take-aws-exam-for-me"
+              className="text-primary hover:underline"
+            >
+              AWS
+            </Link>
+            <span className="mx-1">•</span>
+            <Link
+              href="/pay-someone-to-take-azure-exam-for-me"
+              className="text-primary hover:underline"
+            >
+              Azure
+            </Link>
+            <span className="mx-1">•</span>
+            <Link
+              href="/pay-someone-to-take-comptia-exam-for-me"
+              className="text-primary hover:underline"
+            >
+              CompTIA
+            </Link>
+            <span className="mx-1">•</span>
+            <Link
+              href="/pay-someone-to-take-isaca-exam-for-me"
+              className="text-primary hover:underline"
+            >
+              ISACA
+            </Link>
+            <span className="mx-1">•</span>
+            <Link
+              href="/pay-someone-to-take-ec-council-exam-for-me"
+              className="text-primary hover:underline"
+            >
+              EC-Council
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
