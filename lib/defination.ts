@@ -14,11 +14,6 @@ export interface ExamItem {
 }
 
 export type ExamCategory = Record<string, ExamItem[]>;
-// export interface ExamCategory {
-//  name: string;
-//  slug: string;
-// }
-
 export interface AcademicService {
   name: string;
   href: string;
@@ -52,9 +47,9 @@ export type MenuItem = {
 export type SubMenuItem = {
   name: string;
   href: string;
-  group?: string; // For grouping exam categories
+  group?: string; 
 };
-//other links
+
 export interface LinkItem {
   name: string;
   slug?: string;
@@ -179,11 +174,16 @@ export interface ECCouncilFocusedContentSectionData extends BaseFocusedContentSe
   _type: "eccouncilFocusedContentSection";
 }
 
+export interface ITILFocusedContentSectionData extends BaseFocusedContentSectionData {
+  _type: "itilFocusedContentSection";
+}
+
 export type PageSection =
   | HeroSectionData
   | ContentSectionData
   | AzureFocusedContentSectionData
   | ISACAFocusedContentSectionData
+  | ITILFocusedContentSectionData
   | AWSFocusedContentSectionData
   | CompTIAFocusedContentSectionData
   | ECCouncilFocusedContentSectionData

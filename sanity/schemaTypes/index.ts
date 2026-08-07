@@ -12,6 +12,7 @@ import { compTIAFocusedSchemaTypes } from "./compTIAFocusedSectionType";
 import { sectionType } from "./sectionType";
 import { awsFocusedSchemaTypes } from "./AwsFocusedSectionType";
 import { certOverviewSectionType } from "./certOverviewSectionType";
+import { certCompareSectionType } from "./certCompareSectionType";
 import { ContentSectionWithImageType } from "./contentSectionWithImageType";
 import { ISACAExamsServicePageType } from "./isacaexamsType";
 import { isacaFocusedSchemaTypes } from "./IsacaFocusedSectionType";
@@ -22,7 +23,9 @@ import { ECCouncilExamType } from "./eccouncilExamType";
 import { AzureServicePageType } from "./azureexamsType";
 import { azureFocusedSchemaTypes } from "./azureFocusedSectionType";
 import { AzureExamType } from "./azureExamType";
-
+import { ITILExamsServicePageType } from "./itilexamsType";
+import { itilFocusedSchemaTypes } from "./ItilFocusedSectionType";
+import { ITILExamType } from "./itilExamType";
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     blockContentType,
@@ -44,12 +47,17 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     ...eccouncilFocusedSchemaTypes,
     ECCouncilServicePageType,
     ECCouncilExamType,
-    // ── Azure (NEW) ──
+    // ── Azure ──
     ...azureFocusedSchemaTypes, 
     AzureServicePageType,
     AzureExamType,
+       // ── ITIL  ──
+    ...itilFocusedSchemaTypes,
+    ITILExamsServicePageType,
+    ITILExamType,
     // ── Shared / Common ──
     certOverviewSectionType,
+    certCompareSectionType, 
     ContentSectionWithImageType,
     FaqSectionType,
     ChallengesSectionType,

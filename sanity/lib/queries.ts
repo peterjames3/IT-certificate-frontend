@@ -1,4 +1,6 @@
 import { groq } from "next-sanity";
+
+// ── ISACA Exam Interface ──
 export interface ISACAExam {
   code: string;
   track: string;
@@ -7,6 +9,7 @@ export interface ISACAExam {
   icon: string;
   slug: string;
 }
+
 export const isacaExamsQuery = groq`*[_type == "isacaExam"]{
   code,
   track,
@@ -16,7 +19,26 @@ export const isacaExamsQuery = groq`*[_type == "isacaExam"]{
   "slug": slug.current
 }`;
 
+// ── ITIL Exam Interface ──
+export interface ITILExam {
+  code: string;
+  track: string;
+  level: string;
+  role: string;
+  focus: string;
+  icon: string;
+  slug: string;
+}
 
+export const itilExamsQuery = groq`*[_type == "itilExam"]{
+  code,
+  track,
+  level,
+  role,
+  focus,
+  icon,
+  "slug": slug.current
+}`;
 
 // ── Get all posts for listing ──────────────────────────────
 export const postsQuery = groq`
@@ -117,6 +139,7 @@ export const latestPostsQuery = groq`
     "categories": categories[]->{title}
   }
 `;
+
 // ── Get oldest posts for sidebar / related posts ────────────
 export const oldestPostsQuery = groq`
   *[_type == "post"] | order(publishedAt asc, _createdAt asc) [0...3] {
@@ -150,13 +173,15 @@ export const relatedPostsQuery = groq`
   }
 `;
 
-// Fetch Slugs and CompTIa Exam aid programs
+// ============================================================
+// ── COMPTIA QUERIES ──
+// ============================================================
 
+// Fetch Slugs and CompTIA Exam aid programs
 export const comptiaexamServicePathQuery = groq`
   *[_type == "CompTIAServicePage" && defined(slug.current)] {
     "slug": slug.current
   }
-    
 `;
 
 // Get a single exam service page by slug
@@ -339,6 +364,7 @@ export const comptiaexamServicePageQuery = groq`
     }
   }
 `;
+
 // Get all exam service pages (for listing/sitemap)
 export const allcomptiaExamServicePagesQuery = groq`
   *[_type == "CompTIAServicePage"] | order(_createdAt desc) {
@@ -353,23 +379,25 @@ export const allcomptiaExamServicePagesQuery = groq`
     }
   }
 `;
+
 // Fetch all exam service pages as a lightweight listing
-// Used in the "Exams We Support" section on proctored-exam-help and other pages
 export const comptiaexamsWeSupportQuery = groq`
   *[_type == "CompTIAServicePage"] | order(seoTitle asc) {
     _id,
     seoTitle,
     seoDescription,
     "slug": slug.current,
-    // Pull the hero image as the card thumbnail
     "thumbnail": sections[_type == "hero"][0].heroImage {
       alt,
       "url": asset->url
     },
-    // Pull the first content section's heading as a short tagline fallback
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
+
+// ============================================================
+// ── AWS QUERIES ──
+// ============================================================
 
 // Fetch Slugs for AWS Exam aid programs
 export const awsExamServicePathQuery = groq`
@@ -585,12 +613,13 @@ export const awsExamsWeSupportQuery = groq`
      alt,
      "url":asset->url
      },
-
     "tagline": sections[_type == "hero"][0].subtext,
   }
 `;
 
-// ── ISACA Queries ──
+// ============================================================
+// ── ISACA QUERIES ──
+// ============================================================
 
 // Fetch Slugs for ISACA Exam service pages
 export const isacaExamServicePathQuery = groq`
@@ -796,7 +825,6 @@ export const allIsacaExamServicePagesQuery = groq`
 `;
 
 // Fetch all ISACA exam service pages as a lightweight listing
-// Used in the "Exams We Support" section
 export const isacaExamsWeSupportQuery = groq`
   *[_type == "isacaServicePage"] | order(seoTitle asc) {
     _id,
@@ -811,6 +839,10 @@ export const isacaExamsWeSupportQuery = groq`
   }
 `;
 
+// ============================================================
+// ── EC-COUNCIL QUERIES ──
+// ============================================================
+
 export const eccouncilExamsQuery = groq`*[_type == "eccouncilExam"]{
   code,
   track,
@@ -819,9 +851,6 @@ export const eccouncilExamsQuery = groq`*[_type == "eccouncilExam"]{
   icon,
   "slug": slug.current
 }`;
-
-
-// ── EC-Council Queries ──
 
 // Fetch Slugs for EC-Council Exam service pages
 export const eccouncilExamServicePathQuery = groq`
@@ -1041,7 +1070,9 @@ export const eccouncilExamsWeSupportQuery = groq`
   }
 `;
 
-// ── Azure Queries ──
+// ============================================================
+// ── AZURE QUERIES ──
+// ============================================================
 
 // Fetch all Azure exams (for certification data)
 export const azureExamsQuery = groq`*[_type == "azureExam"]{
@@ -1257,9 +1288,151 @@ export const allAzureExamServicePagesQuery = groq`
 `;
 
 // Fetch all Azure exam service pages as a lightweight listing
-// Used in the "Exams We Support" section
 export const azureExamsWeSupportQuery = groq`
   *[_type == "azureServicePage"] | order(seoTitle asc) {
+    _id,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+    "tagline": sections[_type == "hero"][0].subtext,
+  }
+`;
+
+// ============================================================
+// ── ITIL QUERIES ──
+// ============================================================
+
+
+
+// Fetch Slugs for ITIL Exam service pages
+export const itilExamServicePathQuery = groq`
+  *[_type == "itilServicePage" && defined(slug.current)] {
+    "slug": slug.current
+  }
+`;
+
+// Get a single ITIL exam service page by slug
+export const itilExamServicePageQuery = groq`
+  *[_type == "itilServicePage" && slug.current == $slug][0] {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+
+    // OG image for social sharing
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    },
+
+    // Page builder sections
+    sections[] {
+      _type,
+
+      // ── Hero ──────────────────────────────────────────────
+      _type == "hero" => {
+        preHeading,
+        heading,
+        accentWord,
+        subtext,
+        ctaPrimary,
+        ctaSecondary,
+        "sections": sections[]-> {
+          title,
+          content,
+          tips,
+          icon
+        },
+        "backgroundImage": backgroundImage {
+          alt,
+          "url": asset->url
+        },
+        backgroundColor
+      },
+
+      // ── Content Section with Image ─────────────────────────
+      _type == "contentSectionWithImage" => {
+        sectionId,
+        heading,
+        subheading,
+        body, // Portable Text — rendered with <PortableText />
+        imagePosition,
+        imageSize,
+        backgroundColor,
+        "image": image {
+          alt,
+          caption,
+          "url": asset->url,
+          hotspot,
+          crop
+        },
+        ctaButton
+      },
+
+      // ── Certificate Overview ────────────────────────────────
+      _type == "certOverviewSection" => { _type, sectionId, certSlug },
+
+      // ── ITIL Focused Content Section ──────────────────────
+      _type == "itilFocusedContentSection" => {
+        _type,
+        sectionId,
+        heading,
+        body,
+        sidebarCards[]{
+          title,
+          accentColor,
+          items[]{ text, link }
+        },
+        backgroundColor,
+        ctaButton
+      },
+
+      
+      // ── Certificate Comparison ───────────────────────────────────────
+      _type == "certCompareSection" => {
+       _type,
+       sectionId,
+       heading,
+       certSlugs
+      }
+      // ── FAQ ───────────────────────────────────────────────
+      _type == "faqSection" => {
+        heading,
+        subheading,
+        faqs[] {
+          question,
+          answer, // Portable Text
+          category
+        },
+        ctaBlock
+      }
+    }
+  }
+`;
+
+// Get all ITIL exam service pages (for listing/sitemap)
+export const allItilExamServicePagesQuery = groq`
+  *[_type == "itilServicePage"] | order(_createdAt desc) {
+    _id,
+    _createdAt,
+    seoTitle,
+    seoDescription,
+    "slug": slug.current,
+    "ogImage": ogImage {
+      alt,
+      "url": asset->url
+    }
+  }
+`;
+
+// Fetch all ITIL exam service pages as a lightweight listing
+export const itilExamsWeSupportQuery = groq`
+  *[_type == "itilServicePage"] | order(seoTitle asc) {
     _id,
     seoTitle,
     seoDescription,
