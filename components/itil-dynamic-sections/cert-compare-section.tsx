@@ -1,17 +1,13 @@
 "use client";
 
-import { useComparison } from "@/hooks/useComparison";
-import CompareResults from "@components/certifications/CompareResults";
-
-export interface CertCompareSectionData {
-  _type: "certCompareSection";
-  sectionId?: string;
-  heading?: string;
-  certSlugs: string[];
-}
+import { useComparison } from "@/hooks/useComparisons";
+import CompareResults from "@/components/certifications/compare-results";
+import type { ComparisonResult } from "@/types/api.types";
+import type { CertCompareSectionData } from "@/lib/defination";
 
 interface Props {
   data: CertCompareSectionData;
+  initialComparison?: ComparisonResult;
 }
 
 const TOKENS = {
@@ -19,8 +15,12 @@ const TOKENS = {
   hairline: "#DAD7CC",
 };
 
-export default function CertCompareSection({ data }: Props) {
-  const { data: comparison, isLoading, error } = useComparison(data.certSlugs);
+export default function CertCompareSection({ data, initialComparison }: Props) {
+  const {
+    data: comparison,
+    isLoading,
+    error,
+  } = useComparison(data.certSlugs, initialComparison);
 
   if (isLoading) {
     return (

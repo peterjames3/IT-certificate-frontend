@@ -1,11 +1,13 @@
+import type { SanityDocument } from "@sanity/client";
+import { sanityFetch } from "@/sanity/lib/server-fetch";
 import Hero from "@/components/itil-exam/main-hero";
-
 import HireSomeone from "@/components/itil-exam/hire-someone";
 import VendorMatrixTable from "@/components/itil-exam/vendor-matrix-table";
 import ItilSEOContent from "@/components/itil-exam/itil-seo-content";
 import WhyChooseUs from "@/components/itil-exam/why-choose-us";
 import TestimonialsSection from "@/components/Testimonial/testimonials-section";
 import ItilFAQSection from "@/components/faq/itil-page-faq";
+import { itilExamsQuery } from "@/sanity/lib/queries";
 import ItilExamFAQSchema from "./_schema";
 import CourseCategories from "@/components/itil-exam/itil-cert-overview";
 export const metadata = {
@@ -24,6 +26,18 @@ export const metadata = {
 };
 
 export default async function ItilHomePage() {
+      const itilExams = await sanityFetch<SanityDocument[]>({
+    query: itilExamsQuery,
+  });
+
+    const examData =
+      itilExams?.map((exam: SanityDocument) => ({
+      code: exam.code,
+      track: exam.track,
+      role: exam.role,
+      focus: exam.focus,
+      slug: exam.slug,
+    })) || [];
   return (
     <>
       <ItilExamFAQSchema />
@@ -32,7 +46,7 @@ export default async function ItilHomePage() {
       
       <HireSomeone />
       <ItilSEOContent />
-      <VendorMatrixTable />
+      <VendorMatrixTable exams={examData} provider="itil" />
       <WhyChooseUs />
       <TestimonialsSection />
       <ItilFAQSection />

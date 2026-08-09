@@ -9,7 +9,8 @@ import ITILFocusedContentSection from "@/components/itil-dynamic-sections/itil-f
 import CertOverviewSection from "@/components/itil-dynamic-sections/cert-overview-section";
 import FaqSection from "@/components/itil-dynamic-sections/faq-section";
 import type { ExamServicePageData, PageSection } from "@/lib/defination";
-
+import { getComparisonServer } from "@/services/comparison.server";
+import CertCompareSection from "@/components/itil-dynamic-sections/cert-compare-section";
 // ── Static params ───────────────────────────────────────────
 export async function generateStaticParams() {
   const pages = await client.fetch(itilExamServicePathQuery);
@@ -97,6 +98,27 @@ async function renderSection(section: PageSection, index: number) {
         />
       );
     }
+    case "certCompareSection": {
+  const slugs = section.certSlugs?.filter(Boolean) ?? [];
+  let comparison = null;
+
+  if (slugs.length === 2 || slugs.length === 3) {
+    comparison = await getComparisonServer(slugs);
+  } else {
+    console.error(
+      `certCompareSection "${section.sectionId ?? index}" requires 2 or 3 certSlugs, got ${slugs.length}`,
+    );
+  }
+
+  return (
+    <CertCompareSection
+      key={section.sectionId ?? index}
+      data={section}
+      initialComparison={comparison ?? undefined}
+    />
+  );
+}
+
     case "faqSection":
       return <FaqSection key={index} data={section} />;
     default:

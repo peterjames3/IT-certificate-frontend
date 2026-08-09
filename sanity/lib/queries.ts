@@ -1399,7 +1399,7 @@ export const itilExamServicePageQuery = groq`
        sectionId,
        heading,
        certSlugs
-      }
+      },
       // ── FAQ ───────────────────────────────────────────────
       _type == "faqSection" => {
         heading,

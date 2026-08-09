@@ -178,6 +178,13 @@ export interface ITILFocusedContentSectionData extends BaseFocusedContentSection
   _type: "itilFocusedContentSection";
 }
 
+export interface CertCompareSectionData {
+_type: "certCompareSection";
+  sectionId?: string;
+  heading?: string;
+  certSlugs: string[];
+}
+
 export type PageSection =
   | HeroSectionData
   | ContentSectionData
@@ -188,6 +195,7 @@ export type PageSection =
   | CompTIAFocusedContentSectionData
   | ECCouncilFocusedContentSectionData
   | CertOverviewSectionData
+  | CertCompareSectionData
   | FaqSectionData;
 
 

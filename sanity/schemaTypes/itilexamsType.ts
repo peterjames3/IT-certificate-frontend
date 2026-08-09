@@ -46,6 +46,7 @@ export const ITILExamsServicePageType = defineType({
         { type: "contentSectionWithImage" },
         { type: "itilFocusedContentSection" },
         { type: "certOverviewSection" },
+        { type: "certCompareSection" },
         { type: "faqSection" },
       ],
     },
