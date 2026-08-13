@@ -20,15 +20,12 @@ const LeftHero = () => {
             <span className="text-secondary">
               Hire Verified ITIL Experts To{" "}
             </span>
-            <span className="text-[#10b981]">Take Your ITIL Exams </span>
-            <span className="text-secondary">Secure & Confidential </span>
+            <span className="text-[#10b981]">Pass ITIL Certification   </span>
+            <span className="text-secondary">Exam Online </span>
           </h3>
 
           <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-            If you struggle to balance your busy career with intensive IT service 
-            management preparation, you can pay someone to take your ITIL exam 
-            with total operational anonymity. Our professional exam takers 
-            leverage secure proxy services to clear all primary validation 
+           Pass ITIL Certification Exam Online with the help of ProctoredExamHelp. Our professional exam takers      leverage secure proxy services to clear all primary validation 
             tracks, including 
             <strong className="text-secondary font-medium">
               {" "}
@@ -49,7 +46,7 @@ const LeftHero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Proctored Exam Help
+            Get Help Now!
           </motion.button>
 
          

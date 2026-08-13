@@ -1,7 +1,6 @@
 import type { SanityDocument } from "@sanity/client";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
 import Hero from "@/components/azure-exam/main-hero";
-import VendorMatrixGrid from "@/components/azure-exam/vendor-matrix-grid";
 import HireSomeone from "@/components/azure-exam/hire-someone";
 import VendorMatrixTable from "@/components/azure-exam/vendor-matrix-table";
 import AzureSEOContent from "@/components/azure-exam/azure-seo-content";
@@ -61,7 +60,7 @@ export default async function AzureHomePage() {
       <AzureExamFAQSchema />
       <Hero />
       <AzureCertificateOverview />
-      <VendorMatrixGrid />
+      
       <HireSomeone />
       <AzureSEOContent />
       <VendorMatrixTable exams={examData} provider="azure" />

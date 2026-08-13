@@ -3,20 +3,21 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence } from "motion/react";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 import Image from "next/image";
 import { MenuItems } from "@/lib/menuitem";
 import DropdownMenu from "./drop-down-menu";
 import ContactBar from "@/components/ui/contact-bar";
 import Mobile from "./mobile";
-import { useUIDispatch } from "@/context/UIContext";
+
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
 
-  const dispatch = useUIDispatch();
 
+   const router = useRouter()
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -40,15 +41,15 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-1 lg:gap-2">
             <Image
               src="/favicon-32x32.png"
-              alt="TestHelpNow logo"
+              alt="ProctoredExamHelp logo"
               height={30}
               width={30}
               priority
               className="object-contain"
             />
             <span>
-              <span className="text-foreground">TestHelp</span>
-              <span className="text-primary">Now</span>.
+              <span className="text-foreground">ProctoreExam</span>
+              <span className="text-primary">Help</span>.
             </span>
           </Link>
         </nav>
@@ -88,7 +89,7 @@ export default function Navbar() {
         <div className="lg:flex  hidden gap-5">
           <button
             id="get-help-now-btn"
-            onClick={() => dispatch({ type: "SHOW_HELP" })}
+            onClick={() => router.push('/order')}
             type="button"
             className="cta hover:cursor-pointer"
             aria-label="Get help now"

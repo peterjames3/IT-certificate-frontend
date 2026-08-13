@@ -168,7 +168,7 @@ export default function ItilSeoContent() {
           }}
         >
           <h2 className="text-4xl font-bold mb-6 leading-tight">
-            Pay and Pass ITIL v4 Exams No Months Of Prep Needed
+            Pay and Pass ITIL v4 Exams No Months Of Prep Needed Through ProctoredExamHelp 
           </h2>
           <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
             <p>
@@ -263,7 +263,7 @@ export default function ItilSeoContent() {
           }}
         >
           <h2 className="text-2xl font-semibold mt-8 mb-4">
-            Why People Hire Professional ITIL Exam Takers
+            Why People Hire  Professional ITIL Exam Takers from ProctoredExamHelp
           </h2>
           <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
             <p>
@@ -321,7 +321,7 @@ export default function ItilSeoContent() {
             <p className="mb-3 pt-2">
               After you choose to{" "}
               <strong>pay someone to take my ITIL exam for me</strong> through
-              TestHelpNow, you partner with professionals committed to achieving
+              ProctoredExamHelp, you partner with professionals committed to achieving
               a perfect outcome. You simply tell us to manage your ITIL
               verification, and we match you with a specialist who knows the
               exact layout, question formatting, and timing parameters.

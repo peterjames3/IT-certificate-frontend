@@ -64,12 +64,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/pay-someone-to-take-itil-v4">
+              <Link href="/pay-someone-to-take-itil-exam-for-me">
                 ➜ Take ITIL V4 Related Exam For Me
               </Link>
             </li>
             <li>
-              <Link href="/pay-someone-to-take-cisco-cnna-exam-for-me">
+              <Link href="/pay-someone-to-take-cisco-ccna-exam-for-me">
                 ➜ Take CCNA Related Exam For Me
               </Link>
             </li>

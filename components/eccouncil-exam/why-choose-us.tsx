@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
     "Complete confidentiality and secure proxy sessions guaranteed. Your identity and EC-Council registration remain fully protected with our military-grade encryption and strict NDA protocols.",
     "EC-Council exams create immense pressure and anxiety with their complex practical simulations and technical depth. By hiring a professional ethical hacking exam taker, you can eliminate stress and approach your certification with confidence.",
     "Mastering EC-Council's penetration testing, network defense, and digital forensics domains requires extensive hands-on practice. Our certified specialists possess deep expertise in all EC-Council exam objectives, ensuring you achieve the results you need.",
-    "At TestHelpNow, we guarantee your EC-Council certification success with our proven pass-assurance framework, giving you complete peace of mind and a stress-free certification journey.",
+    "At ProctoredExamHelp, we guarantee your EC-Council certification success with our proven pass-assurance framework, giving you complete peace of mind and a stress-free certification journey.",
   ];
 
   const otherBenefits = [
@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            At TestHelpNow, we&apos;ve built an unmatched reputation as the
+            At ProctoredExamHelp, we&apos;ve built an unmatched reputation as the
             premier EC-Council exam proxy service. Here&apos;s why cybersecurity
             professionals trust us to handle their CEH, ECSA, CHFI, CND, CCISO,
             and LPT certification exams.

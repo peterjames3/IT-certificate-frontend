@@ -28,7 +28,7 @@ export default function HeroRightContent() {
     >
       {/* Identity Verification Box */}
       <motion.div
-        className="relative bg-accent2 rounded-3xl flex flex-col justify-center w-full lg:w-1/2 px-6 py-8 md:py-12 lg:py-16 border border-gray-100 shadow-sm overflow-hidden"
+        className="relative bg-accent2 rounded-tl-none rounded-3xl flex flex-col justify-center w-full lg:w-1/2 px-6 py-8 md:py-12 lg:py-16 border border-gray-100 shadow-sm overflow-hidden"
         variants={itemVariants}
       >
         <section className="relative z-10 space-y-4">
@@ -56,7 +56,7 @@ export default function HeroRightContent() {
       <div className="flex flex-col gap-6 w-full lg:w-1/2">
         {/* Lockdown Browser Box */}
         <motion.div
-          className="space-y-4 rounded-3xl bg-cardBg-support2 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
+          className="space-y-4 rounded-tl-none rounded-3xl bg-cardBg-support2 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
           variants={itemVariants}
         >
           <div className="space-y-3">
@@ -82,7 +82,7 @@ export default function HeroRightContent() {
 
         {/* AI Behaviour Monitoring Box */}
         <motion.div
-          className="space-y-4 rounded-3xl bg-cardBg-support3 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
+          className="space-y-4 rounded-tl-none rounded-3xl bg-cardBg-support3 p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-between"
           variants={itemVariants}
         >
           <div className="space-y-3">

@@ -136,6 +136,27 @@ export const examAidCategories: ExamCategory = {
       name: "Take ITIL V4 Exam for Me",
       slug: "pay-someone-to-take-itil-exam-for-me",
     },
+    {
+      name: "Take ITIL-4-CDS(Create Deliver & Support) For Me",
+      slug: "pay-someone-to-take-itil-exam-for-me/cds",
+    },
+    {
+     name:"Take ITI-4-DSV (Drive Stakeholder Value) For Me",
+     slug: "/pay-someone-to-take-itil-exam-for-me/dsv",
+    },
+    {
+     name: "Take ITIL-4-DPI(Drive Plan & Improve) For Me",
+     slug: "pay-someone-to-take-itil-exam-for-me/dpi",
+    },
+    {
+     name: "Take ITIL-4-HVIT(High Velocity IT) For Me",
+     slug: "pay-someone-to-take-itil-exam-for-me/hvit",
+    },
+    {
+     name: "Take ITIL-4-DITS(Digital & IT Strategy) For Me",
+     slug: "pay-someone-to-take-itil-exam-for-me/dits",
+    },
+
   ],
 };
 
@@ -218,7 +239,7 @@ export const MenuItems: MenuItem[] = [
     href: "/",
   },
   {
-    name: "Take My CompTIA Exam",
+    name: "CompTIA",
     href: "/pay-someone-to-take-comptia-exam-for-me",
     submenu: categoryToSubmenu(
       comptiaCategories,
@@ -233,7 +254,7 @@ export const MenuItems: MenuItem[] = [
     submenu: categoryToSubmenu(examAidCategories),
   },
   {
-    name: "Certificate Tools",
+    name: "Tools",
     href: "#",
     submenu: [
       {

@@ -1,7 +1,6 @@
-// StepThree.tsx
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { CircleCheckBig } from "lucide-react";
+import { CircleCheckBig, Clock, Trophy } from "lucide-react";
 
 export default function StepThree() {
   return (
@@ -16,31 +15,40 @@ export default function StepThree() {
           3
         </nav>
         <h2 className="headline font-semibold mb-2 text-2xl lg:text-3xl text-secondary">
-          Expert Coordination & Technical Execution
+          Pro Access, Delivery & Final Results
         </h2>
-        <p className="text-[1rem] lg:text-[1.3rem] text-primary mb-4">
-          Our team validates your certification requirements and assigns a
-          technical specialist to your file.
+        <p className="text-[1rem] lg:text-[1.3rem] text-secondary-800 mb-4">
+          Once your information is processed, you gain access to your assigned certified professional. They handle the execution and ensure your results are delivered.
         </p>
-        <ul className="p-text text-gray-700 space-y-3">
-          <li className="flex gap-3 items-center">
-            <CircleCheckBig size={22} className="text-secondary mr-2" />{" "}
-            Validate system environment and baseline configurations
-          </li>
-          <li className="flex gap-3 items-center">
-            <CircleCheckBig size={22} className="text-secondary mr-2" />{" "}
-            Coordinate secure logistics for your testing window
-          </li>
-          <li className="flex gap-3 items-center">
-            <CircleCheckBig size={22} className="text-secondary mr-2" />{" "}
-            Complete your certification objectives securely
-          </li>
-        </ul>
+        
+        <div className="grid grid-cols-1 gap-4 mb-6">
+          <div className="flex flex-col gap-2 p-3 bg-white/50 rounded border border-gray-100 shadow-sm">
+            <div className="flex gap-3 items-center font-semibold text-secondary">
+              <Clock size={20} className="text-primary-700" /> Access Your Specialist
+            </div>
+            <p className="p-text text-sm text-gray-600 pl-8">You are given direct, private access to your professional exam taker. They are matched based on the specific vendor and exam code you provided.</p>
+          </div>
+
+          <div className="flex flex-col gap-2 p-3 bg-white/50 rounded border border-gray-100 shadow-sm">
+            <div className="flex gap-3 items-center font-semibold text-secondary">
+              <CircleCheckBig size={20} className="text-green-600" /> Execute & Deliver
+            </div>
+            <p className="p-text text-sm text-gray-600 pl-8">Your expert coordinates the logistics, ensures your system environment is ready, and securely completes your certification objectives within your scheduled window.</p>
+          </div>
+
+          <div className="flex flex-col gap-2 p-3 bg-white/50 rounded border border-gray-100 shadow-sm">
+            <div className="flex gap-3 items-center font-semibold text-secondary">
+              <Trophy size={20} className="text-amber-500" /> Receive Your Results
+            </div>
+            <p className="p-text text-sm text-gray-600 pl-8">Once the examination is successfully completed, your official passing results and certification documentation are delivered directly to you for verification and download.</p>
+          </div>
+        </div>
+
       </motion.div>
       <figcaption className="w-full h-full lg:w-1/2">
         <Image
-          src="/step-3-image.png"
-          alt="Technical specialist coordinating exam logistics for professional certification"
+          src="/step3image.webp"
+          alt="Professional exam taker executing the test and delivering final certification results"
           width={700}
           height={200}
           className="rounded-md object-fill"

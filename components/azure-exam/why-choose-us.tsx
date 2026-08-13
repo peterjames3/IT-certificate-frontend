@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
     "Completely confidential and secure testing sessions utilizing advanced technical environments to establish a natural local user footprint.",
     "Cloud certification paths often introduce excruciating levels of testing pressure and administrative stress. By hiring a certified specialist to take my online Azure certification exam on your behalf, you completely eliminate the anxiety of test day.",
     "Many candidates struggle to master the immense volume of cloud architecture designs and networking rules due to a lack of preparation time. Partnering with us lets a seasoned cloud infrastructure specialist handle the assessment parameters for you.",
-    "At TestHelpNow, we back our specialized assistance with complete pass guarantees, ensuring absolute peace of mind throughout your certification journey.",
+    "At ProctoredExamHelp, we back our specialized assistance with complete pass guarantees, ensuring absolute peace of mind throughout your certification journey.",
   ];
 
   const otherBenefits = [
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            At TestHelpNow, there are several key reasons why you should trust our 
+            At ProctoredExamHelp, there are several key reasons why you should trust our 
             specialists to manage your cloud certification. We have established an 
             exceptional reputation in the cloud engineering field and have grown to become the premier 
             choice for enterprise IT professionals. Some of these advantages include:

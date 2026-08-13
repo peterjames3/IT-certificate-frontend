@@ -26,10 +26,10 @@ export default function VendorMatrixTable({
     <section className="py-20 px-6 max-w-310 mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <span className="text-sm font-bold uppercase tracking-widest text-[#10b981] mb-2 block">
+        <span className="text-sm font-bold uppercase tracking-widest text-accent-500 italic mb-2 block">
           What Our Exam Takers Cover
         </span>
-        <h3 className="text-3xl md:text-4xl font-extrabold text-secondary tracking-tight">
+        <h3 className="text-3xl md:text-4xl font-extrabold text-secondary-800 tracking-tight">
           EC-Council Certification Comparison Matrix
         </h3>
         <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-base md:text-lg">

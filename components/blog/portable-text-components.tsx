@@ -100,13 +100,13 @@ const SanityImage = ({ value }: SanityImageProps) => {
     .url();
 
   return (
-    <figure className="relative w-full h-64 my-8">
+    <figure className="relative max-w-140 h-82 my-8">
       <div className="relative w-full h-full">
         <Image
           src={imageUrl}
           alt={value.alt || " "}
           fill
-          className="object-cover rounded-lg"
+          className="object-cover rounded-lg w-full"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
           priority={false}
         />
@@ -212,7 +212,7 @@ export const portableTextComponents: PortableTextComponents = {
       return (
         <Link
           href={href || "#"} // Provide fallback href
-          className="text-blue-600 hover:underline"
+          className="text-primary-600 hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >

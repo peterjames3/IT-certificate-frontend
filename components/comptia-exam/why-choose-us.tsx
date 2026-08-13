@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            At TestHelpNow take My CompTIA Exam, there are several reasons why
+            At ProctoredExamHelp take My CompTIA Exam, there are several reasons why
             you should pay us to Take My Comptia Exam For Me. We have developed
             an immense reputation in this field and have grown to become the
             best choice. Some of these reasons include the following

@@ -1,11 +1,13 @@
 'use client'
 import { ArrowRight, Star } from "lucide-react"; 
+import { useRouter } from 'next/navigation';
 
 interface HeroLeftProps {
   onScrollToCertifications?: () => void;
 }
 export const HeroLeft = ({ onScrollToCertifications }: HeroLeftProps) => {
-  return (
+const router = useRouter()  
+return (
     <div className="flex flex-col justify-center space-y-6 w-full text-left">
       {/* Badge Notice */}
       <div className="inline-flex items-center gap-2 bg-[#e6f7f0] border border-[#bbf7d0] text-[#0f766e] px-4 py-1.5 rounded-full w-fit shadow-sm">
@@ -42,7 +44,7 @@ export const HeroLeft = ({ onScrollToCertifications }: HeroLeftProps) => {
       <p className="text-base sm:text-lg text-slate-600 font-normal max-w-lg leading-relaxed">
         Pass your{" "}
         <span className="font-semibold text-slate-800">
-          AWS, CompTIA, Azure, or Red Hat Linux
+          AWS, CompTIA, Azure, ITIL, Cisco, GCP, ISACA,  Red Hat Linux among other 
         </span>{" "}
         certification on the first try. Get secure, untraceable remote proxy
         testing assistance tailored specifically for busy system engineers and
@@ -51,16 +53,18 @@ export const HeroLeft = ({ onScrollToCertifications }: HeroLeftProps) => {
 
       {/* Action Buttons Container */}
       <div className="flex flex-wrap items-center gap-4 pt-2">
-        <button className="inline-flex items-center gap-2 bg-[#10b981] hover:bg-[#059669] text-white font-semibold px-7 py-4 rounded-full transition-all shadow-lg shadow-emerald-200 hover:shadow-xl hover:translate-y-[-1px] active:translate-y-0 group">
-          Get Exam Pricing
+        <button
+        onClick={()=>router.push('/contact')}
+         className="inline-flex items-center gap-2 bg-[#10b981] hover:bg-[#059669] text-white font-semibold px-7 py-4 rounded-full transition-all shadow-lg shadow-emerald-200 hover:shadow-xl hover:translate-y-[-1px] active:translate-y-0 group">
+          Book a 15 minute call
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>
 
           <button 
-        onClick={onScrollToCertifications}
+        onClick={()=>router.push('/order')}
         className="inline-flex items-center gap-1.5 bg-transparent hover:bg-slate-50 text-slate-800 font-bold px-6 py-4 rounded-full transition-colors group"
       >
-        See Supported Certs
+        Order Now!
         <ArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" />
       </button>
       </div>

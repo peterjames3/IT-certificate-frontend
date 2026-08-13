@@ -57,7 +57,7 @@ export default function VendorMatrixTable() {
         <span className="text-sm font-bold uppercase tracking-widest text-primary mb-2 block">
           Compare Certification Paths
         </span>
-        <h3 className="text-3xl md:text-4xl font-extrabold text-secondary tracking-tight">
+        <h3 className="text-3xl md:text-4xl font-extrabold text-secondary-800 tracking-tight">
           Cisco CCNA & Networking Certification Comparison Matrix
         </h3>
         <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-base md:text-lg">

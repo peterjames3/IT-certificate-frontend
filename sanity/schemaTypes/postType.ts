@@ -56,7 +56,7 @@ export const postType = defineType({
       type: "text",
       rows: 3,
       description: "A short summary of the post. Used in blog listings, meta descriptions, and social sharing. (Recommended: 150-160 characters)",
-      validation: (Rule) => Rule.max(160),
+      validation: (Rule) => Rule.max(300),
     }),
     defineField({
       name: "body",
@@ -73,7 +73,7 @@ export const postType = defineType({
           title: "SEO Title",
           type: "string",
           description: "Shown in browser tab and Google results (~60 chars)",
-          validation: (Rule) => Rule.max(60),
+          validation: (Rule) => Rule.max(100),
         }),
         defineField({
           name: "seoDescription",
@@ -81,7 +81,7 @@ export const postType = defineType({
           type: "text",
           rows: 3,
           description: "Google snippet (~160 chars)",
-          validation: (Rule) => Rule.max(160),
+          validation: (Rule) => Rule.max(200),
         }),
         defineField({
           name: "seoKeywords",

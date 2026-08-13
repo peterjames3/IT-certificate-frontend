@@ -10,7 +10,7 @@ import { UIProvider } from "@/context/UIContext";
 import QueryProvider from "@/provider/QueryProvider";
 import ChatWoot from "@/components/ui/chatwoot";
 import Script from "next/script";
-//import Chatbot from "../ui/Chatbot";
+import ChatwootIllustration from "@/components/ui/chatwoot-illustration";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,11 +23,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "Testhelpnow | IT Certification  Proctored   exam support & Training",
+      "ProctoredExamHelp | IT Certification Proctored exam support & exam taking",
     template: "%s | Testhelpnow",
   },
   description:
-    "Need help with online exams? TestHelpNow lets you pay someone to do your online exam with expert support, guaranteed confidentiality, and reliable results.",
+    "Need help with online exams? ProctoredExamHelp lets you pay someone to do your online exam with expert support, guaranteed confidentiality, and reliable results.",
   keywords: [
     "IT certification online exam assistance",
     "IT test preparation services",
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       default:
-        "Testhelpnow | Academic Tutoring, Test prep & End-To-End Exam Support Services",
-      template: "%s | Testhelpnow",
+        "ProctoredExamHelp | Online Proctored Exam Help, Test prep & End-To-End Exam Support Services",
+      template: "%s | ProctoredExamHelp",
     },
     description:
       "Get expert tutoring, targeted exam preparation, and end-to-endcertification  support. Edusion helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
@@ -108,27 +108,10 @@ export default function RootLayout({
             {children}
             <ScrollToTopBtn />
             <Footer />
-            {/* <Chatbot /> */}
+            <ChatwootIllustration />
             {/* <ToastContainer /> */}
             <ChatWoot />
-            {/* Chatwoot Live Chat Widget */}
-            <Script id="chatwoot-script" strategy="lazyOnload">
-              {`
-            (function(d,t) {
-              var BASE_URL="https://app.chatwoot.com";
-              var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-              g.src=BASE_URL+"/packs/js/sdk.js";
-              g.async = true;
-              s.parentNode.insertBefore(g,s);
-              g.onload=function(){
-                window.chatwootSDK.run({
-                  websiteToken: 'Z7QNTcjECspMQtHmTpdVo3jq',
-                  baseUrl: BASE_URL
-                })
-              }
-            })(document,"script");
-          `}
-            </Script>
+                   
           </body>
         </UIProvider>
       </QueryProvider>

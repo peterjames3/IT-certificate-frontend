@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation'
 import Link from "next/link";
 import {
   Award,
@@ -173,13 +174,13 @@ const examServices = [
     ],
     learnMore: {
       label: "Learn more about ITIL exam help →",
-      href: "/pay-someone-to-take-itil-v4",
+      href: "/pay-someone-to-take-itil-exam-for-me",
     },
   },
 ];
 
 export default function VendorListSection() {
- 
+  const router = useRouter()
 
   return (
     <motion.section
@@ -317,10 +318,11 @@ export default function VendorListSection() {
 
               {/* CTAs */}
               <button
+               onClick={()=> router.push('/order')}
                 
                 className="bg-white hover:bg-gray-100 text-gray-900 font-bold text-base px-8 py-3 rounded-xl cursor-pointer transition-colors"
               >
-                Get a free quote →
+                Order Now! →
               </button>
               <Link
                 href={service.learnMore.href}

@@ -5,7 +5,7 @@ import { AnimatedBanner } from "@/components/howitworks/animated-banner";
 import HowItWorksSchema from "./_schema";
 //import StatsSection from "../ui/components/stats/stats-section";
 import StatsSection from "@/components/stats/stats-section";
-import Quote from "@/components/form/quote";
+
 import FAQSection from "@/components/howitworks/faq";
 //import ShapoReviews from "@/app/ui/Shaporeviews";
 export const metadata = {
@@ -16,7 +16,7 @@ export const metadata = {
     title: "How It Works - 3 Steps to Secure IT Certification Help",
     description:
       "Pass your IT exams safely. See how our anonymous proxy service manages strict proctoring platforms with zero user registration and discrete payment links.",
-    url: "https://testhelpnow.com/how-it-works",
+    url: "https://proctoredexamhelp.com/how-it-works",
     siteName: "TestHelpNow",
     locale: "en_US",
     type: "website",
@@ -31,7 +31,7 @@ export default function HowItWorks() {
       {/* <ShapoReviews className="py-12 bg-gray-50" /> */}
       <StatsSection />
       <SuccessReasons />
-      <Quote />
+      
       <AnimatedBanner />
       <FAQSection />
     </>

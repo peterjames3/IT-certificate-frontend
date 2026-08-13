@@ -73,12 +73,12 @@ export default function AzureOrderPage() {
             {!submittedSuccessfully ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <h1 className="text-3xl font-extrabold text-secondary tracking-tight">
-                    Secure Your Azure Certification
-                  </h1>
+                  <h2 className="text-3xl font-extrabold text-secondary tracking-tight">
+                    Secure Your IT Certification
+                  </h2>
                   <p className="text-gray-500 mt-2 text-sm md:text-base leading-relaxed">
-                    Enter your testing metrics below to align with a verified **exam taker** 
-                    and deploy our secure **proxy services** for your scheduled session.
+                    Enter your testing metrics below to align with a verified <strong> exam taker </strong> 
+                    and deploy our secure <strong> proxy services </strong> for your scheduled session.
                   </p>
                 </div>
 

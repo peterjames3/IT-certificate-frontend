@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            At TestHelpNow, there are several key reasons why you should trust
+            At ProctoredExamHelp, there are several key reasons why you should trust
             our professional exam takers to manage your ISACA certification. We
             have established an exceptional reputation in the IT governance and
             security field and have grown to become the premier choice for

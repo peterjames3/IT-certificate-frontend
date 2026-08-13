@@ -6,6 +6,16 @@ export default function ChatwootWidget() {
   return (
     <Script id="chatwoot-script" strategy="lazyOnload">
       {`
+        // 1. Define a self-executing function to guarantee the settings are set
+        (function() {
+          window.chatwootSettings = {
+            position: "right",
+            type: "expanded_bubble",
+            launcherTitle: "Live Chat Us Now"
+          };
+        })();
+
+        // 2. Load the Chatwoot SDK after the settings are injected
         (function(d,t) {
           var BASE_URL="https://app.chatwoot.com";
           var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

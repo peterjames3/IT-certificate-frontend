@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { getIcon } from "@/lib/icons"; // Helper to get icon based on exam code
+import { getIcon } from "@/lib/icons";
 
 export interface ExamData {
   code: string;
   track: string;
   role: string;
   focus: string;
-  icon?: string; // Icon name from Sanity
-  slug: string; // Slug for individual certification page
+  icon?: string; 
+  slug: string; 
 }
 
 interface VendorMatrixTableProps {
@@ -24,10 +24,10 @@ export default function VendorMatrixTable({ exams, provider }: VendorMatrixTable
     <section className="py-20 px-6 max-w-310 mx-auto w-full">
       {/* Section Header */}
       <div className="text-center mb-12">
-        <span className="text-sm font-bold uppercase tracking-widest text-primary mb-2 block">
+        <span className="text-sm font-bold uppercase tracking-widest text-accent-500 italic mb-2 block">
           What We Cover
         </span>
-        <h3 className="text-3xl md:text-4xl font-extrabold text-secondary tracking-tight">
+        <h3 className="text-3xl md:text-4xl font-extrabold text-secondary-800 tracking-tight">
           ISACA Certification Comparison Matrix
         </h3>
         <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-base md:text-lg">
