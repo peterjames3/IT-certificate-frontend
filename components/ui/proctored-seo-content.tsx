@@ -49,7 +49,7 @@ export default function ProctoredSeoContent() {
                 expert enterprise engineering lab, we handle the technical
                 delivery seamlessly.
               </p>
-              {/* ✅ Internal Link to Order Page */}
+              {/* Internal Link to Order Page */}
               <div className="mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg">
                 <p className="text-sm">
                   <strong>Ready to get started?</strong>{" "}
@@ -106,7 +106,7 @@ export default function ProctoredSeoContent() {
                   Restricted access to external applications and websites.
                 </li>
               </ul>
-              {/* ✅ Internal Link to Proctored Services Page */}
+              {/*  Internal Link to Proctored Services Page */}
               <div className="mt-3">
                 <Link
                   href="/pay-to-pass-my-online-proctored-exam-safe-guaranteed-and-verified-certification-assistance"
@@ -178,7 +178,7 @@ export default function ProctoredSeoContent() {
                 <strong>Proctorio</strong>. We stay ahead of every update to
                 ensure your exam is delivered without detection.
               </p>
-              {/* ✅ Internal Link to Specific Proctoring Page */}
+              {/* Internal Link to Specific Proctoring Page */}
               <div className="mt-3">
                 <Link
                   href="/take-my-online-proctored-exam-for-me"
@@ -246,7 +246,7 @@ export default function ProctoredSeoContent() {
                     </li>
                     <li>
                       <Link
-                        href="/pay-someone-to-take-itil-v4"
+                        href="/pay-someone-to-take-itil-exam-for-me"
                         prefetch={true}
                         className="hover:text-emerald-600"
                       >
