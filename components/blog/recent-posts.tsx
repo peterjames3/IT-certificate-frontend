@@ -40,7 +40,7 @@ export default async function RecentPosts({
             </address>
             <time>
               {relatedPost.publishedAt
-                ? format(new Date(relatedPost.publishedAt), "MMMM dd, yyyy")
+                ? format(new Date(relatedPost._createAt), "MMMM dd, yyyy")
                 : "Unknown date"}
             </time>
           </footer>

@@ -87,7 +87,7 @@ export default function Post({ post }: { post: SanityDocument }) {
             <p className="label-text font-medium ">
               {" "}
               <span className="font-semibold">written by : </span>{" "}
-              {post.authorName || "Unknown Author"}
+              {post.authorName || "Mary Wright"}
             </p>
           </figcaption>
           <article>
