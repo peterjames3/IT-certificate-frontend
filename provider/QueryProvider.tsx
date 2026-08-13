@@ -1,5 +1,5 @@
 "use client";
-// providers/QueryProvider.tsx
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { useState, type ReactNode } from "react";
@@ -10,11 +10,11 @@ export default function QueryProvider({ children }: { children: ReactNode }) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            staleTime:        1000 * 60 * 5,   // 5 min — data is fresh, no refetch
-            gcTime:           1000 * 60 * 30,  // 30 min — keep in memory
-            retry:            2,               // retry failed requests twice
+            staleTime:        1000 * 60 * 5,   
+            gcTime:           1000 * 60 * 30,  
+            retry:            2,               
             retryDelay:       (attempt) => Math.min(1000 * 2 ** attempt, 10_000),
-            refetchOnWindowFocus: false,       // don't refetch when tab regains focus
+            refetchOnWindowFocus: false,       
           },
           mutations: {
             retry: 1,

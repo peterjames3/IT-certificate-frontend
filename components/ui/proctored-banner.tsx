@@ -1,4 +1,3 @@
-// components/exam-companion.tsx
 "use client";
 
 import { motion } from "motion/react";
@@ -27,7 +26,9 @@ export const Proctored = () => {
           fill
           className="object-cover"
           priority
+          sizes="(max-width: 768px) 100vw, 50vw"
           quality={100}
+          
         />
         <div className="absolute inset-0 bg-dark/90" /> {/* Dark overlay */}
       </motion.div>

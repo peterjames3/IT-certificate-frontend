@@ -6,6 +6,7 @@ import { GoogleTagManager } from "@next/third-parties/google"
 import Footer from "@/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import ChatWoot from "@/components/ui/chatwoot";
+
 import ChatwootIllustration from "@/components/ui/chatwoot-illustration";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "ProctoredExamHelp | IT Certification online exam support & exam taking",
+      "ProctoredExamHelp | IT Certification & Online Exam Taking Services",
     template: "%s | ProctoredExamHelp",
   },
   description:
@@ -39,15 +40,33 @@ export const metadata: Metadata = {
     "Pay Someone to do my Online Exam for me",
   ],
 
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://proctoredexamhelp.com/",
+    // Add hreflang if you have multiple languages
+    // languages: {
+    //   'en-US': 'https://proctoredexamhelp.com/',
+    //   'en-GB': 'https://proctoredexamhelp.com/uk/',
+    // },
+  },
   openGraph: {
     title: {
       default:
-        "ProctoredExamHelp | Online Proctored Exam Help, Test prep & End-To-End Exam Support Services",
+        "ProctoredExamHelp | IT Certification & Online Exam Taking Services",
       template: "%s | ProctoredExamHelp",
     },
     description:
-      "Get expert tutoring, targeted exam preparation, and end-to-endcertification  support. ProctoredExamHelp helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
+      "Need help with live online exams? ProctoredExamHelp lets you pay someone to do your online exam with expert support, guaranteed confidentiality, and reliable results.",
     url: "https://proctoredexamhelp.com/",
     type: "website",
     locale: "en_US",
@@ -83,7 +102,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
      
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
