@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import FeatureButton from "./feature-button";
 import GraphicCluster from "./graphic-cluster";
+import { useRouter } from 'next/navigation'
 import {
   
   MonitorOff,
@@ -30,8 +31,9 @@ export default function LearningSection() {
       icon: <ClipboardCheck className='size-6'/>,
     },
   ];
-
+  const router = useRouter();
   return (
+  
     <section className="w-full py-16 bg-[#f4faf7]">
       <div className="w-full mx-auto max-w-full lg:max-w-310 flex flex-col lg:flex-row gap-12 items-center px-6">
         {/* Left Column: Content */}
@@ -77,7 +79,8 @@ export default function LearningSection() {
 
           {/* Call to Action */}
           <div className="pt-8">
-            <button className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-emerald-500 rounded-full hover:bg-emerald-600 transition-colors shadow-sm shadow-emerald-200 group">
+            <button
+             onClick={()=> router.push('/order')} className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-emerald-500 rounded-full hover:bg-emerald-600 transition-colors shadow-sm shadow-emerald-200 group">
               Book Urgent Slot
               <svg
                 className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"

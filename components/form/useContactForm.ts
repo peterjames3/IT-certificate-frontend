@@ -3,10 +3,12 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import emailjs from "@emailjs/browser";
 import useToast from "@/components/useToast";
-import { validate, FormValues } from "./validation";
+import { validate } from "./validation";
+import { FormValues } from "@/lib/defination"
 
 export const useContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submittedSuccessfully, setSubmittedSuccessfully] = useState(false);
   const { notifySuccess, notifyError } = useToast();
 
   const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
@@ -19,6 +21,9 @@ export const useContactForm = () => {
       email: "",
       phone: "",
       message: "",
+      timeZone:"",
+      service:"",
+      scheduleUrgency: "standard",
     },
     validate,
     onSubmit: (values) => {
@@ -27,19 +32,21 @@ export const useContactForm = () => {
       emailjs.send(serviceId, templateId, values, publicKey).then(
         () => {
           notifySuccess(
-            "Thank you for contacting us! We'll get back to you soon.",
+            "Thank you for booking with us!",
           );
           setIsSubmitting(false);
+          setSubmittedSuccessfully(true);
           formik.resetForm();
         },
         (error) => {
           notifyError(`Message sending failed! ${error.text || error.message}`);
           setIsSubmitting(false);
+
           console.error(error);
         },
       );
     },
   });
 
-  return { formik, isSubmitting };
+  return { formik, isSubmitting, submittedSuccessfully };
 };

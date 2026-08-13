@@ -1,13 +1,4 @@
-interface FormValues {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-  [key: string]: string;
-}
-
-export type { FormValues };
-
+import { FormValues } from "@/lib/defination";
 export const validate = (values: FormValues) => {
   const errors: Partial<FormValues> = {};
 
@@ -27,13 +18,24 @@ export const validate = (values: FormValues) => {
 
   // Phone
   if (!values.phone) {
-    errors.phone = "Phone number is required";
+    errors.phone = "Number is required";
   } else if (
     !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(
       values.phone,
     )
   ) {
     errors.phone = "Invalid phone number";
+  }
+
+  // Time Zone 
+  if(!values.timeZone) {
+    errors.timeZone = "Time zone is required";
+  }
+  // Service (exam)
+  if (!values.service) {
+    errors.service = "Exam/Service name is required";
+  } else if (values.service.length < 2) {
+    errors.service = "Exam/Service name must be at least 2 characters";
   }
 
   // Message

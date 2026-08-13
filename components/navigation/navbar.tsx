@@ -38,7 +38,8 @@ export default function Navbar() {
       <div className="w-full mx-auto max-w-full lg:max-w-310  flex items-center justify-between gap-6 px-4 md:px-2 lg:px-3">
         {/* Logo */}
         <nav className="font-bold text-[1.2rem] lg:text-headline">
-          <Link href="/" className="flex items-center gap-1 lg:gap-2">
+          <Link href="/" className="flex items-center gap-1 lg:gap-2"
+          >
             <Image
               src="/favicon-32x32.png"
               alt="ProctoredExamHelp logo"
@@ -66,6 +67,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
+                  prefetch={true}
                   className={`hover:text-primary transition-colors ${
                     pathname === item.href
                       ? "text-[#10b981] font-sembold"

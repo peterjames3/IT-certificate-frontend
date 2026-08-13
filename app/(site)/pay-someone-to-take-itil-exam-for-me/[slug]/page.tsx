@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Params }) {
       title: page.seoTitle,
       description: page.seoDescription,
       images: page.ogImage?.url ? [{ url: page.ogImage.url }] : [],
-      siteName: "TestHelpNow",
+      siteName: "ProctoredExamHelp",
       locale: "en_US",
     },
     keywords: [

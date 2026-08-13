@@ -2,14 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/navigation/navbar";
-import { GoogleTagManager } from "@next/third-parties/google";
-//import { ToastContainer } from "react-toastify";
+import { GoogleTagManager } from "@next/third-parties/google"
 import Footer from "@/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
-import { UIProvider } from "@/context/UIContext";
-import QueryProvider from "@/provider/QueryProvider";
 import ChatWoot from "@/components/ui/chatwoot";
-import Script from "next/script";
 import ChatwootIllustration from "@/components/ui/chatwoot-illustration";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     default:
-      "ProctoredExamHelp | IT Certification Proctored exam support & exam taking",
-    template: "%s | Testhelpnow",
+      "ProctoredExamHelp | IT Certification online exam support & exam taking",
+    template: "%s | ProctoredExamHelp",
   },
   description:
-    "Need help with online exams? ProctoredExamHelp lets you pay someone to do your online exam with expert support, guaranteed confidentiality, and reliable results.",
+    "Need help with live online exams? ProctoredExamHelp lets you pay someone to do your online exam with expert support, guaranteed confidentiality, and reliable results.",
   keywords: [
     "IT certification online exam assistance",
     "IT test preparation services",
@@ -51,11 +47,11 @@ export const metadata: Metadata = {
       template: "%s | ProctoredExamHelp",
     },
     description:
-      "Get expert tutoring, targeted exam preparation, and end-to-endcertification  support. Edusion helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
-    url: "https://testhelpnow.com/",
+      "Get expert tutoring, targeted exam preparation, and end-to-endcertification  support. ProctoredExamHelp helps students in the US, UK, Canada, and New Zealand excel in their studies and exams.",
+    url: "https://proctoredexamhelp.com/",
     type: "website",
     locale: "en_US",
-    siteName: "Testhelpnow",
+    siteName: "ProctoredExamHelp",
   },
   icons: {
     icon: [
@@ -88,33 +84,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <QueryProvider>
-        <UIProvider>
+     
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
           >
             <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
-            {/* <!-- Google Tag Manager (noscript) --> */}
-            {/* <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-KZHSPRPQ"
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            ></iframe>
-          </noscript> */}
-            {/* <!-- End Google Tag Manager (noscript) --> */}
+       
             <Navbar />
             {children}
             <ScrollToTopBtn />
             <Footer />
             <ChatwootIllustration />
-            {/* <ToastContainer /> */}
+           
             <ChatWoot />
                    
           </body>
-        </UIProvider>
-      </QueryProvider>
+    
     </html>
   );
 }

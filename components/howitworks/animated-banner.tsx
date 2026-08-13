@@ -1,21 +1,14 @@
-// components/animated-banner.tsx
 "use client";
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import { useUIDispatch } from "@/context/UIContext";
-export const AnimatedBanner = () => {
-  const dispatch = useUIDispatch();
 
+export const AnimatedBanner = () => {
   const handleClick = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-
-    setTimeout(() => {
-      dispatch({ type: "SHOW_HELP" });
-    }, 1000);
   };
 
   return (

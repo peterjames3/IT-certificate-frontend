@@ -1,4 +1,3 @@
-// components/animated-banner.tsx
 "use client";
 
 import { motion } from "motion/react";

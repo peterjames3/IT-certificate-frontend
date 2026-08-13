@@ -210,3 +210,15 @@ export interface BaseExamServicePageData {
   sections: PageSection[];
 }
 export type ExamServicePageData = BaseExamServicePageData;
+
+
+export interface FormValues {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+  timeZone: string;
+  service: string;
+  scheduleUrgency?: string;
+  [key: string]: string | undefined;
+}

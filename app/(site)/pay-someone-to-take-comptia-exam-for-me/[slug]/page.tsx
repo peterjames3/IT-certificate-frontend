@@ -28,12 +28,18 @@ export async function generateMetadata({ params }: { params: Params }) {
 
   if (!page) return {};
 
+const url = `https://testhelpnow.com/pay-someone-to-take-comptia-exam-for-me/${page.slug}`;
+
   return {
     title: page.seoTitle,
     description: page.seoDescription,
+    alternates: { canonical: url },
     openGraph: {
+      type: "website",
+      url,
       title: page.seoTitle,
       description: page.seoDescription,
+      
       images: page.ogImage?.url ? [{ url: page.ogImage.url }] : [],
     },
   };

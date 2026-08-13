@@ -31,7 +31,7 @@ const Stepper = () => {
             <div className="w-16 h-16 rounded-full border border-accent3 bg-accent3 text-primary flex items-center justify-center text-2xl font-semibold shrink-0">
               {index + 1}
             </div>
-            <div className="text-background w-1/2">
+            <div className="text-foreground w-1/2">
               <h3 className="text-sm font-medium opacity-80">{step.label}</h3>
               <p className="text-[0.9rem] md:text-[1.0rem] lg:text-[1.1rem] font-semibold">
                 {step.description}
@@ -42,11 +42,11 @@ const Stepper = () => {
       </div>
       <div className="flex mb-auto">
         <Link
-          className="mb-8 w-full flex items-end justify-start rounded-md bg-[#2b9e3b] p-4 md:h-50"
+          className="mb-8 w-full flex items-end justify-start rounded-md bg-button-login-default p-4 md:h-50"
           href="/"
         >
           <div className="w-full text-white flex text-xl md:text-2xl lg:text-3xl items-center gap-5 font-semibold">
-            <GraduationCap size={64} /> TestHelpNow
+            <GraduationCap size={64} /> ProctoredExamHelp
           </div>
         </Link>
       </div>

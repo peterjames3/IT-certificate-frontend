@@ -493,7 +493,7 @@ export default function FAQSection() {
             </Link>
             <span className="mx-1">•</span>
             <Link
-              href="/pay-someone-to-take-itil-v4"
+              href="/pay-someone-to-take-itil-exam-for-me"
               className="text-primary hover:underline"
             >
               ITIL

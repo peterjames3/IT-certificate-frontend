@@ -29,13 +29,17 @@ export async function generateMetadata({ params }: { params: Params }) {
   });
 
   if (!page) return {};
-
+ const url = `https://proctoredexamhelp.com/pay-someone-to-take-aws-exam-for-me/${page.slug}`;
   return {
     title: page.seoTitle,
     description: page.seoDescription,
+    alternates: { canonical: url },
     openGraph: {
+      type:"website",
+      url,
       title: page.seoTitle,
       description: page.seoDescription,
+      siteName:"ProctoredExamHelp",
       images: page.ogImage?.url ? [{ url: page.ogImage.url }] : [],
     },
   };
