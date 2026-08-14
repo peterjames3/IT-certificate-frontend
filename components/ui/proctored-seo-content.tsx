@@ -181,11 +181,11 @@ export default function ProctoredSeoContent() {
               {/* Internal Link to Specific Proctoring Page */}
               <div className="mt-3">
                 <Link
-                  href="/take-my-online-proctored-exam-for-me"
+                  href="/online-exam-helper"
                   prefetch={true}
                   className="text-emerald-600 hover:underline font-medium"
                 >
-                  See how we handle different proctoring platforms →
+                  Learn more about our online exam help →
                 </Link>
               </div>
             </div>
