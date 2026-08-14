@@ -103,6 +103,10 @@ export default function Footer() {
             <li>
               <Link href="/privacy">➜ Privacy</Link>
             </li>
+        
+             <li>
+              <Link href="/online-exam-helper">➜ Online Exam Help</Link>
+            </li>
           </ul>
         </div>
 

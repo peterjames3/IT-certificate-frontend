@@ -512,13 +512,13 @@ export default function ItilFAQSection() {
               Configure Your Exam Order
             </Link>
             <Link
-              href="/pay-someone-to-take-itil-v4"
+              href="/pay-someone-to-take-itil-exam-for-me"
               className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors inline-block"
             >
               ITIL 4 Foundation
             </Link>
             <Link
-              href="/pay-someone-to-take-itil-exam-for-me/take-my-itil-4-cds-exam-for-me"
+              href="/pay-someone-to-take-itil-exam-for-me/cds"
               className="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors inline-block"
             >
               ITIL CDS

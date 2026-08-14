@@ -77,13 +77,8 @@ export const postQuery = groq`
       alt,
       "url": asset->url
     },
-    "author": author-> {
-      name,
-      image {
-        alt,
-        "url": asset->url
-      }
-    },
+    "authorName": author->name,
+  
     "categories": categories[]-> {
       title,
       description,

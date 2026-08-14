@@ -1,7 +1,7 @@
 import { sanityFetch } from "@/sanity/lib/fetch";
 import {latestPostsQuery } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
-import { format } from "date-fns";
+import { format } from "date-fns/format";
 import Link from "next/link";
 
 export default async function RecentPosts({
@@ -39,9 +39,11 @@ export default async function RecentPosts({
               {relatedPost.authorName || "Unknown author"}
             </address>
             <time>
-              {relatedPost.publishedAt
-                ? format(new Date(relatedPost._createAt), "MMMM dd, yyyy")
-                : "Unknown date"}
+               
+              {/* Format the date using date-fns */}
+              {format(new Date(relatedPost.publishedAt), "MMMM dd, yyyy") ||
+                "Unknown date"}
+            
             </time>
           </footer>
         </Link>

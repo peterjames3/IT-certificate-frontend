@@ -243,7 +243,7 @@ export default function ItilSeoContent() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/pay-someone-to-take-itil-v4" className="hover:text-emerald-600">
+                    <Link href="/pay-someone-to-take-itil-exam-for-me" className="hover:text-emerald-600">
                       DevOps & ITIL
                     </Link>
                   </li>
@@ -292,12 +292,60 @@ export default function ItilSeoContent() {
                   <li>TOEFL</li>
                   <li>IELTS</li>
                   <li>PTE Academic</li>
-                  <li>Duolingo English Test</li>
+                 
                   <li>Cambridge Assessments</li>
                 </ul>
               </div>
             </div>
-          </div>
+ <div className="mt-6">
+      <h3 className="text-xl font-semibold mb-3">Common Online Exam Formats We Handle</h3>
+      <p className="text-sm text-gray-600 mb-3">
+        Different exams use different formats and platforms. Here's what we cover:
+      </p>
+      <div className="overflow-x-auto my-4">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border p-2 text-left">Exam Type</th>
+              <th className="border p-2 text-left">Description</th>
+              <th className="border p-2 text-left">Common Platforms</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border p-2 font-semibold">Multiple Choice</td>
+              <td className="border p-2">Automated grading, often timed</td>
+              <td className="border p-2">Canvas, Blackboard, Moodle</td>
+            </tr>
+            <tr>
+              <td className="border p-2 font-semibold">Essay & Short Answer</td>
+              <td className="border p-2">Requires written responses, human-graded</td>
+              <td className="border p-2">Turnitin-integrated LMS</td>
+            </tr>
+            <tr>
+              <td className="border p-2 font-semibold">Open-Book Exams</td>
+              <td className="border p-2">Allows reference materials, tests application</td>
+              <td className="border p-2">Custom university portals</td>
+            </tr>
+            <tr>
+              <td className="border p-2 font-semibold">Proctored Exams</td>
+              <td className="border p-2">Monitored via webcam/software</td>
+              <td className="border p-2">ProctorU, Examity, Proctorio</td>
+            </tr>
+            <tr>
+              <td className="border p-2 font-semibold">Adaptive Testing</td>
+              <td className="border p-2">Questions adjust based on performance</td>
+              <td className="border p-2">NCLEX, GRE, GMAT</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="text-xs text-gray-400 mt-1">
+        * Platforms and formats may vary by institution. Contact us for specific requirements.
+      </p>
+    </div>
+    </div> 
+          
         </motion.article>
 
         {/* ── SECTION 4: Why Choose Professional Help ── */}
@@ -395,13 +443,13 @@ export default function ItilSeoContent() {
                 {" "}Reach out to support agents via multiple channels, including live chat and phone.
               </li>
             </ul>
-            <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <div className="mt-4 p-4 bg-primary-50 border border-primary-200 rounded-lg">
               <p className="text-sm">
                 <strong>Ready to hire an online exam helper?</strong>{" "}
                 <Link 
                   href="/order"
                   prefetch={true}
-                  className="text-blue-700 font-semibold hover:underline"
+                  className="text-primary-700 font-semibold hover:underline"
                 >
                   Book your exam help now →
                 </Link>
@@ -467,7 +515,7 @@ export default function ItilSeoContent() {
               <p className="text-sm">
                 <strong>Get a free, no-obligation quote today!</strong>{" "}
                 <Link 
-                  href="/order"
+                  href="/contact"
                   prefetch={true}
                   className="text-emerald-700 font-semibold hover:underline"
                 >
@@ -537,42 +585,43 @@ export default function ItilSeoContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.55 }}
-          className="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200"
+          className="mt-8 p-6 bg-primary-50 rounded-xl border border-primary-200"
         >
           <h3 className="text-xl font-bold text-secondary mb-4">
             📚 Related Resources
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link
-              href="/blog/top-10-tips-for-acing-your-online-exam"
+              href="/blog/how-to-pass-your-online-exam-without-getting-caught"
               prefetch={true}
-              className="p-3 bg-white rounded-lg border border-blue-100 hover:border-blue-500 hover:shadow-md transition-all"
+              className="p-3 bg-white rounded-lg border border-primary-100 hover:border-blue-500 hover:shadow-md transition-all"
             >
-              <span className="font-medium text-blue-700">Top 10 Exam Tips</span>
-              <p className="text-xs text-gray-500">Ace your online exam with these strategies</p>
+              <span className="font-medium text-secondary-700">Passing Online Exam Tips</span>
+              <p className="text-xs text-gray-500">Ace your online exam without getting caught
+</p>
             </Link>
             <Link
               href="/blog/what-is-online-proctoring-and-how-does-it-work"
               prefetch={true}
-              className="p-3 bg-white rounded-lg border border-blue-100 hover:border-blue-500 hover:shadow-md transition-all"
+              className="p-3 bg-white rounded-lg border border-primary-100 hover:border-blue-500 hover:shadow-md transition-all"
             >
-              <span className="font-medium text-blue-700">Online Proctoring Guide</span>
+              <span className="font-medium text-secondary-700">Online Proctoring Guide</span>
               <p className="text-xs text-gray-500">How proctoring software works</p>
             </Link>
             <Link
               href="/blog/how-to-choose-a-legitimate-exam-help-service"
               prefetch={true}
-              className="p-3 bg-white rounded-lg border border-blue-100 hover:border-blue-500 hover:shadow-md transition-all"
+              className="p-3 bg-white rounded-lg border border-primary-100 hover:border-blue-500 hover:shadow-md transition-all"
             >
-              <span className="font-medium text-blue-700">Choose a Legitimate Service</span>
+              <span className="font-medium text-secondary-700">Choose a Legitimate Service</span>
               <p className="text-xs text-gray-500">What to look for in an exam helper</p>
             </Link>
             <Link
               href="/blog/pay-to-pass-my-online-proctored-exam-safe-guaranteed-and-verified-certification-assistance"
               prefetch={true}
-              className="p-3 bg-white rounded-lg border border-blue-100 hover:border-blue-500 hover:shadow-md transition-all"
+              className="p-3 bg-white rounded-lg border border-primary-100 hover:border-blue-500 hover:shadow-md transition-all"
             >
-              <span className="font-medium text-blue-700">Pay Someone to Take My Exam</span>
+              <span className="font-medium text-secondary-700">Pay Someone to Take My Exam</span>
               <p className="text-xs text-gray-500">Is it safe? Find out here</p>
             </Link>
           </div>
@@ -582,8 +631,8 @@ export default function ItilSeoContent() {
               prefetch={true}
               className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:underline"
             >
-              View All Blog Posts →
-              <CircleArrowRight className="w-4 h-4" />
+              View All Blog Posts 
+              <CircleArrowRight className="size-4" />
             </Link>
           </div>
         </motion.article>
@@ -1087,13 +1136,13 @@ export default function ItilSeoContent() {
           className="border overflow-hidden border-gray-300 rounded-lg space-y-2"
         >
           <div className="font-medium text-white bg-black p-4 text-xl">
-            <h2>Why We&apos;re #1 for IT Exam Help</h2>
+            <h2>Why We&apos;re #1 for Online Exam Help</h2>
           </div>
           <div className="px-4 py-6">
             <ul className="flex flex-col space-y-3 font-medium">
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}
-                Certified ITSM & Governance Experts
+                Certified Subject Matter Experts
               </li>
               <li className="flex items-center gap-2">
                 <CircleArrowRight className="w-5 h-5 text-emerald-500 shrink-0" />{" "}

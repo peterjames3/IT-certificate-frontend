@@ -96,6 +96,12 @@ html {
   --color-status-completed: var(--color-primary-200);
   --color-status-cancelled: #b26623;
   --color-status-failed: #d92d20;
+  --color-accent: #e8f9f1;
+  --color-accent2: #d9f3d8;
+  --color-accent3: #acecbb;
+ --color-cardBg-support1: #ffeeeb;
+  --color-cardBg-support2: #b2d7ff;
+  --color-cardBg-support3: #e8f9f1;
 
   /* Font sizes */
   --text-display: 2.25rem;

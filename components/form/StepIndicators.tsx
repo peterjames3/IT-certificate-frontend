@@ -19,6 +19,10 @@ const steps = [
     label: "Step 4",
     description: "We Handle the Rest",
   },
+   {
+    label: "Step 5",
+    description: "You can even place an order through the Live Chat, Telegram or Discord",
+  },
 ];
 
 const Stepper = () => {
