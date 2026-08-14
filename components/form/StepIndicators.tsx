@@ -21,7 +21,7 @@ const steps = [
   },
    {
     label: "Step 5",
-    description: "You can even place an order through the Live Chat, Telegram or Discord",
+    description: "Or Order Via The Live Chat, Telegram or Discord",
   },
 ];
 
