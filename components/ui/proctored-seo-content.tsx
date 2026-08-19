@@ -109,7 +109,7 @@ export default function ProctoredSeoContent() {
               {/*  Internal Link to Proctored Services Page */}
               <div className="mt-3">
                 <Link
-                  href="/pay-to-pass-my-online-proctored-exam-safe-guaranteed-and-verified-certification-assistance"
+                  href="/blog/pay-to-pass-my-online-proctored-exam-safe-guaranteed-and-verified-certification-assistance"
                   prefetch={true}
                   className="text-emerald-600 hover:underline font-medium"
                 >
@@ -146,7 +146,7 @@ export default function ProctoredSeoContent() {
               {/* ✅ Internal Link to Online Exam Help Page */}
               <div className="mt-3">
                 <Link
-                  href="/online-exam-help"
+                  href="/online-exam-helper"
                   prefetch={true}
                   className="text-emerald-600 hover:underline font-medium"
                 >

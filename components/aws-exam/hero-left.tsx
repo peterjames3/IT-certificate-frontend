@@ -1,14 +1,10 @@
 "use client";
-import { useUIDispatch } from "@/context/UIContext";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const LeftHero = () => {
-  const dispatch = useUIDispatch();
-  const toggleForm = () => {
-    dispatch({ type: "SHOW_HELP" });
-  };
-
+const router = useRouter();
   return (
     <div className="h-full w-full mx-auto px-2 flex items-center">
       <div>
@@ -39,7 +35,7 @@ const LeftHero = () => {
           </p>
 
           <motion.button
-            onClick={toggleForm}
+            onClick={()=>router.push("/order")}
             className="cta hover:cursor-pointer flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

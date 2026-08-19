@@ -6,7 +6,7 @@ import { GoogleTagManager } from "@next/third-parties/google"
 import Footer from "@/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import ChatWoot from "@/components/ui/chatwoot";
-import Whatsapp from "@components/ui/whatsapp";
+import Whatsapp from "@/components/ui/whatsapp";
 import ChatwootIllustration from "@/components/ui/chatwoot-illustration";
 const geistSans = Geist({
   variable: "--font-geist-sans",

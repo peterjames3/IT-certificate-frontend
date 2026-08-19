@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
     "Completely confidential and secure testing sessions utilizing advanced proxy services and technical environments to establish a natural local user footprint with zero detection risk.",
     "Cisco certification paths often introduce excruciating levels of testing pressure and administrative stress. By hiring a certified specialist exam taker to take my online Cisco CCNA exam on your behalf, you completely eliminate the anxiety of test day.",
     "Many candidates struggle to master the immense volume of routing protocols, switching configurations, and network security rules due to a lack of preparation time. Partnering with us lets a seasoned networking infrastructure specialist handle the assessment parameters for you through our secure proxy frameworks.",
-    "At TestHelpNow, we back our specialized exam taker assistance with complete pass guarantees, ensuring absolute peace of mind throughout your Cisco certification journey.",
+    "At ProctoredExamHelp, we back our specialized exam taker assistance with complete pass guarantees, ensuring absolute peace of mind throughout your Cisco certification journey.",
   ];
 
   const otherBenefits = [
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
           </motion.h2>
 
           <motion.p variants={item} className="text-lg text-gray-600 mb-8">
-            At TestHelpNow, there are several key reasons why you should trust
+            At ProctoredExamHelp, there are several key reasons why you should trust
             our professional exam takers to manage your Cisco networking
             certification. We have established an exceptional reputation in the
             networking field and have grown to become the premier choice for

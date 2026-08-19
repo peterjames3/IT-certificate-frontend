@@ -68,6 +68,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+ {
+      url: `${BASE_URL}/online-exam-helper`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+     {
+      url: `${BASE_URL}/pay-someone-to-take-cisco-ccna-exam-for-me`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
     {
       url: `${BASE_URL}/privacy`,
       lastModified: new Date(),

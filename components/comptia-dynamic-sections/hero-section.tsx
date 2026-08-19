@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { useUIState } from "@/context/UIContext";
 import { motion, AnimatePresence } from "framer-motion";
 import type { HeroSectionData, SectionItem } from "@/lib/defination";
 import FloatingElements from "../animation/FloatingElements";
@@ -72,19 +71,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
       id="hero-main"
       className="relative bg-linear-to-tr from-primary-50 via-[#ffffff] to-[#f0f9ff] min-h-40 z-10 py-20"
     >
-      {isVisible ? (
-        <AnimatePresence mode="wait">
-          <motion.div
-            key="form"
-            className="py-20 w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
-          />
-        </AnimatePresence>
-      ) : (
-        <div className="pt-40 pb-16 w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3 flex flex-col gap-10 lg:flex-row md:justify-between items-center">
+            <div className="pt-40 pb-16 w-full mx-auto max-w-full lg:max-w-310 px-4 md:px-2 lg:px-3 flex flex-col gap-10 lg:flex-row md:justify-between items-center">
           {/* ── Left — text ───────────────────────────── */}
           <div className="w-full lg:w-1/2 items-center ">
             <button
@@ -205,7 +192,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
             )}
           </div>
         </div>
-      )}
+      
 
       <FloatingElements />
     </section>
