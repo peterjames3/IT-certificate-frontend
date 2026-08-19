@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import {
   ChevronDown,
   ChevronUp,
@@ -11,7 +11,7 @@ import {
   Cloud,
   HelpCircle,
 } from "lucide-react";
-import type { FaqSectionData } from "@/app/(site)/pay-someone-to-take-comptia-exam-for-me/[slug]/page";
+import type { FaqSectionData } from "@/lib/defination";
 
 // Map category strings to an icon — extend as new categories are added in Sanity
 const getCategoryIcon = (category: string) => {

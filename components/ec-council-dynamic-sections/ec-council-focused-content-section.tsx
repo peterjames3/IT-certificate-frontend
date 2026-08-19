@@ -1,5 +1,5 @@
-import { PortableText } from "@portabletext/react";
-import type { PortableTextBlock } from "@portabletext/types";
+import { PortableText } from "next-sanity";
+import type { PortableTextBlock } from "next-sanity";
 import { CircleArrowRight } from "lucide-react";
 import { portableTextComponents } from "../blog/portable-text-components";
 type ECCouncilFocusedContentSectionData = {

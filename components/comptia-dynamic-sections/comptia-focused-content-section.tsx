@@ -1,4 +1,4 @@
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import type { PortableTextBlock } from "@portabletext/types";
 import { CircleArrowRight } from "lucide-react";
 import { portableTextComponents } from "../blog/portable-text-components";

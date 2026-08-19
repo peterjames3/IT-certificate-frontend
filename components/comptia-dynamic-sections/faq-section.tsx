@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import {
   ChevronDown,
   ChevronUp,

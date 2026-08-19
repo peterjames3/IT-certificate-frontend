@@ -1,9 +1,9 @@
-import { SanityDocument } from "@sanity/client";
+import { SanityDocument } from "next-sanity";
 import TableOfContents from "./table-Of-content";
 import { portableTextComponents } from "./portable-text-components";
 import Image from "next/image";
 import Link from "next/link";
-import { PortableText } from "@portabletext/react";
+import { PortableText } from "next-sanity";
 import SocialShare from "./social-share";
 import { Proctored } from "@/components/ui/proctored-banner";
 import { format } from "date-fns";

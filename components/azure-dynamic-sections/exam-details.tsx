@@ -1,8 +1,8 @@
 import Image from "next/image";
 //import Link from "next/link";
 import { portableTextComponents } from "@/components/blog/portable-text-components";
-import { PortableText } from "@portabletext/react";
-import type { ContentSectionData } from "@/app/(site)/pay-someone-to-take-comptia-exam-for-me/[slug]/page";
+import { PortableText } from "next-sanity";
+import type { ContentSectionData } from "@/lib/defination";
 
 const sizeMap: Record<string, string> = {
   "33": "lg:w-1/3",
