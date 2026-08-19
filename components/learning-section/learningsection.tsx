@@ -59,7 +59,7 @@ export default function LearningSection() {
               how to pass CompTIA, AWS, Azure, ITIL-v4, ISACA, GCP, etc  without studying
             </span>
             ? Our system acts as an ultimate{" "}
-            <Link href="/online-exam-helper" prefect={true} className="font-semibold text-slate-800">
+            <Link href="/online-exam-helper" prefetch={true} className="font-semibold text-slate-800">
               online exam helper
             </Link>
             . We fast-track your certifications before your corporate vouchers
