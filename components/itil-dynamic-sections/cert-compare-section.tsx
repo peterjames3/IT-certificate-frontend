@@ -15,12 +15,12 @@ const TOKENS = {
   hairline: "#DAD7CC",
 };
 
-export default function CertCompareSection({ data, initialComparison }: Props) {
+export default function CertCompareSection({ data }: Props) {
   const {
     data: comparison,
     isLoading,
     error,
-  } = useComparison(data.certSlugs, initialComparison);
+  } = useComparison(data.certSlugs);
 
   if (isLoading) {
     return (
