@@ -2,8 +2,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "motion/react";
-import StaggeredContainer from "@/components/animation/StaggeredContainer"; // Adjust path as needed
+import { motion, type Variants } from "motion/react";
+import StaggeredContainer from "@/components/animation/StaggeredContainer"; 
 
 // LMS portals
 const LMS = [
@@ -92,7 +92,7 @@ const PROCTORING_PLATFORMS = [
 ] as const;
 
 // Single shared variant for child items to handle fade + slide up
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -188,7 +188,6 @@ export default function PortalsSection() {
       {/* ── Proctoring Platforms Section ────────────────────── */}
       <section className="pb-20 px-4 md:px-8 bg-primary-50">
         <div className="w-full mx-auto max-w-full lg:max-w-310 px-3">
-          {/* Separate StaggeredContainer ensures this section triggers independently */}
           <StaggeredContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
             {PROCTORING_PLATFORMS.map((platform, index) => (
               <ProctoringCard
