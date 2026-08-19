@@ -1,4 +1,4 @@
-import type { SanityDocument } from "@sanity/client";
+import type { SanityDocument } from "next-sanity";
 import { sanityFetch } from "@/sanity/lib/server-fetch";
 import Hero from "@/components/aws-exam/main-hero";
 import VendorMatrixGrid from "@/components/aws-exam/vendor-matrix-grid";

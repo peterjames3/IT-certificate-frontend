@@ -1,4 +1,4 @@
-import type { SanityDocument } from "@sanity/client";
+import type { SanityDocument } from "next-sanity";
 import Hero from "@/components/comptia-exam/main-hero";
 import VendorMatrixGrid from "@/components/comptia-exam/vendor-matrix-grid";
 import HireSomeone from "@/components/comptia-exam/hire-someone";
