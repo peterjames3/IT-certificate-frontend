@@ -1,11 +1,11 @@
 import FeatureButton from "../learning-section/feature-button";
 import {
-  ScanFace,
+
   MonitorOff,
   Timer,
   Wifi,
   Eye,
-  ClipboardCheck,
+ 
 } from "lucide-react";
 
 export default function HireSomeoneRight() {
@@ -61,7 +61,7 @@ export default function HireSomeoneRight() {
               label={feature.label}
               // feature.icon is a JSX.Element; cast to any to satisfy prop type expecting string
               icon={feature.icon as unknown as string}
-              colorClass={feature.color}
+             
             />
           ))}
         </div>
