@@ -3,7 +3,7 @@
 
 import { HeroLeft } from "./hero-left";
 import { HeroRight } from "./hero-right";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface HeroSectionProps {
   onScrollToCertifications?: () => void; 

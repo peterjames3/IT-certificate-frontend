@@ -2,7 +2,7 @@
 import LeftHero from "./hero-left";
 import RightHero from "./hero-right";
 import FloatingElements from "../animation/FloatingElements";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function MainHero() {
 

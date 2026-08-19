@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { CheckCircle, Shield, Award, Users, Zap } from "lucide-react";
 
 export default function WhyChooseUs() {

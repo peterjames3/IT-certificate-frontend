@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import LeftSection from "@/components/about-us/about-left";
 import HireSomeoneRight from "./hire-someone-right";
 

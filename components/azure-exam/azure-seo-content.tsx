@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ExamCompanion } from "../ui/exam-companion";
 import { Proctored } from "../ui/proctored-banner";
 import { CircleArrowRight } from "lucide-react";

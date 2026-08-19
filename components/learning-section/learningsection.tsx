@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import FeatureButton from "./feature-button";
 import GraphicCluster from "./graphic-cluster";
 import { useRouter } from 'next/navigation'

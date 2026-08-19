@@ -4,7 +4,7 @@ import Input from "@/components/form/input";
 import TextArea from "@/components/form/text-area";
 import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useContactForm } from "@/components/form/useContactForm";
 import Stepper from "@/components/form/StepIndicators";
 import {
