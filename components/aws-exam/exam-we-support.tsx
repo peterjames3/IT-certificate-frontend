@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import type { SanityDocument } from "@sanity/client";
+import type { SanityDocument } from "next-sanity";
 import Image from "next/image";
 import Link from "next/link";
 
