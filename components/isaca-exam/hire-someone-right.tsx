@@ -60,7 +60,7 @@ export default function HireSomeoneRight() {
               key={index}
               label={feature.label}
               icon={feature.icon as unknown as string}
-              colorClass={feature.color}
+          
             />
           ))}
         </div>
