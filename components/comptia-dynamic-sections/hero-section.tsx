@@ -47,7 +47,7 @@ const cardBg = [
 ];
 
 export default function HeroSection({ data }: HeroSectionProps) {
-  const { isVisible } = useUIState();
+
   const router = useRouter();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
