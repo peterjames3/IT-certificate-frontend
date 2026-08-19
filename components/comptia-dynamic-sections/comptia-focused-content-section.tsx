@@ -1,5 +1,5 @@
 import { PortableText } from "next-sanity";
-import type { PortableTextBlock } from "@portabletext/types";
+import type { PortableTextBlock } from "next-sanity";
 import { CircleArrowRight } from "lucide-react";
 import { portableTextComponents } from "../blog/portable-text-components";
 type CompTIAFocusedContentSectionData = {
