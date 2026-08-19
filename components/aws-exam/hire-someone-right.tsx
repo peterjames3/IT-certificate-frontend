@@ -68,8 +68,8 @@ export default function HireSomeoneRight() {
             <FeatureButton
               key={index}
               label={feature.label}
-              icon={feature.icon}
-              colorClass={feature.color}
+              icon={feature.icon as unknown as string}
+            
             />
           ))}
         </div>
