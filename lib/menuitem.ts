@@ -246,7 +246,7 @@ export const MenuItems: MenuItem[] = [
       "/pay-someone-to-take-comptia-exam-for-me",
     ),
   },
-  
+
   {
     name: "Proctored Exam Help",
     href: "#",
@@ -280,11 +280,11 @@ export const MenuItems: MenuItem[] = [
     ],
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: "Faqs",
+    href: "/faq",
   },
   {
-    name: "How It Works",
-    href: "/how-it-works",
+    name: "Blog",
+    href: "/blog",
   },
 ];

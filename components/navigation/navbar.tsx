@@ -49,7 +49,7 @@ export default function Navbar() {
               className="object-contain"
             />
             <span>
-              <span className="text-foreground">ProctoreExam</span>
+              <span className="text-foreground">ProctoredITExam</span>
               <span className="text-primary">Help</span>.
             </span>
           </Link>

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { groq } from "next-sanity";
 import { client } from "@/sanity/lib/client";
 
-const BASE_URL = "https://proctoredexamhelp.com";
+const BASE_URL = "https://proctoreditexamhelp.com";
 
 // ── Types ──────────────────────────────────────────────────
 interface SanityPage {

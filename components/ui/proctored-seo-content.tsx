@@ -30,7 +30,7 @@ export default function ProctoredSeoContent() {
             </h2>
             <div className="mb-6 space-y-3 leading-relaxed text-[1.2rem]">
               <p>
-                <strong>ProctoredExamHelp</strong> is the leading
+                <strong>ProctoredITExamHelp</strong> is the leading
                 professional proxy testing partner where enterprise engineers
                 and subject matter experts take your online IT certifications on
                 your behalf. We guarantee total privacy, compliance safety, and
@@ -135,7 +135,7 @@ export default function ProctoredSeoContent() {
                 stress and time commitment of traditional preparation.
               </p>
               <p>
-                We cover a wide range of online exams across multiple platforms,
+                At ProctoredITExamHelp, We cover a wide range of online exams across multiple platforms,
                 including
                  <strong> Canvas</strong>, <strong>Blackboard</strong>,{" "}
                 <strong>Moodle</strong>, <strong> Pearson MyLab</strong>,{" "}

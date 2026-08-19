@@ -29,7 +29,7 @@ export default function Footer() {
                 className="object-contain"
               />
               <span className="font-semibold">
-                <span className="text-foreground">ProctoredExam</span>
+                <span className="text-foreground">ProctoredITExam</span>
                 <span className="text-gray-400">Help</span>.
               </span>
             </Link>
