@@ -11,7 +11,7 @@ import {
   Cloud,
   HelpCircle,
 } from "lucide-react";
-import type { FaqSectionData } from "@/app/(site)/pay-someone-to-take-comptia-exam-for-me/[slug]/page";
+import type { FaqSectionData } from "@/lib/defination";
 
 // Map category strings to an icon — extend as new categories are added in Sanity
 const getCategoryIcon = (category: string) => {
