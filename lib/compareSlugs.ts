@@ -6,7 +6,9 @@
  * Add more pairs here as you discover what people search for
  * (check Search Console "queries" once the site has traffic).
  */
-export const POPULAR_COMPARISONS: Array<[string, string]> = [
+export const POPULAR_COMPARISONS: Array<
+  [string, string] | [string, string, string]
+> = [
   ["cissp", "ccsp"],
   ["comptia-security-plus", "ccna"],
   ["comptia-security-plus", "cissp"],
