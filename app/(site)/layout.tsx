@@ -7,6 +7,7 @@ import Footer from "@/components/footer/Footer";
 import ScrollToTopBtn from "@/components/ui/scroll-to-top-btn";
 import ChatWoot from "@/components/ui/chatwoot";
 import Whatsapp from "@/components/ui/whatsapp";
+import { Analytics } from '@vercel/analytics/next';
 import ChatwootIllustration from "@/components/ui/chatwoot-illustration";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -103,22 +104,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-     
-          <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
-          >
-            <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
-       
-            <Navbar />
-            {children}
-            <ScrollToTopBtn />
-            <Footer />
-            <ChatwootIllustration />
-             <Whatsapp />
-            <ChatWoot />
-                   
-          </body>
-    
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
+      >
+        <GoogleTagManager gtmId="GTM-KZHSPRPQ" />
+
+        <Navbar />
+        {children}
+        <ScrollToTopBtn />
+        <Footer />
+        <ChatwootIllustration />
+        <Whatsapp />
+        <Analytics />
+        <ChatWoot />
+      </body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 import { sanityFetch } from "@/sanity/lib/fetch";
 import {latestPostsQuery } from "@/sanity/lib/queries";
 import { SanityDocument } from "next-sanity";
-import { format } from "date-fns/format";
+import { format } from "date-fns";
 import Link from "next/link";
 
 export default async function RecentPosts({
